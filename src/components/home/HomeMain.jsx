@@ -20,6 +20,7 @@ import LoadingLogo from "../utils/LodingLogo";
 import Divider from '@mui/material/Divider';
 import { useAuth } from "../../context/AuthContext";
 import { Button } from "@mui/material";
+import JackpotSection from "./JackpotSection";
 const HomeMain = ({ children }) => {
   const RhombusIcon = (props) => (
     <SvgIcon {...props}>
@@ -30,10 +31,10 @@ const HomeMain = ({ children }) => {
 
 
   const [logoLoading, setLogoLoading] = useState(true); // Loading state
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const [currentTextIndex, setCurrentTextIndex] = useState(0);
+  // const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  // const [currentTextIndex, setCurrentTextIndex] = useState(0);
   // const [winners, setWinners] = useState(win);
-  const [selectedTabName, setSelectedTabName] = useState("All");
+  // const [selectedTabName, setSelectedTabName] = useState("All");
   const navigate = useNavigate()
   const { userWallet, getWalletBalance, isLoading } = useContext(UserContext);
   const { isAuthenticated } = useAuth()
@@ -167,14 +168,14 @@ const HomeMain = ({ children }) => {
           {/* <TopBanner /> */}
           <ImageSlider />
           {/* <DetailsBox /> */}
-          <Winning />
           {/* <WalletComponent /> */}
           {/* Tabs */}
           {/* <ScrollableTabs/> */}
+          <JackpotSection />
           <ScrollableTabs />
 
           {/* Winning Information */}
-          {/* <Winning /> */}
+          <Winning />
 
           {/* Today's earning chart */}
           <Box

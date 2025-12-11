@@ -3,7 +3,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import BottomNavigation from "@mui/material/BottomNavigation";
 import BottomNavigationAction from "@mui/material/BottomNavigationAction";
 import { useTheme } from "@mui/material/styles";
-import Box from "@mui/material/Box";
+// import Box from "@mui/material/Box";
 import useMediaQuery from "@mui/material/useMediaQuery";
 
 const BottomNavigationArea = () => {
@@ -32,7 +32,7 @@ const BottomNavigationArea = () => {
           position: "fixed",
           bottom: "0px",
           height: "10%",
-          // backgroundImage: "url(/assets/christmas2-CQdl-tRr.webp)",
+          // backgroundImage: "url(/assets/christmas2-CQdl-tRr.svg)",
           // backgroundSize: "cover",
           // backgroundPosition: "top",
           backgroundColor: "#01441c",
@@ -51,8 +51,8 @@ const BottomNavigationArea = () => {
             <img
               src={
                 value === "/promotion"
-                  ? "/assets/navigation/promotionSelected.webp"
-                  : "/assets/navigation/promotion.webp"
+                  ? "/assets/navigation/promotion.svg"
+                  : "/assets/navigation/promotion.svg"
               }
               width="30px"
               height="30px"
@@ -71,8 +71,8 @@ const BottomNavigationArea = () => {
             <img
               src={
                 value === "/activity"
-                  ? "/assets/navigation/activitySelected.webp"
-                  : "/assets/navigation/activity.webp"
+                  ? "/assets/navigation/activity.svg"
+                  : "/assets/navigation/activity.svg"
               }
               width="30px"
               height="30px"
@@ -108,8 +108,8 @@ const BottomNavigationArea = () => {
             <img
               src={
                 value === "/wallet"
-                  ? "/assets/navigation/walletSelected.webp"
-                  : "/assets/navigation/wallet.webp"
+                  ? "/assets/navigation/wallet.svg"
+                  : "/assets/navigation/wallet.svg"
               }
               width="30px"
               height="30px"
@@ -128,8 +128,8 @@ const BottomNavigationArea = () => {
             <img
               src={
                 value === "/account"
-                  ? "/assets/navigation/accountSelected.webp"
-                  : "/assets/navigation/account.webp"
+                  ? "/assets/navigation/account.svg"
+                  : "/assets/navigation/account.svg"
               }
               width="30px"
               height="30px"

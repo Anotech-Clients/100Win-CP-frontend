@@ -2,10 +2,10 @@ import React, { useState, useEffect } from "react";
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
+// import Button from '@mui/material/Button';
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext"; // Import useAuth to access axiosInstance and token
-import { jwtDecode } from "jwt-decode"; // Import jwtDecode to decode the token
+// import { jwtDecode } from "jwt-decode"; // Import jwtDecode to decode the token
 import NeedToDepositModal from "../common/NeedToDepositModal"; // Import the new modal
 
 const Lottery = () => {
@@ -114,7 +114,7 @@ const Lottery = () => {
           container
           alignItems="center"
           sx={{
-            mt: 0.5,
+            mt: 0,
             mb: 0,
             display: "flex",
             flexWrap: "nowrap",
