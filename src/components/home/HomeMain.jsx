@@ -270,7 +270,7 @@ const HomeMain = ({ children }) => {
                   <Divider />
                   {/* Gift Icon */}
                   <IconButton sx={{ p: 0.5 }}
-                  onClick={() => navigate("/account/gift-coupon")}>
+                  onClick={() => navigate("/gift-coupon")}>
                     <Gift style={{ color: "white" }} />
                   </IconButton>
 

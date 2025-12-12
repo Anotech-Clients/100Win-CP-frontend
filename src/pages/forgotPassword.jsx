@@ -674,7 +674,7 @@ const ForgotPassword = () => {
                   background:
                     "linear-gradient(180deg,#24ee89,#9fe871)",
                   borderRadius: "2px",
-                  width: "85%",
+                  width: "100%",
                   height: "43px",
                   textTransform: "none",
                 }}

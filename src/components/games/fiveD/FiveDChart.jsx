@@ -165,14 +165,13 @@ const NumberTableWithLines = ({ historyData, selectedTab }) => {
     }
 
     return (
-        <Grid container px={0} sx={{ mt: 4 }}>
+        <Grid container px={0} sx={{ mt: 4, backgroundColor: "linear-gradient(90deg,#24ee89,#9fe871)", }}>
             {columns.map((column, index) => (
                 <Grid
                     item
                     key={column.id}
                     sx={{
                         width: column.width,
-                        backgroundColor: "#cf7c10",
                         color: "white",
                         padding: "4% 5.6%",
                         borderTopLeftRadius: index === 0 ? "5px" : "0",

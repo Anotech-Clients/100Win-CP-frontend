@@ -801,7 +801,7 @@ const Login = () => {
                   fontWeight: "700",
                   fontSize: "18px",
                   textShadow: isLoginButtonActive ? "0 5px 2px rgba(231,65,65,.501961)" : "none",
-                  width: "85%",
+                  // width: "85%",
                   border: "1px solid rgba(0,0,0,.2)",
                   textTransform: "none",
                   height: "42px",
@@ -825,7 +825,7 @@ const Login = () => {
                 style={{
                   borderRadius: "5px",
                   borderColor: "#24ee89",
-                  width: "85%",
+                  // width: "85%",
                   height: "42px",
                 }}
               >

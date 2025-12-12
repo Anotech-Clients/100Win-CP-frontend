@@ -60,25 +60,25 @@ const images = [
     {
         id: 1,
         src: "/assets/clock-unselected.webp",
-        altSrc: "/assets/clock-selected.webp",
+        altSrc: "/assets/clock-selected.svg",
         subtitle: "1min",
     },
     {
         id: 2,
         src: "/assets/clock-unselected.webp",
-        altSrc: "/assets/clock-selected.webp",
+        altSrc: "/assets/clock-selected.svg",
         subtitle: "3min",
     },
     {
         id: 3,
         src: "/assets/clock-unselected.webp",
-        altSrc: "/assets/clock-selected.webp",
+        altSrc: "/assets/clock-selected.svg",
         subtitle: "5min",
     },
     {
         id: 4,
         src: "/assets/clock-unselected.webp",
-        altSrc: "/assets/clock-selected.webp",
+        altSrc: "/assets/clock-selected.svg",
         subtitle: "10min",
     },
 ]

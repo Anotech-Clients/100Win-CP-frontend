@@ -51,14 +51,13 @@ const GameHistory = ({
   }
 
   return (
-    <Grid container px={0} sx={{ backgroundColor: "#323738" }}>
+    <Grid container px={0} sx={{ background: "linear-gradient(90deg,#24ee89,#9fe871)" }}>
       {columns.map((column, index) => (
         <Grid
           item
           key={column.id}
           sx={{
             width: column.width,
-            backgroundColor: "#cf7c10",
             color: "#ffffff",
             padding: "2.5% 5.8%",
             borderTopLeftRadius: index === 0 ? "10px" : "0",

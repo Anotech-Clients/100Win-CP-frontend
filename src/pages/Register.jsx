@@ -617,7 +617,7 @@ const Register = () => {
                   background:
                     "linear-gradient(180deg,#9fe871,#24ee89)",
                   borderRadius: "2px",
-                  width: "85%",
+                  // width: "85%",
                   height: "43px",
                   textShadow: "0 5px 2px rgba(100,35,30,.501961)",
                   textTransform: "none",
@@ -646,7 +646,7 @@ const Register = () => {
                   textTransform: "none",
                   fontSize: "13px",
                   height: "42px",
-                  width: "85%",
+                  // width: "85%",
                 }}
               >
                 <span style={{ color: "#24ee89" }}>I have an account </span>

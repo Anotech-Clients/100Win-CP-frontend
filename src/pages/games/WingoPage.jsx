@@ -53,25 +53,25 @@ const images = [
   {
     id: 4,
     src: "/assets/clock-unselected.webp",
-    altSrc: "/assets/clock-selected.webp",
+    altSrc: "/assets/clock-selected.svg",
     subtitle: "30Sec",
   },
   {
     id: 1,
     src: "/assets/clock-unselected.webp",
-    altSrc: "/assets/clock-selected.webp",
+    altSrc: "/assets/clock-selected.svg",
     subtitle: "1Min",
   },
   {
     id: 2,
     src: "/assets/clock-unselected.webp",
-    altSrc: "/assets/clock-selected.webp",
+    altSrc: "/assets/clock-selected.svg",
     subtitle: "3Min",
   },
   {
     id: 3,
     src: "/assets/clock-unselected.webp",
-    altSrc: "/assets/clock-selected.webp",
+    altSrc: "/assets/clock-selected.svg",
     subtitle: "5Min",
   },
 ];
