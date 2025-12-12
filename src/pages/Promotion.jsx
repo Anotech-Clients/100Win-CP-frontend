@@ -575,7 +575,7 @@ const Promotion = ({ children }) => {
                     xs={12}
                     sx={{
                       borderRadius: "8px 8px 0 0",
-                      backgroundColor: "#cf7c10",
+                      backgroundColor: "#00441b",
                       // borderRight: "1px solid #ccc",
                       padding: "0.6rem",
                       display: "flex",
