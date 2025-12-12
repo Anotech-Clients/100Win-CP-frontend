@@ -370,7 +370,7 @@ const Chart5D = ({ data }) => {
                     disabled={chartPage === 1}
                     sx={{
                         marginRight: "10px",
-                        backgroundColor: "#FED358",
+                        backgroundColor: "#24ee89",
                         "&.Mui-disabled": {
                             backgroundColor: "#3a4142", // Disabled background color
                             color: "#ffffff", // Optional: Change text color for better visibility
@@ -380,7 +380,7 @@ const Chart5D = ({ data }) => {
                 >
                     <ArrowBackIosRoundedIcon style={{ color: chartPage === 1 ? "#ffffff" : "#323738" }} />
                 </Button>
-                <Grid sx={{ display: "flex", alignItems: "center", color: "#B79C8B", fontSize: "12.8px" }}>
+                <Grid sx={{ display: "flex", alignItems: "center", color: "#B3BEC1", fontSize: "12.8px" }}>
                     {chartPage}/{gameTotalPage}
                 </Grid>
                 <Button
@@ -389,7 +389,7 @@ const Chart5D = ({ data }) => {
                     disabled={chartPage === gameTotalPage}
                     sx={{
                         marginLeft: "10px",
-                        backgroundColor: "#FED358",
+                        backgroundColor: "#24ee89",
                         "&.Mui-disabled": {
                             backgroundColor: "#3a4142", // Disabled background color
                             color: "#ffffff", // Optional: Change text color for better visibility

@@ -227,7 +227,7 @@ const RacingMyHistory = ({ bets, isLoading, getGradientForItem, page, setPage, t
                         </Typography>
                         <Typography
                           sx={{
-                            color: "#B79C8B",
+                            color: "#B3BEC1",
                             fontSize: "12px",
                           }}
                         >
@@ -404,7 +404,7 @@ const RacingMyHistory = ({ bets, isLoading, getGradientForItem, page, setPage, t
                           <Typography
                             sx={{
                               fontSize: "15px",
-                              color: "#B79C8B",
+                              color: "#B3BEC1",
                               borderBottom: "none",
                             }}
                           >
@@ -413,7 +413,7 @@ const RacingMyHistory = ({ bets, isLoading, getGradientForItem, page, setPage, t
                           <Typography
                             sx={{
                               fontSize: "15px",
-                              color: row.color || "#B79C8B",
+                              color: row.color || "#B3BEC1",
                               textAlign: "right",
                               borderBottom: "1px solid #3a4142",
                             }}
@@ -531,17 +531,17 @@ const RacingMyHistory = ({ bets, isLoading, getGradientForItem, page, setPage, t
           disabled={page === 1}
           sx={{
             marginRight: "10px",
-            backgroundColor: "#FED358",
+            backgroundColor: "#24ee89",
             "&.Mui-disabled": {
               backgroundColor: "#3a4142",
-              color: "#B79C8B",
+              color: "#B3BEC1",
             },
             "&.MuiButtonBase-root": { minWidth: 0, padding: "5px 7px" },
           }}
         >
-          <ArrowBackIosRoundedIcon style={{ color: page === 1 ? "#B79C8B" : "#323738" }} />
+          <ArrowBackIosRoundedIcon style={{ color: page === 1 ? "#B3BEC1" : "#323738" }} />
         </Button>
-        <Grid sx={{ display: "flex", alignItems: "center", color: "#B79C8B", fontSize: "13px" }}>
+        <Grid sx={{ display: "flex", alignItems: "center", color: "#B3BEC1", fontSize: "13px" }}>
           {page}/{totalPage}
         </Grid>
         <Button
@@ -550,15 +550,15 @@ const RacingMyHistory = ({ bets, isLoading, getGradientForItem, page, setPage, t
           disabled={page >= totalPage}
           sx={{
             marginLeft: "10px",
-            backgroundColor: "#FED358",
+            backgroundColor: "#24ee89",
             "&.Mui-disabled": {
               backgroundColor: "#3a4142",
-              color: "#B79C8B",
+              color: "#B3BEC1",
             },
             "&.MuiButtonBase-root": { minWidth: 0, padding: "5px 7px" },
           }}
         >
-          <ArrowForwardIosRoundedIcon style={{ color: page === totalPage ? "#B79C8B" : "#323738" }} />
+          <ArrowForwardIosRoundedIcon style={{ color: page === totalPage ? "#B3BEC1" : "#323738" }} />
         </Button>
       </Box>
     </Grid>

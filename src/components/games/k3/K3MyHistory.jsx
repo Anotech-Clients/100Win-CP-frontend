@@ -215,7 +215,7 @@ const K3MyHistory = ({ bets, page, setPage, totalPage, hideDetailsButton,insideB
                         </Typography>
                         <Typography
                           sx={{
-                            color: "#B79C8B",
+                            color: "#B3BEC1",
                             fontSize: "12px",
                           }}
                         >
@@ -457,7 +457,7 @@ const K3MyHistory = ({ bets, page, setPage, totalPage, hideDetailsButton,insideB
                               // fontWeight: "bold",
                               fontSize: "15px",
                               // padding: "2px 6px",
-                              color: "#B79C8B",
+                              color: "#B3BEC1",
                               borderBottom: "none",
                             }}
                           >
@@ -466,7 +466,7 @@ const K3MyHistory = ({ bets, page, setPage, totalPage, hideDetailsButton,insideB
                           <Typography
                             sx={{
                               fontSize: "15px",
-                              color: row.color || "#B79C8B",
+                              color: row.color || "#B3BEC1",
                               textAlign: "right",
                               // padding: "2px 6px",
                               borderBottom: "1px solid #3a4142",
@@ -509,7 +509,7 @@ const K3MyHistory = ({ bets, page, setPage, totalPage, hideDetailsButton,insideB
             disabled={page === 1}
             sx={{
               marginRight: "10px",
-              backgroundColor: "#FED358",
+              backgroundColor: "#24ee89",
               "&.Mui-disabled": {
                 backgroundColor: "#5a5145", // Disabled background color
                 color: "#ffffff", // Optional: Change text color for better visibility
@@ -528,7 +528,7 @@ const K3MyHistory = ({ bets, page, setPage, totalPage, hideDetailsButton,insideB
             disabled={page >= totalPage}
             sx={{
               marginLeft: "10px",
-              backgroundColor: "#FED358",
+              backgroundColor: "#24ee89",
               "&.Mui-disabled": {
                 backgroundColor: "#5a5145", // Disabled background color
                 color: "#ffffff", // Optional: Change text color for better visibility

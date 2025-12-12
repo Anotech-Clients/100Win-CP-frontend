@@ -191,7 +191,7 @@ const FiveDMyHistory = ({ bets, page, setPage, hideDetailsButton, totalPage }) =
                   <Box sx={{ display: "flex", alignItems: "center" }}>
                     <Box
                       sx={{
-                        background: "#FED358",
+                        background: "#24ee89",
                         color: "white",
                         height: 36,
                         width: 38,
@@ -211,7 +211,7 @@ const FiveDMyHistory = ({ bets, page, setPage, hideDetailsButton, totalPage }) =
                       <Typography sx={{ fontSize: "15px", color: "#ffffff", mb: 0.5 }}>
                         {String(bet.periodId)}
                       </Typography>
-                      <Typography sx={{ color: "#B79C8B", fontSize: "12px" }}>
+                      <Typography sx={{ color: "#B3BEC1", fontSize: "12px" }}>
                         {bet.timestamp
                           ? new Date(bet.timestamp).toISOString().slice(0, 19).replace("T", " ")
                           : "N/A"}
@@ -315,7 +315,7 @@ const FiveDMyHistory = ({ bets, page, setPage, hideDetailsButton, totalPage }) =
                       {
                         label: "Tax",
                         value: `₹${parseFloat(bet.tax || 0).toFixed(2)}`,
-                        color: "#B79C8B"
+                        color: "#B3BEC1"
                       },
                       {
                         label: "Result", value: (
@@ -387,7 +387,7 @@ const FiveDMyHistory = ({ bets, page, setPage, hideDetailsButton, totalPage }) =
                         value: bet.timestamp
                           ? new Date(bet.timestamp).toISOString().slice(0, 19).replace("T", " ")
                           : "N/A",
-                        color: "#B79C8B"
+                        color: "#B3BEC1"
                       }
                     ].map((item, idx) => (
                       <Grid
@@ -402,12 +402,12 @@ const FiveDMyHistory = ({ bets, page, setPage, hideDetailsButton, totalPage }) =
 
                         }}
                       >
-                        <Typography sx={{ color: "#B79C8B", fontSize: "15px", borderBottom: "none", }}>
+                        <Typography sx={{ color: "#B3BEC1", fontSize: "15px", borderBottom: "none", }}>
                           {item.label}
                         </Typography>
                         <Typography
                           sx={{
-                            color: item.color || "#B79C8B",
+                            color: item.color || "#B3BEC1",
                             fontSize: "15px",
                             textAlign: "right",
                             // padding: "2px 6px",
@@ -448,14 +448,14 @@ const FiveDMyHistory = ({ bets, page, setPage, hideDetailsButton, totalPage }) =
           disabled={page === 1}
           sx={{
             marginRight: "10px",
-            backgroundColor: "#FED358",
-            "&.Mui-disabled": { backgroundColor: "#3a4142", color: "#B79C8B" },
+            backgroundColor: "#24ee89",
+            "&.Mui-disabled": { backgroundColor: "#3a4142", color: "#B3BEC1" },
             "&.MuiButtonBase-root": { minWidth: 0, padding: "5px 7px" },
           }}
         >
-          <ArrowBackIosRoundedIcon style={{ color: page === 1 ? "#B79C8B" : "#323738" }} />
+          <ArrowBackIosRoundedIcon style={{ color: page === 1 ? "#B3BEC1" : "#323738" }} />
         </Button>
-        <Grid sx={{ display: "flex", alignItems: "center", color: "#B79C8B", fontSize: "13px" }}>
+        <Grid sx={{ display: "flex", alignItems: "center", color: "#B3BEC1", fontSize: "13px" }}>
           {page}/{totalPage}
         </Grid>
         <Button
@@ -464,12 +464,12 @@ const FiveDMyHistory = ({ bets, page, setPage, hideDetailsButton, totalPage }) =
           disabled={page >= totalPage}
           sx={{
             marginLeft: "10px",
-            backgroundColor: "#FED358",
-            "&.Mui-disabled": { backgroundColor: "#3a4142", color: "#B79C8B" },
+            backgroundColor: "#24ee89",
+            "&.Mui-disabled": { backgroundColor: "#3a4142", color: "#B3BEC1" },
             "&.MuiButtonBase-root": { minWidth: 0, padding: "5px 7px" },
           }}
         >
-          <ArrowForwardIosRoundedIcon style={{ color: page === totalPage ? "#B79C8B" : "#323738" }} />
+          <ArrowForwardIosRoundedIcon style={{ color: page === totalPage ? "#B3BEC1" : "#323738" }} />
         </Button>
       </Box>
     </Grid>

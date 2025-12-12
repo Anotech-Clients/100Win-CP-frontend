@@ -36,7 +36,7 @@ const FirstDepositCard = ({ bonus, onDeposit, depositType = "FIRST" })  => {
           + ₹{bonus.bonus}.00
         </Typography>
       </Box>
-      <Typography variant="body2" sx={{ color: "#B79C8B", fontSize: "12px", textAlign: "left" }}>
+      <Typography variant="body2" sx={{ color: "#B3BEC1", fontSize: "12px", textAlign: "left" }}>
       Deposit ₹{bonus.minimumDeposit} for the {depositType.toLowerCase()} time and you will receive ₹{bonus.bonus} bonus
       </Typography>
       <Box sx={{ display: "flex", alignItems: "center", position: "relative" }}>
