@@ -99,7 +99,7 @@ const ScrollableTabs = () => {
            <HomeMiniGames onDetailClick={() => handleSwitchToTab("Mini games")}/>
             <HomeCasino onDetailClick={() => handleSwitchToTab("Casino")}/>
             <HomeSlots onDetailClick={() => handleSwitchToTab("Slots")}/>
-              <TopBanner/>
+              {/* <TopBanner/> */}
                      <HomeSports onDetailClick={() => handleSwitchToTab("Sports")}/>
                              <HomeRummy />
                       <HomeFishing onDetailClick={() => handleSwitchToTab("Fishing")}/>
@@ -135,7 +135,7 @@ const ScrollableTabs = () => {
   };
 
   return (
-    <Box sx={{ mt: 3.5, 
+    <Box sx={{
     // mx: "13px"
      }}>
       {/* Scrollable tabs container */}
@@ -217,7 +217,7 @@ const ScrollableTabs = () => {
       </Box> */}
 
       {/* Content area */}
-      <Box sx={{px:2,pt:1,background:"transparent"}}>
+      <Box sx={{px:2,background:"transparent"}}>
         {renderComponent()}
       </Box>
     </Box>
