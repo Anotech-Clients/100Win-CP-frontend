@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Box, Typography } from "@mui/material";
+import { GameContext } from "../../context/GameContext";
 
 export default function TrendingGamesMosaic() {
+    const { handleApiClick } = useContext(GameContext)
     const items = {
         aviator: "/assets/TrendingGames/Aviator_251210_189.webp",
         sevenUp: "/assets/TrendingGames/7up7down_251210_69.webp",
@@ -35,7 +37,7 @@ export default function TrendingGamesMosaic() {
             <Box
                 sx={{
                     display: "grid",
-                    width: "100%",
+                    width: "calc(100% - 20px)",
                     px: "10px",
                     gap: 1.5,
                     pb: 2,
@@ -58,6 +60,7 @@ export default function TrendingGamesMosaic() {
                         width: "100%",
                         paddingBottom: "56.25%", // 16:9 aspect ratio
                     }}
+                    onClick={() => handleApiClick(1,"SPRIBE", "SPRIBE" )}
                 >
                     <Box
                         component="img"
@@ -85,6 +88,7 @@ export default function TrendingGamesMosaic() {
                         width: "100%",
                         paddingBottom: "133.33%", // 3:4 aspect ratio (spans 2 rows)
                     }}
+                    onClick={() => handleApiClick(51,"JILI", "SLOT" )}
                 >
                     <Box
                         component="img"
@@ -112,6 +116,7 @@ export default function TrendingGamesMosaic() {
                         width: "100%",
                         paddingBottom: "56.25%", // 16:9 aspect ratio
                     }}
+                    onClick={() => handleApiClick(52,"JILI", "SLOT" )}
                 >
                     <Box
                         component="img"
@@ -139,6 +144,7 @@ export default function TrendingGamesMosaic() {
                         width: "100%",
                         paddingBottom: "56.25%", // 16:9 aspect ratio
                     }}
+                    onClick={() => handleApiClick(53,"JILI", "SLOT" )}
                 >
                     <Box
                         component="img"
