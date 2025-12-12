@@ -84,14 +84,14 @@ function CollectionRecord() {
           justifyContent="center"
         >
           <IconButton
-            sx={{ color: "#FDE4BC", position: "absolute", left: 0, p: "12px" }}
+            sx={{ color: "#ffffff", position: "absolute", left: 0, p: "12px" }}
             onClick={() => navigate(-1)}
           >
             <ArrowBackIosNewIcon sx={{ fontSize: "19px" }} />
           </IconButton>
           <Typography
             variant="h6"
-            sx={{ color: "#FDE4BC", textAlign: "center", fontSize: "19px" }}
+            sx={{ color: "#ffffff", textAlign: "center", fontSize: "19px" }}
           >
             Receive History
           </Typography>

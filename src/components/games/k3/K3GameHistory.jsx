@@ -74,7 +74,7 @@ const K3GameHistory = ({ data, page, setPage ,totalPage}) => {
             direction="row"
             alignItems="center"
             justifyContent="space-between"
-            color="#FDE4BC"
+            color="#ffffff"
             key={row.id}
             fontSize="0.75rem"
             // fontWeight="bold"

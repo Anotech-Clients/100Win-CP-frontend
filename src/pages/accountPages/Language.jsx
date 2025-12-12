@@ -53,7 +53,7 @@ const Language = () => {
           >
             <IconButton
               sx={{
-                color: "#FDE4BC",
+                color: "#ffffff",
                 position: "absolute",
                 left: 0,
                 p: "12px",
@@ -64,7 +64,7 @@ const Language = () => {
             </IconButton>
             <Typography
               variant="h6"
-              sx={{ color: "#FDE4BC", textAlign: "center", fontSize: "19px" }}
+              sx={{ color: "#ffffff", textAlign: "center", fontSize: "19px" }}
             >
               Language
             </Typography>
@@ -90,7 +90,7 @@ const Language = () => {
           />
           <ListItemText 
             primary="English" 
-            sx={{ color: '#FDE4BC' }}
+            sx={{ color: '#ffffff' }}
           />
          <Checkbox
             checked={selectedLang === 'en'}
@@ -131,7 +131,7 @@ const Language = () => {
           />
           <ListItemText 
             primary="हिंदी" 
-            sx={{ color: '#FDE4BC' }}
+            sx={{ color: '#ffffff' }}
           />
           <Checkbox
             checked={selectedLang === 'hi'}

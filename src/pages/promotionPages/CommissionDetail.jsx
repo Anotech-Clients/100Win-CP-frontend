@@ -150,7 +150,7 @@ const CommissionDetail = () => {
               >
                 <IconButton
                   sx={{
-                    color: "#FDE4BC",
+                    color: "#ffffff",
                     position: "absolute",
                     left: 0,
                     p: "12px",
@@ -162,7 +162,7 @@ const CommissionDetail = () => {
                 <Typography
                   variant="h6"
                   sx={{
-                    color: "#FDE4BC",
+                    color: "#ffffff",
                     textAlign: "center",
                     fontSize: "19px",
                   }}
@@ -335,7 +335,7 @@ const CommissionDetail = () => {
                     <Typography variant="body2">{item.label}</Typography>
                     <Typography
                       variant="body2"
-                      sx={{ color: item.valueColor || "#FDE4BC" }}
+                      sx={{ color: item.valueColor || "#ffffff" }}
                     >
                       {item.value}
                     </Typography>

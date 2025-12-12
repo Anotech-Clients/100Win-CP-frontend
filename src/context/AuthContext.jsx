@@ -373,7 +373,7 @@ Ready to upgrade? Contact us today!`;
   };
   
   useEffect(() => {
-    if (location.pathname !== "/register" && location.pathname !== "/" && location.pathname !== "/forgot-password" && location.pathname !== "/customer-telegram" && location.pathname !== "/tms/change-password") {
+    if (location.pathname !== "/register" && location.pathname !== "/login" && location.pathname !== "/" && location.pathname !== "/forgot-password" && location.pathname !== "/customer-telegram" && location.pathname !== "/tms/change-password") {
       checkAuthStatus();
     } else {
       setIsLoading(false);
@@ -434,7 +434,7 @@ Ready to upgrade? Contact us today!`;
       setIsDemoAdmin(false);
       
       if (!silent) {
-        navigate("/login", { replace: true });
+        navigate("/", { replace: true });
       }
     }
   };

@@ -46,7 +46,7 @@ const TelegramFloat = () => {
             className="draggable-button"
             style={{
                 position: "fixed",
-                bottom: 236,
+                bottom: 180,
                 right: 10,
                 zIndex: 1000,
                 cursor: "pointer",

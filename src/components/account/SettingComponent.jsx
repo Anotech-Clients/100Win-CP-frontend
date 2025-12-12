@@ -178,7 +178,7 @@ function SettingComponent() {
                 sx={{ color: "rgb(99, 99, 99)" ,p:0}}
                 onClick={handleOpenChangeUsername}
               >
-                <span style={{color:"#FDE4BC"}}>{userData ? userData.userName : "Loading..."}</span>
+                <span style={{color:"#ffffff"}}>{userData ? userData.userName : "Loading..."}</span>
                 <KeyboardArrowRightIcon />
               </Button>
             </div>
@@ -189,7 +189,7 @@ function SettingComponent() {
           <div className="settingpage-uid">
             <h4>UID</h4>
             <div className="uid">
-              <span style={{color:"#FDE4BC"}}>{userData && userData.uid ? userData.uid : "Loading..."}</span>
+              <span style={{color:"#ffffff"}}>{userData && userData.uid ? userData.uid : "Loading..."}</span>
               {/* <ContentCopyIcon onClick={handleCopy} sx={{ color: "rgb(240,150,14)" }} /> */}
                 <IconButton onClick={handleCopy} sx={{ p: 0 }}>
                                   <img
@@ -205,7 +205,7 @@ function SettingComponent() {
       <div className="bottom-page">
         <div
           className="bottom-heading"
-          style={{ textAlign: "left", color: "#FDE4BC" ,marginBottom:"15px"}}
+          style={{ textAlign: "left", color: "#ffffff" ,marginBottom:"15px"}}
         >
           
           <h3 style={{display:"flex",gap:"10px"}}> <Grid
@@ -287,7 +287,7 @@ function SettingComponent() {
                                       alt="logo"
                                       style={{ width: "25px"}}
                                     />
-                    <Box sx={{ color: '#FDE4BC', fontSize: '16px' }}>Nickname</Box>
+                    <Box sx={{ color: '#ffffff', fontSize: '16px' }}>Nickname</Box>
                   </Box>
 
                   <TextField
@@ -305,7 +305,7 @@ function SettingComponent() {
                         backgroundColor: 'rgba(0, 0, 0, 0.3)',
                         borderRadius: "50px",
                         height: "50px",
-                        color: '#FDE4BC',
+                        color: '#ffffff',
                         '& fieldset': {
                           borderColor: 'transparent'
                         },
@@ -317,7 +317,7 @@ function SettingComponent() {
                         }
                       },
                       '& .MuiInputBase-input::placeholder': {
-                        color: '#FDE4BC',
+                        color: '#ffffff',
                         opacity: 1
                       }
                     }}

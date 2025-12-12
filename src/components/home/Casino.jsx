@@ -162,7 +162,7 @@ const Casino = () => {
             <Box sx={{}}>
                 <Grid item sx={{ display: "flex", alignItems: "center", flexShrink: 0 }}>
                     <img src="/assets/gameFilter/casino.webp" alt="" width="21px" />
-                    <Typography sx={{ fontSize: "16px", color: "#FDE4BC", mx: 1, whiteSpace: "nowrap", fontWeight:"bold",
+                    <Typography sx={{ fontSize: "16px", color: "#ffffff", mx: 1, whiteSpace: "nowrap", fontWeight:"bold",
                 fontFamily: "'Times New Roman', Times, serif !important", }}>
                         Casino
                     </Typography>

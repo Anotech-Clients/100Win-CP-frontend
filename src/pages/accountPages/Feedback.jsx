@@ -98,7 +98,7 @@ const Feedback = () => {
           >
             <IconButton
               sx={{
-                color: "#FDE4BC",
+                color: "#ffffff",
                 position: "absolute",
                 left: 0,
                 p: "12px",
@@ -109,7 +109,7 @@ const Feedback = () => {
             </IconButton>
             <Typography
               variant="h6"
-              sx={{ color: "#FDE4BC", textAlign: "center", fontSize: "19px" }}
+              sx={{ color: "#ffffff", textAlign: "center", fontSize: "19px" }}
             >
               Feedback
             </Typography>
@@ -149,7 +149,7 @@ const Feedback = () => {
             }}
             sx={{ mb: 2, width: "100%", maxWidth: "600px" }} // You can adjust the maxWidth as needed
           />
-          <Box sx={{ textAlign: "center", my: 2, color: "#FDE4BC" }}>
+          <Box sx={{ textAlign: "center", my: 2, color: "#ffffff" }}>
             <Typography variant="body1" fontSize={"15px"}>
               Send helpful feedback
             </Typography>

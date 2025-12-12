@@ -267,7 +267,7 @@ const InvitationRule = ({ children }) => {
           >
             <IconButton
               sx={{
-                color: "#FDE4BC",
+                color: "#ffffff",
                 position: "absolute",
                 left: 0,
                 p: "12px",
@@ -278,7 +278,7 @@ const InvitationRule = ({ children }) => {
             </IconButton>
             <Typography
               variant="h6"
-              sx={{ color: "#FDE4BC", textAlign: "center", fontSize: "19px" }}
+              sx={{ color: "#ffffff", textAlign: "center", fontSize: "19px" }}
             >
                 Rules
             </Typography>
@@ -336,7 +336,7 @@ const InvitationRule = ({ children }) => {
                       justifyContent: "center",
                       alignItems: "center-top",
                       fontWeight: "bold",
-                      color: "#FDE4BC",
+                      color: "#ffffff",
                       mb: 1,
                       mt:-1,
                       fontSize:"13px"
@@ -538,7 +538,7 @@ const InvitationRule = ({ children }) => {
                       justifyContent: "center",
                       alignItems: "center-top",
                       fontWeight: "bold",
-                      color: "#FDE4BC",
+                      color: "#ffffff",
                       mb: 1,
                       mt:-1,
                       fontSize:"13px"

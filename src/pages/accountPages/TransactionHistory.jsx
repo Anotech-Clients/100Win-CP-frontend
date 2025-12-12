@@ -418,7 +418,7 @@ const TransactionHistory = () => {
           <Grid item xs={12} container alignItems="center" justifyContent="center">
             <IconButton
               sx={{
-                color: "#FDE4BC",
+                color: "#ffffff",
                 position: "absolute",
                 left: 0,
                 p: "12px",
@@ -430,7 +430,7 @@ const TransactionHistory = () => {
             <Typography
               variant="h6"
               sx={{
-                color: "#FDE4BC",
+                color: "#ffffff",
                 textAlign: "center",
                 fontSize: "19px",
                 fontWeight: "semi-bold",
@@ -529,7 +529,7 @@ const TransactionHistory = () => {
                           borderTopRightRadius: "4px",
                         }}
                       >
-                        <Typography variant="subtitle1" sx={{ fontWeight: "normal", color: "#FDE4BC" }}>
+                        <Typography variant="subtitle1" sx={{ fontWeight: "normal", color: "#ffffff" }}>
                           {cardTitle}
                         </Typography>
                       </Box>

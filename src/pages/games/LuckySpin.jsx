@@ -80,7 +80,7 @@ const LuckySpin = () => {
                 >
                     <Grid item xs={2}>
                         <IconButton
-                            sx={{ color: "#FDE4BC", ml: -2 }} // White color for the icon
+                            sx={{ color: "#ffffff", ml: -2 }} // White color for the icon
                             onClick={handleBackClick}
                         >
                             <ArrowBackIosNewIcon sx={{ fontSize: "19px" }} />
@@ -90,7 +90,7 @@ const LuckySpin = () => {
                         <Typography
                             variant="h6"
                             sx={{
-                                color: "#FDE4BC", // White color for the text
+                                color: "#ffffff", // White color for the text
                                 flexGrow: 1,
                                 textAlign: "center",
                                 mr: 8,
@@ -124,7 +124,7 @@ const LuckySpin = () => {
                                 fontWeight: "bold",
                                 mb: 2,
                                 fontSize: "13.8px",
-                                color: "#FDE4BC",
+                                color: "#ffffff",
                             }}
                         >
                             Today
@@ -140,7 +140,7 @@ const LuckySpin = () => {
                                 mb: 2,
                             }}
                         >
-                            <Typography sx={{ color: "#FDE4BC", fontSize: "14px" }}>Today Recharge</Typography>
+                            <Typography sx={{ color: "#ffffff", fontSize: "14px" }}>Today Recharge</Typography>
                             <Box
                                 sx={{
                                     display: "flex",
@@ -181,7 +181,7 @@ const LuckySpin = () => {
                                 borderRadius: "8px",
                             }}
                         >
-                            <Typography sx={{ color: "#FDE4BC", fontSize: "14px" }}>Number of spins</Typography>
+                            <Typography sx={{ color: "#ffffff", fontSize: "14px" }}>Number of spins</Typography>
                             <Typography sx={{ color: "#ff0000", fontWeight: "bold", fontSize: "14px" }}>
                                 {spinInfo.remainingSpins}/{spinInfo.totalSpins}
                             </Typography>
@@ -239,7 +239,7 @@ const LuckySpin = () => {
                                 </svg>
                             </span>
                             <p
-                                style={{ margin: "0px", fontSize: "12px", fontWeight: "medium", color: "#FDE4BC" }}
+                                style={{ margin: "0px", fontSize: "12px", fontWeight: "medium", color: "#ffffff" }}
                             >
                                 Event Description
                             </p>
@@ -276,7 +276,7 @@ const LuckySpin = () => {
                                 </svg>
                             </span>
                             <p
-                                style={{ margin: "0px", fontSize: "12px", fontWeight: "medium", color: "#FDE4BC" }}
+                                style={{ margin: "0px", fontSize: "12px", fontWeight: "medium", color: "#ffffff" }}
                             >
                                 Event Details
                             </p>
@@ -311,14 +311,14 @@ const LuckySpin = () => {
                                 </svg>
                             </span>
                             <p
-                                style={{ margin: "0px", fontSize: "12px", fontWeight: "medium", color: "#FDE4BC" }}
+                                style={{ margin: "0px", fontSize: "12px", fontWeight: "medium", color: "#ffffff" }}
                             >
                                 Activity Rules
                             </p>
                         </Grid>
                     </Grid>
                     {/* History Section */}
-                    <Box sx={{ color: "#FDE4BC", mb: 2 }}>
+                    <Box sx={{ color: "#ffffff", mb: 2 }}>
                         <Typography
                             variant="h6"
                             sx={{
@@ -383,17 +383,17 @@ const LuckySpin = () => {
                             <TableHead>
                                 <TableRow >
                                     <TableCell
-                                        sx={{ color: "#FDE4BC", textAlign: "center", padding: 1, borderBottom: "none" }}
+                                        sx={{ color: "#ffffff", textAlign: "center", padding: 1, borderBottom: "none" }}
                                     >
                                         Spin Time
                                     </TableCell>
                                     <TableCell
-                                        sx={{ color: "#FDE4BC", textAlign: "center", padding: 1, borderBottom: "none" }}
+                                        sx={{ color: "#ffffff", textAlign: "center", padding: 1, borderBottom: "none" }}
                                     >
                                         Reward Type
                                     </TableCell>
                                     <TableCell
-                                        sx={{ color: "#FDE4BC", textAlign: "center", padding: 1, borderBottom: "none" }}
+                                        sx={{ color: "#ffffff", textAlign: "center", padding: 1, borderBottom: "none" }}
                                     >
                                         Prize
                                     </TableCell>
@@ -421,7 +421,7 @@ const LuckySpin = () => {
                                                 alt="No data"
                                                 style={{ width: "60%", marginBottom: "8px" }}
                                             />
-                                            <Typography variant="body2" sx={{ color: "#FDE4BC" }}>
+                                            <Typography variant="body2" sx={{ color: "#ffffff" }}>
                                                 No spins today.
                                             </Typography>
                                         </TableCell>

@@ -81,7 +81,7 @@ const GameHistory = ({ data, page, setPage, totalPage }) => {
                 alignItems: "center",
                 justifyContent: "left",
                 fontSize: "13px",
-                color: "#FDE4BC",
+                color: "#ffffff",
                 // fontWeight: "bold"
               }}
             >
@@ -138,7 +138,7 @@ const GameHistory = ({ data, page, setPage, totalPage }) => {
                 justifyContent: "center",
                 textTransform: "capitalize",
                 fontSize: "13px",
-                color: "#FDE4BC",
+                color: "#ffffff",
                 // fontWeight: "bold"
               }}
             >

@@ -125,9 +125,9 @@ setPopupMessage("All fields are required!");
                 }
             }}>
                 {/* Header */}
-                <Box sx={{ bgcolor: "#232626", padding: "8px 10px", display: "flex", alignItems: "center", color: "#FDE4BC" }}>
+                <Box sx={{ bgcolor: "#232626", padding: "8px 10px", display: "flex", alignItems: "center", color: "#ffffff" }}>
                     <ChevronLeftIcon sx={{ fontSize: 30, cursor: "pointer" }} onClick={() => navigate(-1)} />
-                    <Typography variant="h6" sx={{ flexGrow: 1, textAlign: "center", color: "#FDE4BC" }}>
+                    <Typography variant="h6" sx={{ flexGrow: 1, textAlign: "center", color: "#ffffff" }}>
                         Modify Bank Details
                     </Typography>
                     <HomeIcon sx={{ fontSize: 30, cursor: "pointer" }} onClick={() => navigate("/")} />
@@ -136,7 +136,7 @@ setPopupMessage("All fields are required!");
                 {/* Form Fields */}
                 <Box sx={{ m: 2, textAlign: "left" }}>
                     {/* User ID */}
-                    <Typography variant="subtitle1" sx={{ color: "#FDE4BC", mt: 1, mb: 1, }}>
+                    <Typography variant="subtitle1" sx={{ color: "#ffffff", mt: 1, mb: 1, }}>
                         Select modification <span style={{ color: "red" }}>*</span>
                     </Typography>
                     <Select
@@ -179,7 +179,7 @@ setPopupMessage("All fields are required!");
                     </Select>
 
                     {/* Old Bank Details */}
-                    <Typography variant="subtitle1" sx={{ color: "#FDE4BC", mt: 3, mb: 1, }}>Old Bank Name <span style={{ color: "red" }}>*</span></Typography>
+                    <Typography variant="subtitle1" sx={{ color: "#ffffff", mt: 3, mb: 1, }}>Old Bank Name <span style={{ color: "red" }}>*</span></Typography>
                     <TextField
                         fullWidth
                         variant="outlined"
@@ -189,7 +189,7 @@ setPopupMessage("All fields are required!");
                         sx={inputStyles}
                     />
 
-                    <Typography variant="subtitle1" sx={{ color: "#FDE4BC", mt: 3, mb: 1, }}>Old Beneficiary Name <span style={{ color: "red" }}>*</span></Typography>
+                    <Typography variant="subtitle1" sx={{ color: "#ffffff", mt: 3, mb: 1, }}>Old Beneficiary Name <span style={{ color: "red" }}>*</span></Typography>
                     <TextField
                         fullWidth
                         variant="outlined"
@@ -199,7 +199,7 @@ setPopupMessage("All fields are required!");
                         sx={inputStyles}
                     />
 
-                    <Typography variant="subtitle1" sx={{ color: "#FDE4BC", mt: 3, mb: 1, }}>Old Account Number <span style={{ color: "red" }}>*</span></Typography>
+                    <Typography variant="subtitle1" sx={{ color: "#ffffff", mt: 3, mb: 1, }}>Old Account Number <span style={{ color: "red" }}>*</span></Typography>
                     <TextField
                         fullWidth
                         variant="outlined"
@@ -209,7 +209,7 @@ setPopupMessage("All fields are required!");
                         sx={inputStyles}
                     />
 
-                    <Typography variant="subtitle1" sx={{ color: "#FDE4BC", mt: 3, mb: 1, }}>Old IFSC Code <span style={{ color: "red" }}>*</span></Typography>
+                    <Typography variant="subtitle1" sx={{ color: "#ffffff", mt: 3, mb: 1, }}>Old IFSC Code <span style={{ color: "red" }}>*</span></Typography>
                     <TextField
                         fullWidth
                         variant="outlined"
@@ -220,7 +220,7 @@ setPopupMessage("All fields are required!");
                     />
 
                     {/* New Bank Details */}
-                    <Typography variant="subtitle1" sx={{ color: "#FDE4BC", mt: 3, mb: 1, }}>New Bank Name <span style={{ color: "red" }}>*</span></Typography>
+                    <Typography variant="subtitle1" sx={{ color: "#ffffff", mt: 3, mb: 1, }}>New Bank Name <span style={{ color: "red" }}>*</span></Typography>
                     <TextField
                         fullWidth
                         variant="outlined"
@@ -230,7 +230,7 @@ setPopupMessage("All fields are required!");
                         sx={inputStyles}
                     />
 
-                    <Typography variant="subtitle1" sx={{ color: "#FDE4BC", mt: 3, mb: 1, }}>New Beneficiary Name <span style={{ color: "red" }}>*</span></Typography>
+                    <Typography variant="subtitle1" sx={{ color: "#ffffff", mt: 3, mb: 1, }}>New Beneficiary Name <span style={{ color: "red" }}>*</span></Typography>
                     <TextField
                         fullWidth
                         variant="outlined"
@@ -240,7 +240,7 @@ setPopupMessage("All fields are required!");
                         sx={inputStyles}
                     />
 
-                    <Typography variant="subtitle1" sx={{ color: "#FDE4BC", mt: 3, mb: 1, }}>New Account Number <span style={{ color: "red" }}>*</span></Typography>
+                    <Typography variant="subtitle1" sx={{ color: "#ffffff", mt: 3, mb: 1, }}>New Account Number <span style={{ color: "red" }}>*</span></Typography>
                     <TextField
                         fullWidth
                         variant="outlined"
@@ -250,7 +250,7 @@ setPopupMessage("All fields are required!");
                         sx={inputStyles}
                     />
 
-                    <Typography variant="subtitle1" sx={{ color: "#FDE4BC", mt: 3, mb: 1, }}>New IFSC Code <span style={{ color: "red" }}>*</span></Typography>
+                    <Typography variant="subtitle1" sx={{ color: "#ffffff", mt: 3, mb: 1, }}>New IFSC Code <span style={{ color: "red" }}>*</span></Typography>
                     <TextField
                         fullWidth
                         variant="outlined"
@@ -261,11 +261,11 @@ setPopupMessage("All fields are required!");
                     />
 
                     {/* Bank Details Screenshot */}
-                    <Typography variant="subtitle1" sx={{ color: "#FDE4BC", mt: 3, mb: 1, }}>Bank Details Screenshot <span style={{ color: "red" }}>*</span> <span style={{ fontStyle: "italic", opacity: 0.7, fontSize: "12px" }}>
+                    <Typography variant="subtitle1" sx={{ color: "#ffffff", mt: 3, mb: 1, }}>Bank Details Screenshot <span style={{ color: "red" }}>*</span> <span style={{ fontStyle: "italic", opacity: 0.7, fontSize: "12px" }}>
                     ( Upto <span style={{ color: "red" }}>2 mb</span> )</span></Typography>
                     <Box component="label" sx={{ width: 100, height: 100, bgcolor: "#323738", display: "flex", alignItems: "center", justifyContent: "center", borderRadius: 2, cursor: "pointer", overflow: "hidden", border: "1px solid #3B3833" }}>
                         {screenshot ? <img src={URL.createObjectURL(screenshot)} alt="Screenshot" style={{ width: "100%", height: "100%", objectFit: "cover" }} /> :
-                            <AddPhotoAlternateIcon sx={{ color: "#FDE4BC", fontSize: 45 }} />}
+                            <AddPhotoAlternateIcon sx={{ color: "#ffffff", fontSize: 45 }} />}
                         <input type="file" accept="image/*" hidden onChange={handleImageUpload} />
                     </Box>
 

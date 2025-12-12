@@ -120,7 +120,7 @@ const LuckyTenDaysInterest = () => {
                 <Box>
                     <Typography
                         sx={{
-                            color: '#FDE4BC',
+                            color: '#ffffff',
                             fontSize: 16,
                             mb: 3,
                             zIndex: 3,
@@ -336,7 +336,7 @@ const LuckyTenDaysInterest = () => {
             }}>
                 <Typography
                     sx={{
-                        color: '#FDE4BC',
+                        color: '#ffffff',
                         fontSize: 16,
                         // fontWeight: 'bold',
                         mb: 4,
@@ -382,7 +382,7 @@ const LuckyTenDaysInterest = () => {
                             >
                                 <Box sx={{ display: 'flex', alignItems: 'center' }}>
 
-                                    <Typography sx={{ color: isChecked ? 'grey' : "#FDE4BC", mr: 2, fontSize: 10, ml: 1 }}>
+                                    <Typography sx={{ color: isChecked ? 'grey' : "#ffffff", mr: 2, fontSize: 10, ml: 1 }}>
                                         ₹{ruleDetails?.rechargeRequired}
                                     </Typography>
                                 </Box>
@@ -456,7 +456,7 @@ const LuckyTenDaysInterest = () => {
                 margin: 0,
                 padding: 0,
                 bgcolor: '#232626',
-                color: '#FDE4BC'
+                color: '#ffffff'
             }}
         >
             <Grid sx={{ display: "flex", justifyContent: "space-between", position: "relative", mb: 4 }}>

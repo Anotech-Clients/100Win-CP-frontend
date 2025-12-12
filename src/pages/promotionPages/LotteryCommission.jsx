@@ -72,7 +72,7 @@ useEffect(() => {
             >
               <IconButton
                 sx={{
-                  color: "#FDE4BC",
+                  color: "#ffffff",
                   position: "absolute",
                   left: 0,
                   p: "12px",
@@ -83,7 +83,7 @@ useEffect(() => {
               </IconButton>
               <Typography
                 variant="h6"
-                sx={{ color: "#FDE4BC", textAlign: "center", fontSize: "19px" }}
+                sx={{ color: "#ffffff", textAlign: "center", fontSize: "19px" }}
               >
                 Details
               </Typography>
@@ -123,7 +123,7 @@ const DetailsBox = ({ selectedDate, commissionData }) => (
     <Typography
       variant="body2"
       sx={{
-        color: "#FDE4BC",
+        color: "#ffffff",
         marginBottom: "8px",
         textAlign: "start",
       }}
@@ -137,14 +137,14 @@ const DetailsBox = ({ selectedDate, commissionData }) => (
       }}
     ></Box>
     <Grid container spacing={1}>
-      <Grid item xs={12} container justifyContent="space-between" color="#FDE4BC">
+      <Grid item xs={12} container justifyContent="space-between" color="#ffffff">
         <Typography variant="body2" >Total number of bettors</Typography>
         <Typography variant="body2" sx={{ fontWeight: "bold" }}>
           {commissionData.totalBettors ?? 0} People
         </Typography>
       </Grid>
 
-      <Grid item xs={12} container justifyContent="space-between" color="#FDE4BC">
+      <Grid item xs={12} container justifyContent="space-between" color="#ffffff">
         <Typography variant="body2">Total Invested amount</Typography>
         <Typography
           variant="body2"
@@ -154,7 +154,7 @@ const DetailsBox = ({ selectedDate, commissionData }) => (
         </Typography>
       </Grid>
 
-      <Grid item xs={12} container justifyContent="space-between" color="#FDE4BC">
+      <Grid item xs={12} container justifyContent="space-between" color="#ffffff">
         <Typography variant="body2">Total commission settlement</Typography>
         <Typography variant="body2" sx={{ fontWeight: "bold" }}>
           ₹{commissionData.totalCommissionPayout ?? 0}
@@ -168,8 +168,8 @@ const DetailsBox = ({ selectedDate, commissionData }) => (
         textAlign: "center",
         padding: "8px 16px",
         borderRadius: "24px",
-        border: "1px solid #FDE4BC",
-        color: "#FDE4BC",
+        border: "1px solid #ffffff",
+        color: "#ffffff",
         fontWeight: "bold",
         cursor: "pointer",
         // "&:hover": {
@@ -191,7 +191,7 @@ const CommissionDetailsBox = ({ commissionData, levels }) => {
         borderRadius: "8px",
         // padding: "16px",
         backgroundColor: "#323738",
-        color: "#FDE4BC",
+        color: "#ffffff",
         maxWidth: "400px",
         margin: "16px auto",
         boxShadow: "0px 2px 10px rgba(0, 0, 0, 0.1)",

@@ -1848,7 +1848,7 @@ const WingoPage = ({ timerKey }) => {
                   <Grid container justifyContent="space-between" alignItems={"center"}>
                     <Typography
                       variant="h6"
-                      sx={{ color: "#FDE4BC", fontSize: isSmallScreen2 ? "15px" : "17px" }}
+                      sx={{ color: "#ffffff", fontSize: isSmallScreen2 ? "15px" : "17px" }}
                     >
                       Balance
                     </Typography>
@@ -1874,7 +1874,7 @@ const WingoPage = ({ timerKey }) => {
                               fontSize: "17px"
                             }
                             : {
-                              backgroundColor: "#382e35", color: "#FDE4BC", minWidth: "30px",
+                              backgroundColor: "#382e35", color: "#ffffff", minWidth: "30px",
                               padding: "2px 6px",
                               fontSize: "17px"
                             }
@@ -1907,7 +1907,7 @@ const WingoPage = ({ timerKey }) => {
                               fontSize: "17px"
                             }
                             : {
-                              backgroundColor: "#382e35", color: "#FDE4BC", minWidth: "30px",
+                              backgroundColor: "#382e35", color: "#ffffff", minWidth: "30px",
                               padding: "2px 6px",
                               fontSize: "17px"
                             }
@@ -1939,7 +1939,7 @@ const WingoPage = ({ timerKey }) => {
                               fontSize: "17px"
                             }
                             : {
-                              backgroundColor: "#382e35", color: "#FDE4BC", minWidth: "30px",
+                              backgroundColor: "#382e35", color: "#ffffff", minWidth: "30px",
                               padding: "2px 6px",
                               fontSize: "17px"
                             }
@@ -1971,7 +1971,7 @@ const WingoPage = ({ timerKey }) => {
                               fontSize: "17px"
                             }
                             : {
-                              backgroundColor: "#382e35", color: "#FDE4BC", minWidth: "30px",
+                              backgroundColor: "#382e35", color: "#ffffff", minWidth: "30px",
                               padding: "2px 6px",
                               fontSize: "17px"
                             }
@@ -1995,7 +1995,7 @@ const WingoPage = ({ timerKey }) => {
                       justifyContent="space-between"
                       align="center"
                       alignItems="center"
-                      sx={{ color: "#FDE4BC", flexWrap: "nowrap" }}
+                      sx={{ color: "#ffffff", flexWrap: "nowrap" }}
                     >
                       <Typography
                         variant="h6"
@@ -2033,11 +2033,11 @@ const WingoPage = ({ timerKey }) => {
                             borderRadius: 15,
                             height: isSmallScreen2 ? 25 : 30,
                             backgroundColor: "#232626",
-                            color: "#FDE4BC",
+                            color: "#ffffff",
                           }}
                           InputProps={{
                             style: {
-                              color: "#FDE4BC",
+                              color: "#ffffff",
                               borderRadius: 15,
                               height: isSmallScreen2 ? 25 : 30,
                               fontSize: isSmallScreen2 ? "15px" : "17px",
@@ -2055,11 +2055,11 @@ const WingoPage = ({ timerKey }) => {
                       justifyContent="space-between"
                       align="center"
                       alignItems="center"
-                      sx={{ color: "#FDE4BC" }}>
+                      sx={{ color: "#ffffff" }}>
 
                       <Typography
                         variant="h6"
-                        sx={{ color: "#FDE4BC", fontSize: isSmallScreen2 ? "15px" : "17px" }}
+                        sx={{ color: "#ffffff", fontSize: isSmallScreen2 ? "15px" : "17px" }}
                       >
                         Quantity
                       </Typography>
@@ -2150,7 +2150,7 @@ const WingoPage = ({ timerKey }) => {
                   <Grid
                     container
                     justifyContent="flex-end"
-                    sx={{ color: "#FDE4BC" }}
+                    sx={{ color: "#ffffff" }}
                   >
                     {[1, 5, 10, 20, 50, 100].map((value) => (
                       <div
@@ -2178,7 +2178,7 @@ const WingoPage = ({ timerKey }) => {
                                   : selectedColor,
                               color: "white",
                             }
-                            : { backgroundColor: "#382e35", color: "#FDE4BC" }),
+                            : { backgroundColor: "#382e35", color: "#ffffff" }),
                         }}
                       >
                         X{value}

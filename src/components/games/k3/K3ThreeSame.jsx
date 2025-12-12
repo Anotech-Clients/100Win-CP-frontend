@@ -32,7 +32,7 @@ const K3ThreeSame = ({
           <Typography
             variant="body1"
             align="left"
-            color="#FDE4BC"
+            color="#ffffff"
             fontSize={14}
           >
             {item.label}
@@ -79,7 +79,7 @@ const K3ThreeSame = ({
                       position: "relative",
                       color: selectedNumbers1.toString() === value.toString()
                         ? "white"
-                        : "#FDE4BC",
+                        : "#ffffff",
                       marginTop: "5px",
                       marginBottom: "8px",
                       opacity: selectedNumbers1.toString() === value.toString() ? 1 : 0.5,

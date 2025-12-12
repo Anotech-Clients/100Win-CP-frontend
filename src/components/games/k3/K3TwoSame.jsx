@@ -68,7 +68,7 @@ const K3TwoSame = ({ onBetSelect, handleOpenDrawer, handleEventSelection }) => {
         <div key={typeIndex} style={{ marginTop: "5px" }}>
           <Typography
             variant="body1"
-            color="#FDE4BC"
+            color="#ffffff"
             align="left"
             fontSize={14}
           >

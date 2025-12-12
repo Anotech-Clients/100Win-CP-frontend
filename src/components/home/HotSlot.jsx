@@ -66,7 +66,7 @@ const HotSlot = () => {
             <Typography
               sx={{
                 fontSize: "16px",
-                color: "#FDE4BC",
+                color: "#ffffff",
                 marginRight: "12px",
                 marginLeft: "7px",
                 whiteSpace: "nowrap",
@@ -183,7 +183,7 @@ const HotSlot = () => {
             <Typography
               sx={{
                 fontSize: "16px",
-                color: "#FDE4BC",
+                color: "#ffffff",
                 marginRight: "12px",
                 marginLeft: "7px",
                 whiteSpace: "nowrap",

@@ -1473,7 +1473,7 @@ const CarRacingPage = ({ timerKey }) => {
                                         <Typography
                                             variant="h6"
                                             sx={{
-                                                color: "#FDE4BC",
+                                                color: "#ffffff",
                                                 fontSize: "0.85rem",
                                                 mr: 1,
                                                 alignContent: "center",
@@ -1540,7 +1540,7 @@ const CarRacingPage = ({ timerKey }) => {
                                     <Grid container justifyContent="space-between">
                                         <Typography
                                             variant="h6"
-                                            sx={{ color: "#FDE4BC", fontSize: "1rem" }}
+                                            sx={{ color: "#ffffff", fontSize: "1rem" }}
                                         >
                                             Balance
                                         </Typography>
@@ -1575,7 +1575,7 @@ const CarRacingPage = ({ timerKey }) => {
                                             direction="row"
                                             justifyContent="space-between"
                                             alignItems="center"
-                                            sx={{ color: "#FDE4BC", flexWrap: "nowrap" }}
+                                            sx={{ color: "#ffffff", flexWrap: "nowrap" }}
 
                                         >
                                             <Typography
@@ -1614,11 +1614,11 @@ const CarRacingPage = ({ timerKey }) => {
                                                         borderRadius: 15,
                                                         height: isSmallScreen2 ? 25 : 30,
                                                         backgroundColor: "#232626",
-                                                        color: "#FDE4BC",
+                                                        color: "#ffffff",
                                                     }}
                                                     InputProps={{
                                                         style: {
-                                                            color: "#FDE4BC",
+                                                            color: "#ffffff",
                                                             borderRadius: 15,
                                                             height: isSmallScreen2 ? 25 : 30,
                                                             fontSize: isSmallScreen2 ? "15px" : "17px",
@@ -1636,12 +1636,12 @@ const CarRacingPage = ({ timerKey }) => {
                                             justifyContent="space-between"
                                             align="center"
                                             alignItems="center"
-                                            sx={{ color: "#FDE4BC" }}>
+                                            sx={{ color: "#ffffff" }}>
 
 
                                             <Typography
                                                 variant="h6"
-                                                sx={{ color: "#FDE4BC", fontSize: isSmallScreen2 ? "15px" : "17px" }}
+                                                sx={{ color: "#ffffff", fontSize: isSmallScreen2 ? "15px" : "17px" }}
                                             >
                                                 Quantity
                                             </Typography>

@@ -64,7 +64,7 @@ const Rule = () => {
             >
               <IconButton
                 sx={{
-                  color: "#FDE4BC",
+                  color: "#ffffff",
                   position: "absolute",
                   left: 0,
                   p: "12px",
@@ -75,7 +75,7 @@ const Rule = () => {
               </IconButton>
               <Typography
                 variant="h6"
-                sx={{ color: "#FDE4BC", textAlign: "center", fontSize: "19px" }}
+                sx={{ color: "#ffffff", textAlign: "center", fontSize: "19px" }}
               >
                 Rule
               </Typography>
@@ -180,7 +180,7 @@ const Rule = () => {
                 display: "flex",
                 alignItems: "center",
                 fontWeight: "bold",
-                color: "#FDE4BC",
+                color: "#ffffff",
                 fontSize: "17px",
               }}
             >
@@ -252,7 +252,7 @@ const Rule = () => {
                       </TableCell>
                       <TableCell
                         sx={{
-                          color: "#FDE4BC",
+                          color: "#ffffff",
                           borderBottom: "transparent",
                           textAlign: "center",
                           padding: "9px",

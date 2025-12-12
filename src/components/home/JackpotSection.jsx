@@ -4,13 +4,14 @@ import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 
 const JackpotSection = () => {
     return (
-        <Box sx={{ mx: 2 }}>
+        <Box sx={{ mx: 0.5 }}>
             <Box
                 sx={{
                     display: "flex",
                     justifyContent: "space-between",
                     alignItems: "center",
                     py: 1,
+                    mx: 1.5,
                     color: "white",
                 }}
             >
@@ -38,11 +39,12 @@ const JackpotSection = () => {
                         sx={{
                             textTransform: "none",
                             color: "white",
-                            borderColor: "rgba(255,255,255,0.3)",
+                            background: "#373e3f",
+                            border: "none",
                             borderRadius: "8px",
                             px: 1.5,
                             py: 0.5,
-                            fontSize: 12,
+                            fontSize: 13,
                             display: "flex",
                             alignItems: "center",
                             gap: 0.5,
@@ -85,8 +87,6 @@ const JackpotSection = () => {
                     position: "relative",
                     width: "100%",
                     mb: 2,
-                    // maxWidth: 430,
-                    // borderRadius: "20px",
                     overflow: "hidden",
                 }}
             >
@@ -99,11 +99,9 @@ const JackpotSection = () => {
                         width: "100%",
                         height: "100%",
                         objectFit: "cover",
-                        // borderRadius: "20px",
                         display: "block",
                     }}
                 />
-
                 {/* Inner Content */}
                 <Box
                     sx={{
@@ -111,7 +109,7 @@ const JackpotSection = () => {
                         inset: 0,
                         display: "flex",
                         alignItems: "center",
-                        px: 3,
+                        px: { xs: 1.5, sm: 2, md: 3 },
                     }}
                 >
                     {/* Trophy + Coins */}
@@ -120,18 +118,27 @@ const JackpotSection = () => {
                             component="img"
                             src="/assets/trophy-B3u8sNrg-Bogwg3F_.webp"
                             alt="Trophy"
-                            sx={{ width: "110px" }}
+                            sx={{
+                                width: { xs: "70px", sm: "90px", md: "110px" }
+                            }}
                         />
                     </Box>
-
                     {/* Right-side text */}
-                    <Box sx={{ ml: 3, mt: 3, flex: 1 }}>
-                        <Box sx={{ display: "flex" }}>
-                            <Box component="img" src="/assets/grass.png" alt="" width={30} height={30} />
+                    <Box sx={{ ml: { xs: 1.5, sm: 8 }, mt: { xs: 2, sm: 2.5, md: 3 }, flex: 1 }}>
+                        <Box sx={{ display: "flex", alignItems: "center" }}>
+                            <Box
+                                component="img"
+                                src="/assets/grass.png"
+                                alt=""
+                                sx={{
+                                    width: { xs: 20, sm: 25, md: 30 },
+                                    height: { xs: 20, sm: 25, md: 30 }
+                                }}
+                            />
                             <Typography
                                 sx={{
                                     fontWeight: 700,
-                                    fontSize: "18px",
+                                    fontSize: { xs: "14px", sm: "16px", md: "18px" },
                                     color: "rgb(0,255,153)",
                                     display: "flex",
                                     alignItems: "center",
@@ -140,21 +147,30 @@ const JackpotSection = () => {
                             >
                                 Daily Jackpot
                             </Typography>
-                            <Box component="img" src="/assets/grass.png" alt="" width={30} height={30} sx={{ transform: "scaleX(-1)" }} />
+                            <Box
+                                component="img"
+                                src="/assets/grass.png"
+                                alt=""
+                                sx={{
+                                    width: { xs: 20, sm: 25, md: 30 },
+                                    height: { xs: 20, sm: 25, md: 30 },
+                                    transform: "scaleX(-1)"
+                                }}
+                            />
                         </Box>
-                        <Typography sx={{ color: "#ddd", mt: 0.5, fontSize: "16px" }}>
+                        <Typography sx={{ color: "#ddd", mt: 0.5, fontSize: { xs: "12px", sm: "14px", md: "16px" },
+                    ml: -5 }}>
                             Jackpot prize pool
                         </Typography>
-
                         <Box
                             sx={{
-                                px: 2,
-                                py: 1,
-                                ml: 1,
-                                borderRadius: "12px",
+                                px: { xs: 1.5, sm: 2 },
+                                py: { xs: 0.5, sm: 0.75, md: 1 },
+                                ml: { xs: 0.5 },
+                                borderRadius: { xs: "8px", sm: "10px", md: "12px" },
                                 bgcolor: "rgba(0,0,0,0.55)",
                                 textAlign: "center",
-                                fontSize: "18px",
+                                fontSize: { xs: "14px", sm: "16px", md: "18px" },
                                 fontWeight: 800,
                                 color: "rgb(36,238,137)",
                                 width: "fit-content",

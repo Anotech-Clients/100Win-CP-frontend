@@ -208,7 +208,7 @@ const FiveDMyHistory = ({ bets, page, setPage, hideDetailsButton, totalPage }) =
                     </Box>
 
                     <Box>
-                      <Typography sx={{ fontSize: "15px", color: "#FDE4BC", mb: 0.5 }}>
+                      <Typography sx={{ fontSize: "15px", color: "#ffffff", mb: 0.5 }}>
                         {String(bet.periodId)}
                       </Typography>
                       <Typography sx={{ color: "#B79C8B", fontSize: "12px" }}>
@@ -271,7 +271,7 @@ const FiveDMyHistory = ({ bets, page, setPage, hideDetailsButton, totalPage }) =
                   textAlign: "left",
                   marginLeft: 1,
                   fontSize: "21px",
-                  color: "#FDE4BC",
+                  color: "#ffffff",
                 }}
               >
                 Details
@@ -337,12 +337,12 @@ const FiveDMyHistory = ({ bets, page, setPage, hideDetailsButton, totalPage }) =
                                     style={{
                                       width: "18px",
                                       borderRadius: "50%",
-                                      border: "1px solid #FDE4BC",
+                                      border: "1px solid #ffffff",
                                       display: "flex",
                                       alignItems: "center",
                                       justifyContent: "center",
                                       background: "transparent",
-                                      color: "#FDE4BC",
+                                      color: "#ffffff",
                                       fontSize: "12.8px",
                                       fontWeight: "bold",
                                       aspectRatio: "1 / 1",
@@ -359,7 +359,7 @@ const FiveDMyHistory = ({ bets, page, setPage, hideDetailsButton, totalPage }) =
                       {
                         label: "Select",
                         value: formatSelectedBets(bet),
-                        color: "#FDE4BC"
+                        color: "#ffffff"
                       },
                       {
                         label: "Status",

@@ -51,7 +51,7 @@ const WingoChart = ({ data, page, setPage, totalPage }) => {
           borderRadius: "4px",
         }}
       >
-        <div style={{ marginBottom: "10px", color: "#FDE4BC", textAlign: "left", fontSize: isMiddleScreen ? "12px" : "14px" }}>
+        <div style={{ marginBottom: "10px", color: "#ffffff", textAlign: "left", fontSize: isMiddleScreen ? "12px" : "14px" }}>
           Statistic (last 100 Periods)
         </div>
         <div
@@ -61,7 +61,7 @@ const WingoChart = ({ data, page, setPage, totalPage }) => {
             marginBottom: "8px",
           }}
         >
-          <div style={{ color: "#FDE4BC", fontSize: isMiddleScreen ? "12px" : "14px" }}>Winning number</div>
+          <div style={{ color: "#ffffff", fontSize: isMiddleScreen ? "12px" : "14px" }}>Winning number</div>
           <div>
             {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map((num, index) => (
               <span
@@ -94,7 +94,7 @@ const WingoChart = ({ data, page, setPage, totalPage }) => {
             fontSize: isMiddleScreen ? "12px" : "14px"
           }}
         >
-          <div style={{ color: "#FDE4BC" }}>Missing</div>
+          <div style={{ color: "#ffffff" }}>Missing</div>
           <div>
             {[1, 0, 21, 5, 3, 16, 9, 4, 10, 8].map((num, index) => (
               <span
@@ -128,7 +128,7 @@ const WingoChart = ({ data, page, setPage, totalPage }) => {
             fontSize: isMiddleScreen ? "12px" : "14px"
           }}
         >
-          <div style={{ color: "#FDE4BC" }}>Avg missing</div>
+          <div style={{ color: "#ffffff" }}>Avg missing</div>
           <div>
             {[11, 4, 13, 15, 6, 6, 10, 9, 11, 13].map((num, index) => (
               <span
@@ -161,7 +161,7 @@ const WingoChart = ({ data, page, setPage, totalPage }) => {
             fontSize: isMiddleScreen ? "12px" : "14px"
           }}
         >
-          <div style={{ color: "#FDE4BC" }}>Frequency</div>
+          <div style={{ color: "#ffffff" }}>Frequency</div>
           <div>
             {[8, 19, 6, 7, 12, 13, 8, 11, 7, 9].map((num, index) => (
               <span
@@ -195,7 +195,7 @@ const WingoChart = ({ data, page, setPage, totalPage }) => {
             marginBottom: "8px",
           }}
         >
-          <div style={{ color: "#FDE4BC" }}>Max consecutive</div>
+          <div style={{ color: "#ffffff" }}>Max consecutive</div>
           <div>
             {[2, 2, 1, 2, 1, 2, 1, 2, 1, 3].map((num, index) => (
               <span
@@ -237,7 +237,7 @@ const WingoChart = ({ data, page, setPage, totalPage }) => {
               justifySelf: "flex-end",
             }}
           >
-            <div style={{ fontSize: isMiddleScreen ? "11px" : "13px", color: "#FDE4BC" }}>
+            <div style={{ fontSize: isMiddleScreen ? "11px" : "13px", color: "#ffffff" }}>
               {row.periodId.toString()}
             </div>
             {Array.from({ length: 10 }).map((_, circleIndex) => {

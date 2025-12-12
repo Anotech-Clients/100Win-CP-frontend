@@ -23,7 +23,7 @@ const FirstDepositCard = ({ bonus, onDeposit, depositType = "FIRST" })  => {
       }, padding: "10px"
     }}>
       <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-        <Typography variant="body1" sx={{ fontSize: "14px", color: "#FDE4BC" }}>
+        <Typography variant="body1" sx={{ fontSize: "14px", color: "#ffffff" }}>
         {depositLabel} deposit{" "}
           <Typography component="span" sx={{ color: "#DD9138" }}>
             ₹{bonus.minimumDeposit}

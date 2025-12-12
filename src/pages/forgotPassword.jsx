@@ -435,7 +435,7 @@ const ForgotPassword = () => {
                       background: isVerifyButtonDisabled
                         ? "linear-gradient(90deg, #A0A0A0 0%, #808080 100%)"
                         : "linear-gradient(90deg,#24ee89,#9fe871)",
-                      color: "#FDE4BC",
+                      color: "#ffffff",
                       borderRadius: 50,
                       textTransform: "capitalize",
                       px: 3,

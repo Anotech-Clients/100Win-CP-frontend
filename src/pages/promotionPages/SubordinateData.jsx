@@ -263,7 +263,7 @@ const SubordinateData = () => {
               >
                 <IconButton
                   sx={{
-                    color: "#FDE4BC",
+                    color: "#ffffff",
                     position: "absolute",
                     left: 0,
                     p: "12px",
@@ -275,7 +275,7 @@ const SubordinateData = () => {
                 <Typography
                   variant="h6"
                   sx={{
-                    color: "#FDE4BC",
+                    color: "#ffffff",
                     textAlign: "center",
                     fontSize: "19px",
                   }}
@@ -304,7 +304,7 @@ const SubordinateData = () => {
                       flexGrow: 1,
                       border: "none",
                       backgroundColor: "transparent",
-                      color: "#FDE4BC",
+                      color: "#ffffff",
                       outline: "none",
                       padding: "10px",
                       fontSize: "16px",
@@ -339,7 +339,7 @@ const SubordinateData = () => {
                     justifyContent: "space-between",
                     padding: "0 16px",
                     borderColor: "transparent",
-                    color: "#FDE4BC",
+                    color: "#ffffff",
                     borderRadius: "5px",
                   }}
                 >
@@ -360,7 +360,7 @@ const SubordinateData = () => {
                     justifyContent: "space-between",
                     padding: "0 16px",
                     borderColor: "transparent",
-                    color: "#FDE4BC",
+                    color: "#ffffff",
                     borderRadius: "5px",
                   }}
                   onClick={() => setDatePickerOpen(true)}
@@ -389,7 +389,7 @@ const SubordinateData = () => {
                         <Typography
                           variant="h6"
                           fontWeight="bold"
-                           color="#FDE4BC"
+                           color="#ffffff"
                           sx={{ borderRight: "1px solid #666462" }}
                         >
                           {summaryStats.depositNumber}
@@ -411,13 +411,13 @@ const SubordinateData = () => {
                         <Typography
                           variant="h6"
                           fontWeight="bold"
-                          color="#FDE4BC"
+                          color="#ffffff"
                         >
                           {summaryStats.depositAmount.toFixed(2)}
                         </Typography>
                         <Typography
                           variant="body2"
-                          sx={{ fontSize: "13px", color: "#FDE4BC" }}
+                          sx={{ fontSize: "13px", color: "#ffffff" }}
                         >
                           Deposit amount
                         </Typography>
@@ -433,7 +433,7 @@ const SubordinateData = () => {
                           fontWeight="bold"
                           sx={{
                             borderRight: "1px solid #666462",
-                            color: "#FDE4BC",
+                            color: "#ffffff",
                           }}
                         >
                           {summaryStats.bettorsCount}
@@ -443,7 +443,7 @@ const SubordinateData = () => {
                           sx={{
                             fontSize: "13px",
                             borderRight: "1px solid #666462",
-                            color: "#FDE4BC",
+                            color: "#ffffff",
                           }}
                         >
                           Number of bettors
@@ -455,13 +455,13 @@ const SubordinateData = () => {
                         <Typography
                           variant="h6"
                           fontWeight="bold"
-                          color="#FDE4BC"
+                          color="#ffffff"
                         >
                           {summaryStats.totalBetAmount.toFixed(2)}
                         </Typography>
                         <Typography
                           variant="body2"
-                          sx={{ fontSize: "13px", color: "#FDE4BC" }}
+                          sx={{ fontSize: "13px", color: "#ffffff" }}
                         >
                           Total bet
                         </Typography>
@@ -477,7 +477,7 @@ const SubordinateData = () => {
                           fontWeight="bold"
                           sx={{
                             borderRight: "1px solid #666462",
-                            color: "#FDE4BC",
+                            color: "#ffffff",
                           }}
                         >
                           {summaryStats.firstDepositCount}
@@ -487,7 +487,7 @@ const SubordinateData = () => {
                           sx={{
                             fontSize: "13px",
                             borderRight: "1px solid #666462",
-                            color: "#FDE4BC",
+                            color: "#ffffff",
                           }}
                         >
                           Number of people making first deposit
@@ -499,7 +499,7 @@ const SubordinateData = () => {
                         <Typography
                           variant="h6"
                           fontWeight="bold"
-                          color="#FDE4BC"
+                          color="#ffffff"
                         >
                           {summaryStats.firstDepositAmount.toFixed(2)}
                         </Typography>
@@ -533,9 +533,9 @@ const SubordinateData = () => {
                 sx={{
                   backgroundColor: "#382e35",
                   borderRadius: "5px",
-                  color: "#FDE4BC",
+                  color: "#ffffff",
                   "& .MuiTabs-indicator": {
-                    backgroundColor: "#FDE4BC",
+                    backgroundColor: "#ffffff",
                   },
                 }}
               >
@@ -620,7 +620,7 @@ const SubordinateData = () => {
                             variant="body2"
                             sx={{
                               textAlign: "start",
-                              color: "#FDE4BC",
+                              color: "#ffffff",
                             }}
                           >
                             UID
@@ -628,7 +628,7 @@ const SubordinateData = () => {
                           <Typography
                             variant="body2"
                             sx={{
-                              color: "#FDE4BC",
+                              color: "#ffffff",
                             }}
                           >
                             Joined
@@ -636,7 +636,7 @@ const SubordinateData = () => {
                           <Typography
                             variant="body2"
                             sx={{
-                              color: "#FDE4BC",
+                              color: "#ffffff",
                               textAlign: "center",
                             }}
                           >
@@ -645,7 +645,7 @@ const SubordinateData = () => {
                           <Typography
                             variant="body2"
                             sx={{
-                              color: "#FDE4BC",
+                              color: "#ffffff",
                               textAlign: "end",
                             }}
                           >
@@ -793,7 +793,7 @@ const SubordinateData = () => {
                             <Typography
                               variant="subtitle1"
                               sx={{
-                                color: "#FDE4BC",
+                                color: "#ffffff",
                                 fontWeight: "bold",
                               }}
                             >
@@ -802,7 +802,7 @@ const SubordinateData = () => {
                             <IconButton
                               sx={{
                                 padding: "0",
-                                color: "#FDE4BC",
+                                color: "#ffffff",
                               }}
                               onClick={() => handleCopyUserId(commission.userId)}
                             >

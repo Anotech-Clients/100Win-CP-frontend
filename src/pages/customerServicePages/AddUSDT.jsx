@@ -104,9 +104,9 @@ const AddUSDT = () => {
                 }
             }}>
                 {/* Header */}
-                <Box sx={{ bgcolor: "#232626", padding: "8px 10px", display: "flex", alignItems: "center", color: "#FDE4BC" }}>
+                <Box sx={{ bgcolor: "#232626", padding: "8px 10px", display: "flex", alignItems: "center", color: "#ffffff" }}>
                     <ChevronLeftIcon sx={{ fontSize: 30, cursor: "pointer" }} onClick={() => navigate(-1)} />
-                    <Typography variant="h6" sx={{ flexGrow: 1, textAlign: "center", color: "#FDE4BC" }}>
+                    <Typography variant="h6" sx={{ flexGrow: 1, textAlign: "center", color: "#ffffff" }}>
                         Add USDT Address
                     </Typography>
                     <HomeIcon sx={{ fontSize: 30, cursor: "pointer" }} onClick={() => navigate("/")} />
@@ -115,7 +115,7 @@ const AddUSDT = () => {
                 {/* Form Fields */}
                 <Box sx={{ m: 2 }}>
                     {/* User ID */}
-                    <Typography variant="subtitle1" sx={{ color: "#FDE4BC", mt: 1, mb: 1, textAlign: "left" }}>
+                    <Typography variant="subtitle1" sx={{ color: "#ffffff", mt: 1, mb: 1, textAlign: "left" }}>
                         User ID <span style={{ color: "red" }}>*</span>
                     </Typography>
                     <TextField
@@ -133,7 +133,7 @@ const AddUSDT = () => {
                     />
 
                     {/* USDT Address */}
-                    <Typography variant="subtitle1" sx={{ color: "#FDE4BC", mt: 3, mb: 1, textAlign: "left" }}>
+                    <Typography variant="subtitle1" sx={{ color: "#ffffff", mt: 3, mb: 1, textAlign: "left" }}>
                         USDT Address <span style={{ color: "red" }}>*</span>
                     </Typography>
                     <TextField
@@ -153,7 +153,7 @@ const AddUSDT = () => {
                     />
 
                     {/* USDT Address Screenshot */}
-                    <Typography variant="subtitle1" sx={{ color: "#FDE4BC", mt: 3, mb: 1, textAlign: "left" }}>
+                    <Typography variant="subtitle1" sx={{ color: "#ffffff", mt: 3, mb: 1, textAlign: "left" }}>
                         USDT Address Screenshot  <span style={{ color: "red" }}>*</span> <span style={{ fontStyle: "italic", opacity: 0.7, fontSize: "12px" }}>
                             ( Upto <span style={{ color: "red" }}>2 mb</span> )
                         </span>
@@ -177,7 +177,7 @@ const AddUSDT = () => {
                             <img src={URL.createObjectURL(screenshot)} alt="Screenshot" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
                         ) : (
                             <Box sx={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
-                                <AddPhotoAlternateIcon sx={{ color: "#FDE4BC", fontSize: 45 }} />
+                                <AddPhotoAlternateIcon sx={{ color: "#ffffff", fontSize: 45 }} />
                                 <Typography variant="caption" sx={{ color: "gray" }}>photo</Typography>
                             </Box>
                         )}

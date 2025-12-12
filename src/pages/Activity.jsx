@@ -178,7 +178,7 @@ const Activity = () => {
                     <Typography
                       component="div"
                       sx={{
-                        color: "#FDE4BC",
+                        color: "#ffffff",
                         fontWeight: "bold",
                         fontSize: "13px",
                         padding: "5px 10px",
@@ -239,7 +239,7 @@ const Activity = () => {
                     <Typography
                       component="div"
                       sx={{
-                        color: "#FDE4BC",
+                        color: "#ffffff",
                         fontWeight: "bold",
                         fontSize: "13px",
                         padding: "5px 10px",

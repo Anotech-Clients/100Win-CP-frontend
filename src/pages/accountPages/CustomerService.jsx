@@ -148,7 +148,7 @@ const CustomerService = () => {
             padding: "8px 10px",
             display: "flex",
             alignItems: "center",
-            color: "#FDE4BC",
+            color: "#ffffff",
           }}
         >
           <ChevronLeftIcon
@@ -162,7 +162,7 @@ const CustomerService = () => {
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              color: "#FDE4BC",
+              color: "#ffffff",
             }}
           >
             Customer Service
@@ -183,7 +183,7 @@ const CustomerService = () => {
         </Box>
         <Typography
           variant="h6"
-          sx={{ color: "#FDE4BC", textAlign: "left", mt: 2, ml: 2 }}
+          sx={{ color: "#ffffff", textAlign: "left", mt: 2, ml: 2 }}
         >
           Self Service
         </Typography>
@@ -241,7 +241,7 @@ const CustomerService = () => {
         >
           <Typography
             variant="subtitle1"
-            sx={{ fontWeight: "bold", color: "#FDE4BC" }}
+            sx={{ fontWeight: "bold", color: "#ffffff" }}
           >
             Kind Tips
           </Typography>

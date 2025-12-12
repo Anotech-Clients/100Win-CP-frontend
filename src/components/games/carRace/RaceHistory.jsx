@@ -112,7 +112,7 @@ const RaceHistory = ({ data, page, setPage, totalPage }) => {
             }}
           >
             <Grid item xs={4} sx={{ textAlign: "center" }}>
-              <Typography variant="body2" sx={{ color: "#FDE4BC", fontSize: "12.288px" }}>{item.periodId}</Typography>
+              <Typography variant="body2" sx={{ color: "#ffffff", fontSize: "12.288px" }}>{item.periodId}</Typography>
             </Grid>
 
             <Grid item xs={3} sx={{ display: "flex", justifyContent: "center" }}>

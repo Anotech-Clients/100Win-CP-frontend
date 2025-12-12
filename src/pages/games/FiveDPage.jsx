@@ -107,7 +107,7 @@ const TopButton = styled(Tab)(({ theme, selected, index }) => ({
     padding: index === box.length - 1 ? "4px 6px" : "4px 16px",
     fontWeight: "bold",
     fontSize: "16px", // Default font size for larger screens
-    color: selected ? "transparent" : "#FDE4BC",
+    color: selected ? "transparent" : "#ffffff",
     backgroundColor: selected ? "#323738" : "#382e35",
     backgroundImage: selected ? `url(${box[index]})` : "none",
     backgroundSize: "cover",
@@ -1571,7 +1571,7 @@ const FiveDPage = ({ timerKey }) => {
                                                 variant="body2"
                                                 sx={{
                                                     fontSize: { xs: "13px", sm: "13px" },
-                                                    color: "#FDE4BC",
+                                                    color: "#ffffff",
                                                 }}
                                             >
                                                 {result.number}
@@ -2181,7 +2181,7 @@ const FiveDPage = ({ timerKey }) => {
                                     <Grid container justifyContent="space-between">
                                         <Typography
                                             variant="h6"
-                                            sx={{ color: "#FDE4BC", fontSize: "1rem" }}
+                                            sx={{ color: "#ffffff", fontSize: "1rem" }}
                                         >
                                             Balance
                                         </Typography>
@@ -2217,7 +2217,7 @@ const FiveDPage = ({ timerKey }) => {
                                             direction="row"
                                             justifyContent="space-between"
                                             alignItems="center"
-                                            sx={{ color: "#FDE4BC", flexWrap: "nowrap" }}
+                                            sx={{ color: "#ffffff", flexWrap: "nowrap" }}
                                         >
                                             <Typography
                                                 variant="h6"
@@ -2255,11 +2255,11 @@ const FiveDPage = ({ timerKey }) => {
                                                         borderRadius: 15,
                                                         height: isSmallScreen2 ? 25 : 30,
                                                         backgroundColor: "#232626",
-                                                        color: "#FDE4BC",
+                                                        color: "#ffffff",
                                                     }}
                                                     InputProps={{
                                                         style: {
-                                                            color: "#FDE4BC",
+                                                            color: "#ffffff",
                                                             borderRadius: 15,
                                                             height: isSmallScreen2 ? 25 : 30,
                                                             fontSize: isSmallScreen2 ? "15px" : "17px",
@@ -2277,12 +2277,12 @@ const FiveDPage = ({ timerKey }) => {
                                             justifyContent="space-between"
                                             align="center"
                                             alignItems="center"
-                                            sx={{ color: "#FDE4BC" }}>
+                                            sx={{ color: "#ffffff" }}>
                                             {/* Multiplier Selection */}
 
                                             <Typography
                                                 variant="h6"
-                                                sx={{ color: "#FDE4BC", fontSize: isSmallScreen2 ? "15px" : "17px" }}
+                                                sx={{ color: "#ffffff", fontSize: isSmallScreen2 ? "15px" : "17px" }}
                                             >
                                                 Quantity
                                             </Typography>
@@ -2352,7 +2352,7 @@ const FiveDPage = ({ timerKey }) => {
                                     <Grid
                                         container
                                         justifyContent="flex-end"
-                                        sx={{ color: "#FDE4BC" }}
+                                        sx={{ color: "#ffffff" }}
                                     >
                                         {[1, 5, 10, 20, 50, 100].map((value) => (
                                             <div

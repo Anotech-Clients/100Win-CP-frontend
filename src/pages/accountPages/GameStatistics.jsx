@@ -40,7 +40,7 @@ const GameStatsItem = ({ stats }) => {
             <Typography
               variant="h6"
               component="span"
-              sx={{ fontWeight: "bold", color: "#FDE4BC" }}
+              sx={{ fontWeight: "bold", color: "#ffffff" }}
             >
               Lottery
             </Typography>
@@ -256,7 +256,7 @@ function GameStatistic({ children }) {
             >
               <IconButton
                 sx={{
-                  color: "#FDE4BC",
+                  color: "#ffffff",
                   position: "absolute",
                   left: 0,
                   p: "12px",
@@ -267,7 +267,7 @@ function GameStatistic({ children }) {
               </IconButton>
               <Typography
                 variant="h6"
-                sx={{ color: "#FDE4BC", textAlign: "center", fontSize: "19px" }}
+                sx={{ color: "#ffffff", textAlign: "center", fontSize: "19px" }}
               >
                 Game Statistics
               </Typography>

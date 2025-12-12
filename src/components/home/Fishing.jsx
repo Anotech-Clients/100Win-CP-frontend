@@ -64,7 +64,7 @@ const Fishing = () => {
             <Typography
               sx={{
                 fontSize: "16px",
-                color: "#FDE4BC",
+                color: "#ffffff",
                 marginRight: "12px",
                 marginLeft: "7px",
                 whiteSpace: "nowrap",

@@ -106,7 +106,7 @@ const ActivityDetails = () => {
           >
             <IconButton
               sx={{
-                color: "#FDE4BC",
+                color: "#ffffff",
                 position: "absolute",
                 left: 0,
                 p: "12px",
@@ -117,7 +117,7 @@ const ActivityDetails = () => {
             </IconButton>
             <Typography
               variant="h6"
-              sx={{ color: "#FDE4BC", textAlign: "center", fontSize: "19px" }}
+              sx={{ color: "#ffffff", textAlign: "center", fontSize: "19px" }}
             >
               Acitvity Details
             </Typography>
@@ -146,7 +146,7 @@ const ActivityDetails = () => {
             />
           </Box>
           <Typography
-            sx={{ color: "#FDE4BC", fontWeight: "bold", marginBottom: 1 }}
+            sx={{ color: "#ffffff", fontWeight: "bold", marginBottom: 1 }}
           >
             {activity.title}
           </Typography>

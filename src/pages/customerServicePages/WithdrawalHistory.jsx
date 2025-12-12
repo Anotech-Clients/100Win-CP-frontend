@@ -68,9 +68,9 @@ const WithdrawalHistory = () => {
             maxWidth: "100%"
         }
     }}>
-         <Box sx={{ bgcolor: "#232626", padding: "8px 10px", display: "flex", alignItems: "center", color: "#FDE4BC" }}>
+         <Box sx={{ bgcolor: "#232626", padding: "8px 10px", display: "flex", alignItems: "center", color: "#ffffff" }}>
                     <ChevronLeftIcon sx={{ fontSize: 30, cursor: "pointer" }} onClick={() => navigate(-1)} />
-                    <Typography variant="h6" sx={{ flexGrow: 1, textAlign: "center", color: "#FDE4BC" }}>
+                    <Typography variant="h6" sx={{ flexGrow: 1, textAlign: "center", color: "#ffffff" }}>
                         Withdrawal History
                     </Typography>
                     <HomeIcon sx={{ fontSize: 30 ,cursor:"pointer"}} onClick={() => navigate("/")} />
@@ -79,11 +79,11 @@ const WithdrawalHistory = () => {
 
                 <Box sx={{ m: 2, textAlign: "center" }} >
           {loading ? (
-            <CircularProgress sx={{ color: "#FDE4BC", mt: 5 }} /> // Loader when fetching data
+            <CircularProgress sx={{ color: "#ffffff", mt: 5 }} /> // Loader when fetching data
           ) : withdrawalHistory.length === 0 ? (
             <Box sx={{ textAlign: "center", mt: 5 }}>
               <img src={NoDataImage} alt="No Data" style={{ width: "80%", maxWidth: "300px" }} />
-              <Typography sx={{ color: "#FDE4BC", mt: 2 }}>No withdrawal history found</Typography>
+              <Typography sx={{ color: "#ffffff", mt: 2 }}>No withdrawal history found</Typography>
             </Box>
           ) : (
             withdrawalHistory && withdrawalHistory.map((item, index) => (

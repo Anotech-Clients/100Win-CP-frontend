@@ -280,7 +280,7 @@ const DepositHistory = () => {
               >
                 <IconButton
                   sx={{
-                    color: "#FDE4BC",
+                    color: "#ffffff",
                     position: "absolute",
                     left: 0,
                     p: "12px",
@@ -292,7 +292,7 @@ const DepositHistory = () => {
                 <Typography
                   variant="h6"
                   sx={{
-                    color: "#FDE4BC",
+                    color: "#ffffff",
                     textAlign: "center",
                     fontSize: "19px",
                   }}

@@ -295,13 +295,13 @@ const ActivityReward = () => {
             zIndex: 1000, padding: "5px 16px", background: "#323738" }}
         >
           <Grid item>
-            <IconButton sx={{ color: "#FDE4BC" }} onClick={handleRedirect}>
+            <IconButton sx={{ color: "#ffffff" }} onClick={handleRedirect}>
               <ArrowBackIosNewIcon sx={{ fontSize: "19px" }} />
             </IconButton>
           </Grid>
           <Grid item display="flex" alignItems="center">
             <RestoreOutlinedIcon
-              sx={{ cursor: "pointer", color: "#FDE4BC", marginRight: "8px" }}
+              sx={{ cursor: "pointer", color: "#ffffff", marginRight: "8px" }}
             />
             <Box
               component="div"
@@ -310,7 +310,7 @@ const ActivityReward = () => {
               }
               sx={{ cursor: "pointer", display: "flex", alignItems: "center" }}
             >
-              <Typography sx={{ color: "#FDE4BC", fontSize: "0.8rem" }}>
+              <Typography sx={{ color: "#ffffff", fontSize: "0.8rem" }}>
                 Collection record
               </Typography>
             </Box>

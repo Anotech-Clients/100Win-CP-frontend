@@ -45,7 +45,7 @@ const bannerPosterContext = useContext(BannerPosterContext)
           >
             <IconButton
               sx={{
-                color: "#FDE4BC",
+                color: "#ffffff",
                 position: "absolute",
                 left: 0,
                 p: "12px",
@@ -56,7 +56,7 @@ const bannerPosterContext = useContext(BannerPosterContext)
             </IconButton>
             <Typography
               variant="h6"
-              sx={{ color: "#FDE4BC", textAlign: "center", fontSize: "19px" }}
+              sx={{ color: "#ffffff", textAlign: "center", fontSize: "19px" }}
             >
               Rules
             </Typography>
@@ -89,7 +89,7 @@ const bannerPosterContext = useContext(BannerPosterContext)
           />
         </Box>
         <Typography
-          sx={{ color: "#FDE4BC", fontWeight: "bold", marginBottom: 1 }}
+          sx={{ color: "#ffffff", fontWeight: "bold", marginBottom: 1 }}
         >
          Cognix Lucky 10 Days 
         </Typography>

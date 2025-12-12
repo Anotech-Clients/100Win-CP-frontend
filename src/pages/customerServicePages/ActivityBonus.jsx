@@ -93,17 +93,17 @@ const ActivityBonus = () => {
             }}>
                 {/* Header */}
                 <Box sx={{ bgcolor: "#232626", padding: "12px 10px", display: "flex", alignItems: "center" }}>
-                    <ChevronLeftIcon sx={{ fontSize: 30, cursor: "pointer", color: "#FDE4BC" }} onClick={() => navigate(-1)} />
-                    <Typography variant="h6" sx={{ flexGrow: 1, textAlign: "center", fontWeight: "bold", color: "#FDE4BC" }}>
+                    <ChevronLeftIcon sx={{ fontSize: 30, cursor: "pointer", color: "#ffffff" }} onClick={() => navigate(-1)} />
+                    <Typography variant="h6" sx={{ flexGrow: 1, textAlign: "center", fontWeight: "bold", color: "#ffffff" }}>
                         Activity Bonus
                     </Typography>
-                    <HomeIcon sx={{ fontSize: 30, color: "#FDE4BC", cursor: "pointer" }} onClick={() => navigate("/")} />
+                    <HomeIcon sx={{ fontSize: 30, color: "#ffffff", cursor: "pointer" }} onClick={() => navigate("/")} />
                 </Box>
 
                 {/* Form Fields */}
                 <Box sx={{ m: 2, textAlign: "left" }}>
                     {/* Bonus Description */}
-                    <Typography variant="subtitle1" sx={{ color: "#FDE4BC", mt: 1, mb: 1, }}>
+                    <Typography variant="subtitle1" sx={{ color: "#ffffff", mt: 1, mb: 1, }}>
                         Please clearly explain the bonus you wish to claim. <span style={{ color: "red" }}>*</span>
                     </Typography>
                     <TextField
@@ -122,7 +122,7 @@ const ActivityBonus = () => {
                     </Typography>
 
                     {/* Daman ID */}
-                    <Typography variant="subtitle1" sx={{ color: "#FDE4BC", mt: 1, mb: 1, }}>
+                    <Typography variant="subtitle1" sx={{ color: "#ffffff", mt: 1, mb: 1, }}>
                         User ID <span style={{ color: "red" }}>*</span>
                     </Typography>
                     <TextField
@@ -141,7 +141,7 @@ const ActivityBonus = () => {
 
 
                     {/* Screenshot Upload */}
-                    <Typography variant="subtitle1" sx={{ color: "#FDE4BC", mt: 3, mb: 1, }}>
+                    <Typography variant="subtitle1" sx={{ color: "#ffffff", mt: 3, mb: 1, }}>
                         Please attach the screenshot <span style={{ color: "red" }}>*</span> <span style={{ fontStyle: "italic", opacity: 0.7, fontSize: "12px" }}>
                             ( Upto <span style={{ color: "red" }}>2 mb</span> )
                         </span>

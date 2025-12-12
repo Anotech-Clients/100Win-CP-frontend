@@ -28,7 +28,7 @@ const ActivityRules = () => {
           >
             <Grid item xs={2}>
               <IconButton
-                sx={{ color: "#FDE4BC", ml: -2 }} // #323738 color for the icon
+                sx={{ color: "#ffffff", ml: -2 }} // #323738 color for the icon
                 onClick={handleBackClick}
               >
                 <ArrowBackIosNewIcon sx={{ fontSize:"19px"}}/>
@@ -38,7 +38,7 @@ const ActivityRules = () => {
               <Typography
                 variant="h6"
                 sx={{
-                  color: "#FDE4BC", // #323738 color for the text
+                  color: "#ffffff", // #323738 color for the text
                   flexGrow: 1,
                   textAlign: "center",
                   mr: 8,
@@ -71,7 +71,7 @@ const ActivityRules = () => {
               textAlign: "center",
               borderBottomLeftRadius: "50px",
               borderBottomRightRadius: "50px",
-              color: "#FDE4BC",
+              color: "#ffffff",
               fontWeight: "bold",
             }}
           >
@@ -79,7 +79,7 @@ const ActivityRules = () => {
           </Box>
           <Typography
             variant="body1"
-            sx={{ color: "#FDE4BC", my: 1, mx: 2, fontSize: "12.6px" }}
+            sx={{ color: "#ffffff", my: 1, mx: 2, fontSize: "12.6px" }}
           >
             The event is effective from now on. The discount can only be used
             once per address, per email address, per phone number and for the
@@ -97,7 +97,7 @@ const ActivityRules = () => {
         <Box
           sx={{
             backgroundColor: "#323738",
-            color: "#FDE4BC",
+            color: "#ffffff",
             borderRadius: "12px",
             boxShadow: "0 4px 8px rgba(0,0,0,0.1)",
             textAlign: "left",
@@ -115,7 +115,7 @@ const ActivityRules = () => {
               textAlign: "center",
               borderBottomLeftRadius: "50px",
               borderBottomRightRadius: "50px",
-              color: "#FDE4BC",
+              color: "#ffffff",
               fontWeight: "bold",
             }}
           >
@@ -123,7 +123,7 @@ const ActivityRules = () => {
           </Box>
           <Typography
             variant="body1"
-            sx={{ color: "#FDE4BC", my: 1, mx: 2, fontSize: "12.6px" }}
+            sx={{ color: "#ffffff", my: 1, mx: 2, fontSize: "12.6px" }}
           >
             All offers are specially designed for players.
           </Typography>
@@ -141,7 +141,7 @@ const ActivityRules = () => {
         <Box
           sx={{
             backgroundColor: "#323738",
-            color: "#FDE4BC",
+            color: "#ffffff",
             borderRadius: "12px",
             boxShadow: "0 4px 8px rgba(0,0,0,0.1)",
             textAlign: "left",
@@ -159,7 +159,7 @@ const ActivityRules = () => {
               textAlign: "center",
               borderBottomLeftRadius: "50px",
               borderBottomRightRadius: "50px",
-              color: "#FDE4BC",
+              color: "#ffffff",
               fontWeight: "bold",
             }}
           >
@@ -167,7 +167,7 @@ const ActivityRules = () => {
           </Box>
           <Typography
             variant="body1"
-            sx={{ color: "#FDE4BC", my: 1, mx: 2, fontSize: "12.6px" }}
+            sx={{ color: "#ffffff", my: 1, mx: 2, fontSize: "12.6px" }}
           >
             The platform reserves the right of final outcome of this event;
           </Typography>

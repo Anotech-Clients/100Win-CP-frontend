@@ -84,7 +84,7 @@ const HomeRummy = ({onDetailClick = () => {}}) => {
           <Typography
             sx={{
               fontSize: "14px",
-              color: "#FDE4BC",
+              color: "#ffffff",
               marginRight: "12px",
               marginLeft: "3px",
               whiteSpace: "nowrap",

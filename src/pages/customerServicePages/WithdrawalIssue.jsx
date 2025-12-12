@@ -103,7 +103,7 @@ setPopupMessage("Withdrawal issue submitted successfully!")
                 {/* Header */}
                 <Box sx={{ bgcolor: "#232626", padding: "8px 10px", display: "flex", alignItems: "center", color: "#f5f3f0" }}>
                     <ChevronLeftIcon sx={{ fontSize: 30, cursor: "pointer" }} onClick={() => window.history.back()} />
-                    <Typography variant="h6" sx={{ flexGrow: 1, textAlign: "center", color: "#FDE4BC" }}>
+                    <Typography variant="h6" sx={{ flexGrow: 1, textAlign: "center", color: "#ffffff" }}>
                         Withdrawal Issue
                     </Typography>
                     <HomeIcon sx={{ fontSize: 30,cursor:"pointer" }} onClick={() => navigate("/")} />
@@ -165,7 +165,7 @@ setPopupMessage("Withdrawal issue submitted successfully!")
                         {screenshot ? (
                             <img src={URL.createObjectURL(screenshot)} alt="Receipt Screenshot" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
                         ) : (
-                            <AddPhotoAlternateIcon sx={{ color: "#FDE4BC", fontSize: 45 }} />
+                            <AddPhotoAlternateIcon sx={{ color: "#ffffff", fontSize: 45 }} />
                         )}
                         <input type="file" accept="image/*" hidden onChange={handleImageUpload} />
                     </Box>

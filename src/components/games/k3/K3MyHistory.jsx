@@ -207,7 +207,7 @@ const K3MyHistory = ({ bets, page, setPage, totalPage, hideDetailsButton,insideB
                         <Typography
                           sx={{
                             fontSize: "15px",
-                            color: "#FDE4BC",
+                            color: "#ffffff",
                             mb: 0.5,
                           }}
                         >
@@ -303,7 +303,7 @@ const K3MyHistory = ({ bets, page, setPage, totalPage, hideDetailsButton,insideB
                     textAlign: "left",
                     marginLeft: 1,
                     fontSize: "21px",
-                    color: "#FDE4BC",
+                    color: "#ffffff",
                   }}
                 >
                   Details
@@ -512,14 +512,14 @@ const K3MyHistory = ({ bets, page, setPage, totalPage, hideDetailsButton,insideB
               backgroundColor: "#FED358",
               "&.Mui-disabled": {
                 backgroundColor: "#5a5145", // Disabled background color
-                color: "#FDE4BC", // Optional: Change text color for better visibility
+                color: "#ffffff", // Optional: Change text color for better visibility
               },
               "&.MuiButtonBase-root": { minWidth: 0, padding: "5px 7px" },
             }}
           >
-            <ArrowBackIosRoundedIcon style={{ color: page === 1 ? "#FDE4BC" : "#323738" }} />
+            <ArrowBackIosRoundedIcon style={{ color: page === 1 ? "#ffffff" : "#323738" }} />
           </Button>
-          <Grid sx={{ display: "flex", alignItems: "center", color: "#FDE4BC", fontSize: "13px" }}>
+          <Grid sx={{ display: "flex", alignItems: "center", color: "#ffffff", fontSize: "13px" }}>
             {page}/{totalPage}
           </Grid>
           <Button
@@ -531,12 +531,12 @@ const K3MyHistory = ({ bets, page, setPage, totalPage, hideDetailsButton,insideB
               backgroundColor: "#FED358",
               "&.Mui-disabled": {
                 backgroundColor: "#5a5145", // Disabled background color
-                color: "#FDE4BC", // Optional: Change text color for better visibility
+                color: "#ffffff", // Optional: Change text color for better visibility
               },
               "&.MuiButtonBase-root": { minWidth: 0, padding: "5px 7px" },
             }}
           >
-            <ArrowForwardIosRoundedIcon style={{ color: page >= totalPage ? "#FDE4BC" : "#323738" }} />
+            <ArrowForwardIosRoundedIcon style={{ color: page >= totalPage ? "#ffffff" : "#323738" }} />
           </Button>
         </Box>
       </Box>

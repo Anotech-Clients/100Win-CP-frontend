@@ -27,7 +27,7 @@ function CoinBox({ coinboxAmount, coinboxDay, onClick, disabled, status, message
       }}
     >
       <div className="coinbox-amount" style={{
-        color: status === 'COMPLETED' ? '#B79C8B' : '#FDE4BC',
+        color: status === 'COMPLETED' ? '#B79C8B' : '#ffffff',
         fontWeight: isCurrentDay ? 'bold' : 'normal'
       }}>
         {coinboxAmount}
@@ -201,7 +201,7 @@ const Attendance = ({ children }) => {
           </div>
           <div id="coinbox-content">
             <div id="coinbox-amount" style={{
-              color: isCompleted ? "#B79C8B" : "#FDE4BC",
+              color: isCompleted ? "#B79C8B" : "#ffffff",
               fontWeight: isCurrentDay ? 'bold' : 'normal'
             }}>
               ₹{task.bonus.toFixed(2)}
@@ -249,7 +249,7 @@ const Attendance = ({ children }) => {
               <Grid item container alignItems="center" justifyContent="center">
                 <Grid item xs={2}>
                   <IconButton
-                    sx={{ color: "#FDE4BC", ml: -5 }}
+                    sx={{ color: "#ffffff", ml: -5 }}
                     onClick={handleRedirect}
                   >
                     <ArrowBackIosNewIcon />
@@ -259,7 +259,7 @@ const Attendance = ({ children }) => {
                   <Typography
                     variant="h6"
                     sx={{
-                      color: "#FDE4BC",
+                      color: "#ffffff",
                       flexGrow: 1,
                       textAlign: "center",
                       mr: 8,

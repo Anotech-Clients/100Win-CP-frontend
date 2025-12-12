@@ -132,7 +132,7 @@ const InviteLink = ({ children }) => {
                 >
                   <IconButton
                     sx={{
-                      color: "#FDE4BC",
+                      color: "#ffffff",
                       position: "absolute",
                       left: 0,
                       p: "12px",
@@ -143,7 +143,7 @@ const InviteLink = ({ children }) => {
                   </IconButton>
                   <Typography
                     variant="h6"
-                    sx={{ color: "#FDE4BC", textAlign: "center", fontSize: "19px" }}
+                    sx={{ color: "#ffffff", textAlign: "center", fontSize: "19px" }}
                   >
                     Invite
                   </Typography>
@@ -246,7 +246,7 @@ const InviteLink = ({ children }) => {
                     fontSize: "17px",
                     // fontWeight: "bold",
                     mt: "15px",
-                    color: "#FDE4BC",
+                    color: "#ffffff",
                   }}
                 >
                   Invite friends
@@ -258,7 +258,7 @@ const InviteLink = ({ children }) => {
                     // fontWeight: "bold",
                     fontSize: "17px",
                     mt: "15px",
-                    color: "#FDE4BC",
+                    color: "#ffffff",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",

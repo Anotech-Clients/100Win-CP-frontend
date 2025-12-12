@@ -341,7 +341,7 @@ const InvitationBonus = () => {
           >
             <IconButton
               sx={{
-                color: "#FDE4BC",
+                color: "#ffffff",
                 position: "absolute",
                 left: 0,
                 p: "12px",
@@ -352,7 +352,7 @@ const InvitationBonus = () => {
             </IconButton>
             <Typography
               variant="h6"
-              sx={{ color: "#FDE4BC", textAlign: "center", fontSize: "19px" }}
+              sx={{ color: "#ffffff", textAlign: "center", fontSize: "19px" }}
             >
               Invitation bonus
             </Typography>
@@ -597,7 +597,7 @@ const InvitationBonus = () => {
                     >
                       <Typography
                         sx={{
-                          color: "#FDE4BC",
+                          color: "#ffffff",
                           fontSize: "12.8px",
                           fontWeight: "400",
                         }}
@@ -606,7 +606,7 @@ const InvitationBonus = () => {
                       </Typography>
                       <Typography
                         sx={{
-                          color: "#FDE4BC",
+                          color: "#ffffff",
                           fontSize: "14.9332px",
                           fontWeight: "400",
                         }}
@@ -628,7 +628,7 @@ const InvitationBonus = () => {
                     >
                       <Typography
                         sx={{
-                          color: "#FDE4BC",
+                          color: "#ffffff",
                           fontSize: "12.8px",
                           fontWeight: "400",
                         }}
@@ -729,7 +729,7 @@ const InvitationBonus = () => {
                         "&.Mui-disabled": {
                           background: "#5a5145",
                           border: "transparent",
-                          color: "#FDE4BC",
+                          color: "#ffffff",
                         },
                         background: "linear-gradient(180deg, #FED358, #FFB472)",
                         border: bonusStatus.disabled
@@ -752,7 +752,7 @@ const InvitationBonus = () => {
                         sx={{
                           fontSize: "16px",
                           fontWeight: 700,
-                          color: bonusStatus.disabled ? "#FDE4BC" : "#000000",
+                          color: bonusStatus.disabled ? "#ffffff" : "#000000",
                         }}
                       >
                         {bonusStatus.text}

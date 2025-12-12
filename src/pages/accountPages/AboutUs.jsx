@@ -55,7 +55,7 @@ const AboutUs = () => {
           >
             <IconButton
               sx={{
-                color: "#FDE4BC",
+                color: "#ffffff",
                 position: "absolute",
                 left: 0,
                 p: "12px",
@@ -66,7 +66,7 @@ const AboutUs = () => {
             </IconButton>
             <Typography
               variant="h6"
-              sx={{ color: "#FDE4BC", textAlign: "center", fontSize: "19px" }}
+              sx={{ color: "#ffffff", textAlign: "center", fontSize: "19px" }}
             >
               About Us
             </Typography>
@@ -87,7 +87,7 @@ const AboutUs = () => {
           <ListItem
             secondaryAction={
               <IconButton edge="end" aria-label="go to">
-                <ChevronRightIcon sx={{ fontSize: 30, color: "#FDE4BC" }} />
+                <ChevronRightIcon sx={{ fontSize: 30, color: "#ffffff" }} />
               </IconButton>
             }
             sx={{
@@ -113,7 +113,7 @@ const AboutUs = () => {
             <ListItemText
               primary="Confidentiality Agreement"
               sx={{
-                color: "#FDE4BC",
+                color: "#ffffff",
                 margin: 0, // Removes extra margin around the text
               }}
             />
@@ -123,7 +123,7 @@ const AboutUs = () => {
           <ListItem
             secondaryAction={
               <IconButton edge="end" aria-label="go to">
-                <ChevronRightIcon sx={{ fontSize: 30, color: "#FDE4BC" }} />
+                <ChevronRightIcon sx={{ fontSize: 30, color: "#ffffff" }} />
               </IconButton>
             }
             sx={{
@@ -148,7 +148,7 @@ const AboutUs = () => {
             </ListItemIcon>
             <ListItemText
               primary="Risk Disclosure Agreement"
-              sx={{ color: "#FDE4BC", margin: 0 }}
+              sx={{ color: "#ffffff", margin: 0 }}
             />
           </ListItem>
           <Divider sx={{ mx: 2 }} />

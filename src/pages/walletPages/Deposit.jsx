@@ -927,7 +927,7 @@ const handleDeposit = (e) => {
               <Grid item container alignItems="center" justifyContent="center">
                 <Grid item xs={3}>
                   <IconButton
-                    sx={{ color: "#FDE4BC", mr: 8 }}
+                    sx={{ color: "#ffffff", mr: 8 }}
                     onClick={handleRedirect}
                   >
                     <ArrowBackIosNewIcon sx={{ fontSize: "20px" }} />
@@ -937,7 +937,7 @@ const handleDeposit = (e) => {
                   <Typography
                     variant="h6"
                     sx={{
-                      color: "#FDE4BC",
+                      color: "#ffffff",
                       flexGrow: 1,
                       textAlign: "center",
                       mr: 3,
@@ -951,7 +951,7 @@ const handleDeposit = (e) => {
                     variant="caption"
                     sx={{
                       textAlign: "left",
-                      color: "#FDE4BC",
+                      color: "#ffffff",
                       fontSize: "13px",
                       flexGrow: 1,
                     }}
@@ -1077,7 +1077,7 @@ const handleDeposit = (e) => {
                     fontSize: "17px",
                     marginLeft: 1.5,
                     fontWeight: "500",
-                    color: "#FDE4BC",
+                    color: "#ffffff",
                   }}
                 >
                   Select channel
@@ -1187,7 +1187,7 @@ const handleDeposit = (e) => {
                   variant="h6"
                   sx={{
                     fontWeight: "bold",
-                    color: "#FDE4BC",
+                    color: "#ffffff",
                     ml: "12px",
                     fontSize: "19px",
                   }}
@@ -1446,7 +1446,7 @@ const handleDeposit = (e) => {
                     variant="body1"
                     fontWeight="bold"
                     align="left"
-                    sx={{ lineHeight: 1.3, fontSize: "16px",color:"#FDE4BC" }}
+                    sx={{ lineHeight: 1.3, fontSize: "16px",color:"#ffffff" }}
                   >
                     Recharge Instructions
                   </Typography>
@@ -1785,7 +1785,7 @@ const handleDeposit = (e) => {
                     fontSize: "17px",
                     marginLeft: 1.5,
                     fontWeight: "bold",
-                    color: "#FDE4BC",
+                    color: "#ffffff",
                   }}
                 >
                   Deposit History

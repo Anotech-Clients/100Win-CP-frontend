@@ -53,7 +53,7 @@ const SuperJackpot = () => {
             >
               <IconButton
                 sx={{
-                  color: "#FDE4BC",
+                  color: "#ffffff",
                   position: "absolute",
                   left: 0,
                   p: "12px",
@@ -64,7 +64,7 @@ const SuperJackpot = () => {
               </IconButton>
               <Typography
                 variant="h6"
-                sx={{ color: "#FDE4BC", textAlign: "center", fontSize: "19px" }}
+                sx={{ color: "#ffffff", textAlign: "center", fontSize: "19px" }}
               >
                 Super jackpot
               </Typography>
@@ -196,7 +196,7 @@ const SuperJackpot = () => {
                   fullWidth
                   sx={{
                     bgcolor: "#323738",
-                    color: "#FDE4BC",
+                    color: "#ffffff",
                     fontSize: "13px",
                     borderRadius: "10px",
                     py: 1.5,
@@ -225,7 +225,7 @@ const SuperJackpot = () => {
                   fullWidth
                   sx={{
                     bgcolor: "#323738",
-                    color: "#FDE4BC",
+                    color: "#ffffff",
                     borderRadius: "10px",
                     py: 1.5,
                     textTransform: "none",

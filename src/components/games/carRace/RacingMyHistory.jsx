@@ -219,7 +219,7 @@ const RacingMyHistory = ({ bets, isLoading, getGradientForItem, page, setPage, t
                         <Typography
                           sx={{
                             fontSize: "15px",
-                            color: "#FDE4BC",
+                            color: "#ffffff",
                             mb: 0.5,
                           }}
                         >
@@ -306,7 +306,7 @@ const RacingMyHistory = ({ bets, isLoading, getGradientForItem, page, setPage, t
                     textAlign: "left",
                     marginLeft: 1,
                     fontSize: "21px",
-                    color: "#FDE4BC",
+                    color: "#ffffff",
                   }}
                 >
                   Details

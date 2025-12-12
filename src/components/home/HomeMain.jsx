@@ -12,16 +12,17 @@ import SvgIcon from "@mui/material/SvgIcon";
 import { useNavigate } from "react-router-dom";
 import ImageSlider from "./ImageSlider";
 import { UserContext } from "../../context/UserState";
-import GameTabFilter from "./GameTabFilter";
-import WalletComponent from "./walletCard";
-import TopBanner from "./TopBanner";
-import CloudDownloadIcon from '@mui/icons-material/CloudDownload';
+// import GameTabFilter from "./GameTabFilter";
+// import WalletComponent from "./walletCard";
+// import TopBanner from "./TopBanner";
+// import CloudDownloadIcon from '@mui/icons-material/CloudDownload';
 import LoadingLogo from "../utils/LodingLogo";
 import Divider from '@mui/material/Divider';
 import { useAuth } from "../../context/AuthContext";
 import { Badge, Button } from "@mui/material";
 import JackpotSection from "./JackpotSection";
-import { Bell, Divide, Gift, Plus } from "lucide-react";
+import { Bell, Gift, Plus } from "lucide-react";
+import TrendingGames from "./TrendingGames";
 const HomeMain = ({ children }) => {
   const RhombusIcon = (props) => (
     <SvgIcon {...props}>
@@ -140,6 +141,7 @@ const HomeMain = ({ children }) => {
                       lineHeight: "30px",
                       fontWeight: "600",
                     }}
+                    onClick={() =>  navigate("/login")}
                   >
                     Sign In
                   </Button>
@@ -158,6 +160,7 @@ const HomeMain = ({ children }) => {
                       boxShadow:
                         "0 0 12px rgba(35,238,136,.3), inset 0 -2px #1dca6a",
                     }}
+                    onClick={() =>  navigate("/register")}
                   >
                     Sign Up
                   </Button>
@@ -298,6 +301,7 @@ const HomeMain = ({ children }) => {
           {/* Tabs */}
           {/* <ScrollableTabs/> */}
           <JackpotSection />
+          <TrendingGames />
           <ScrollableTabs />
 
           {/* Winning Information */}
@@ -318,7 +322,7 @@ const HomeMain = ({ children }) => {
               <Typography
                 variant="h6"
                 sx={{
-                  color: "#FDE4BC",
+                  color: "#ffffff",
                   display: "flex",
                   alignItems: "center",
                   marginLeft: "7px",

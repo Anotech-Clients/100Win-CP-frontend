@@ -111,14 +111,14 @@ const PasswordChange = () => {
             zIndex: 1000,
             backgroundColor: "#232626",
             padding: "4px 8px",
-            color: "#FDE4BC",
+            color: "#ffffff",
           }}
         >
           <Grid item container alignItems="center" justifyContent="center">
             <Grid item xs={2}>
               <IconButton
                 onClick={() => navigate(-1)}
-                sx={{ color: "#FDE4BC", ml: -5 }}
+                sx={{ color: "#ffffff", ml: -5 }}
               >
                 <ArrowBackIosNewIcon sx={{ fontSize: "20px" }} />
               </IconButton>
@@ -127,7 +127,7 @@ const PasswordChange = () => {
               <Typography
                 variant="h6"
                 sx={{
-                  color: "#FDE4BC",
+                  color: "#ffffff",
                   flexGrow: 1,
                   fontSize: "19px",
                   textAlign: "center",
@@ -161,7 +161,7 @@ const PasswordChange = () => {
                   alt=""
                   sx={{ width: "22px", height: "20px" }}
                 />
-                <FormLabel sx={{ marginLeft: "5px", color: "#FDE4BC" }}>
+                <FormLabel sx={{ marginLeft: "5px", color: "#ffffff" }}>
                   Login password
                 </FormLabel>
               </Box>
@@ -193,12 +193,12 @@ const PasswordChange = () => {
                     },
                   },
                   "& .MuiInputBase-input": {
-                    color: "#FDE4BC",
+                    color: "#ffffff",
                     fontSize: "15px",
                   },
                 }}
                 InputProps={{
-                  style: { borderRadius: "10px", color: "#FDE4BC" },
+                  style: { borderRadius: "10px", color: "#ffffff" },
                   endAdornment: (
                     <IconButton
                       onClick={() =>
@@ -227,7 +227,7 @@ const PasswordChange = () => {
                   alt=""
                   sx={{ width: "22px", height: "20px" }}
                 />
-                <FormLabel sx={{ marginLeft: "5px", color: "#FDE4BC" }}>
+                <FormLabel sx={{ marginLeft: "5px", color: "#ffffff" }}>
                   New login password
                 </FormLabel>
               </Box>
@@ -258,7 +258,7 @@ const PasswordChange = () => {
                     },
                   },
                   "& .MuiInputBase-input": {
-                    color: "#FDE4BC",
+                    color: "#ffffff",
                     fontSize: "15px",
                   },
                 }}
@@ -290,7 +290,7 @@ const PasswordChange = () => {
                   alt=""
                   sx={{ width: "22px", height: "20px" }}
                 />
-                <FormLabel sx={{ marginLeft: "5px", color: "#FDE4BC" }}>
+                <FormLabel sx={{ marginLeft: "5px", color: "#ffffff" }}>
                   Confirm new password
                 </FormLabel>
               </Box>
@@ -321,7 +321,7 @@ const PasswordChange = () => {
                     },
                   },
                   "& .MuiInputBase-input": {
-                    color: "#FDE4BC",
+                    color: "#ffffff",
                     fontSize: "15px",
                   },
                 }}

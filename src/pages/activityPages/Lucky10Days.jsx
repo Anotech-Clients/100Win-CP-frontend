@@ -60,7 +60,7 @@ const Lucky10days = () => {
                     >
                         <IconButton
                             sx={{
-                                color: "#FDE4BC",
+                                color: "#ffffff",
                                 position: "absolute",
                                 left: 0,
                                 p: "12px",
@@ -71,7 +71,7 @@ const Lucky10days = () => {
                         </IconButton>
                         <Typography
                             variant="h6"
-                            sx={{ color: "#FDE4BC", textAlign: "center", fontSize: "19px" }}
+                            sx={{ color: "#ffffff", textAlign: "center", fontSize: "19px" }}
                         >
                             Lucky 10 Days
                         </Typography>

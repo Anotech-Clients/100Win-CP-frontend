@@ -102,7 +102,7 @@ const DetailsBox = () => {
             <Typography
               ref={nodeRef}
               sx={{
-                color: "#FDE4BC",
+                color: "#ffffff",
                 fontSize: "13px",
                 display: "-webkit-box",
                 WebkitBoxOrient: "vertical",

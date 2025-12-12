@@ -111,14 +111,18 @@ const Home = () => {
     <Suspense fallback={<LoadingLogo />}>
       <div style={{ position: "relative" }}>
         <Mobile>
-          <NotificationModal
-            open={isNotificationModalOpen}
-            onClose={handleNotificationClose}
-          />
-          <DepositModal
-            open={isDepositModalOpen}
-            onClose={handleDepositModalClose}
-          />
+          {isAuthenticated && (
+            <>
+              <NotificationModal
+                open={isNotificationModalOpen}
+                onClose={handleNotificationClose}
+              />
+              <DepositModal
+                open={isDepositModalOpen}
+                onClose={handleDepositModalClose}
+              />
+            </>)
+          }
           <HomeMain />
           {/* <DownloadModal /> */}
           <BottomNavigationArea />

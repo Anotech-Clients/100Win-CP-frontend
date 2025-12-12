@@ -1916,7 +1916,7 @@ const K3Page = ({ timerKey }) => {
                 variant="h6"
                 sx={{
                   fontWeight: "bold",
-                  color: "#FDE4BC",
+                  color: "#ffffff",
                   textAlign: "left",
                   pl: "5%",
                 }}
@@ -2120,7 +2120,7 @@ const K3Page = ({ timerKey }) => {
                 margin: "0 auto",
                 maxWidth: isSmallScreen ? "600px" : "396px",
                 backgroundColor: "white",
-                color: "#FDE4BC",
+                color: "#ffffff",
                 borderTopLeftRadius: "16px",
                 borderTopRightRadius: "16px",
               },
@@ -2131,7 +2131,7 @@ const K3Page = ({ timerKey }) => {
               alignItems="center"
               style={{
                 position: "relative",
-                color: "#FDE4BC",
+                color: "#ffffff",
                 backgroundColor: "#323738",
               }}
             >
@@ -2143,7 +2143,7 @@ const K3Page = ({ timerKey }) => {
                   // position: "relative",
                   // marginBottom: "-5px",
                   height: "40px",
-                  color: "#FDE4BC",
+                  color: "#ffffff",
                   backgroundColor: "#323738",
                   paddingTop: "10px",
                   paddingLeft: 9,
@@ -2301,7 +2301,7 @@ const K3Page = ({ timerKey }) => {
                   <Grid container justifyContent="space-between" alignItems={"center"}>
                     <Typography
                       variant="h6"
-                      sx={{ color: "#FDE4BC", fontSize: isSmallScreen2 ? "15px" : "17px", }}
+                      sx={{ color: "#ffffff", fontSize: isSmallScreen2 ? "15px" : "17px", }}
                     >
                       Balance
                     </Typography>
@@ -2385,7 +2385,7 @@ const K3Page = ({ timerKey }) => {
                       justifyContent="space-between"
                       align="center"
                       alignItems="center"
-                      sx={{ color: "#FDE4BC", flexWrap: "nowrap" }}
+                      sx={{ color: "#ffffff", flexWrap: "nowrap" }}
                     >
                       <Typography variant="h6" sx={{ fontSize: isSmallScreen2 ? "15px" : "17px", display: "flex", justifyContent: "flex-start" }}>
                         Add your money
@@ -2420,11 +2420,11 @@ const K3Page = ({ timerKey }) => {
                             borderRadius: 15,
                             height: isSmallScreen2 ? 25 : 30,
                             backgroundColor: "#232626",
-                            color: "#FDE4BC",
+                            color: "#ffffff",
                           }}
                           InputProps={{
                             style: {
-                              color: "#FDE4BC",
+                              color: "#ffffff",
                               borderRadius: 15,
                               height: isSmallScreen2 ? 25 : 30,
                               border: "none",
@@ -2443,10 +2443,10 @@ const K3Page = ({ timerKey }) => {
                       justifyContent="space-between"
                       align="center"
                       alignItems="center"
-                      sx={{ color: "#FDE4BC" }}>
+                      sx={{ color: "#ffffff" }}>
                       <Typography
                         variant="h6"
-                        sx={{ color: "#FDE4BC", fontSize: isSmallScreen2 ? "15px" : "17px" }}
+                        sx={{ color: "#ffffff", fontSize: isSmallScreen2 ? "15px" : "17px" }}
                       >
                         Quantity
                       </Typography>
@@ -2518,7 +2518,7 @@ const K3Page = ({ timerKey }) => {
                   <Grid
                     container
                     justifyContent="flex-end"
-                    sx={{ color: "#FDE4BC" }}
+                    sx={{ color: "#ffffff" }}
                   >
                     {[1, 5, 10, 20, 50, 100].map((value) => (
                       <div

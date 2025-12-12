@@ -173,7 +173,7 @@ const BannerCard = () => {
                     variant="body2"
                     component="div"
                     sx={{
-                      color: "#FDE4BC",
+                      color: "#ffffff",
                       fontWeight: "bold",
                       fontSize: "calc(100% + 0.25%)", // Increase text size by 0.25%
                     }}

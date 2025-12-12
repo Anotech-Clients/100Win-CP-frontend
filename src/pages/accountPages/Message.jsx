@@ -73,7 +73,7 @@ const Message = ({ children }) => {
               padding: "8px 10px",
               display: "flex",
               alignItems: "center",
-              color: "#FDE4BC",
+              color: "#ffffff",
             }}
           >
             <ChevronLeftIcon
@@ -88,7 +88,7 @@ const Message = ({ children }) => {
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                color: "#FDE4BC",
+                color: "#ffffff",
               }}
             >
               Notification
@@ -108,7 +108,7 @@ const Message = ({ children }) => {
           }}elevation={0}>
             {loading ? (
               <Box sx={{ display: 'flex', justifyContent: 'center', p: 3 }}>
-                <CircularProgress sx={{ color: '#FDE4BC' }} />
+                <CircularProgress sx={{ color: '#ffffff' }} />
               </Box>
             ) : error ? (
               <Alert severity="error" sx={{ mt: 2 }}>{error}</Alert>
@@ -142,7 +142,7 @@ const Message = ({ children }) => {
                         <Typography
                           variant="body1"
                           sx={{
-                            color: "#FDE4BC",
+                            color: "#ffffff",
                             fontSize: "16px",
                             textAlign: "left"
                           }}

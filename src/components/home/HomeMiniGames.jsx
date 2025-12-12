@@ -82,7 +82,7 @@ const HomeMiniGames = ({onDetailClick = () => {}}) => {
           <Typography
                       sx={{
                         fontSize: "14px",
-                        color: "#FDE4BC",
+                        color: "#ffffff",
                         marginRight: "12px",
                         marginLeft: "3px",
                         whiteSpace: "nowrap",
@@ -112,7 +112,7 @@ const HomeMiniGames = ({onDetailClick = () => {}}) => {
               backgroundColor: "#382e35",
               "&.MuiButtonBase-root": { minWidth: 0, padding: "3px 8px", boxShadow: "none", },
             }}
-          ><Typography sx={{ color: "#FED358", fontSize: "12px", textTransform: "none", fontWeight: "bold",  fontFamily: "'Times New Roman', Times, serif !important", }}>Detail</Typography> </Button>
+          ><Typography sx={{ color: "#FED358", fontSize: "12px", textTransform: "none", fontWeight: "bold",  fontFamily: "'Times New Roman', Times, serif !important", }}>All</Typography> </Button>
           <Button
             variant="contained"
             onClick={handlePrev}

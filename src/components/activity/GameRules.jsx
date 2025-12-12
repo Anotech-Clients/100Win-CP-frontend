@@ -115,10 +115,10 @@ const GameRules = () => {
                         }}
                     >
                         <Grid item xs={12} container alignItems="center" justifyContent="center">
-                            <IconButton sx={{ color: '#FDE4BC', position: 'absolute', left: 0 }} onClick={handleBackClick}>
+                            <IconButton sx={{ color: '#ffffff', position: 'absolute', left: 0 }} onClick={handleBackClick}>
                                 <ArrowBackIosNewIcon />
                             </IconButton>
-                            <Typography variant="h6" sx={{ color: '#FDE4BC', textAlign: 'center' }}>
+                            <Typography variant="h6" sx={{ color: '#ffffff', textAlign: 'center' }}>
                                 Game Rules
                             </Typography>
                         </Grid>

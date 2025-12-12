@@ -167,7 +167,7 @@ const WinningStreakTabs = () => {
             >
                 <CardContent sx={{ padding: 2, position: "relative" }}>
                     <Box sx={{ mb: 2.5 }}>
-                        <Typography variant="h6" sx={{ fontSize: 15, color: "#FDE4BC", mb: 1, textAlign: "left" }}>
+                        <Typography variant="h6" sx={{ fontSize: 15, color: "#ffffff", mb: 1, textAlign: "left" }}>
                             Current Winning Streak
                         </Typography>
 
@@ -321,7 +321,7 @@ const WinningStreakTabs = () => {
                                 background: selectedGame === tab.value
                                     ? "linear-gradient(90deg,#24ee89,#9fe871)"
                                     : "#323738",
-                                color: selectedGame === tab.value?"#232626":"#FDE4BC",
+                                color: selectedGame === tab.value?"#232626":"#ffffff",
                             }}
                         >
                             <Grid sx={{ width: "100%", height: "100%", display: "flex", justifyContent: "center", alignItems: "center" }}>
@@ -342,7 +342,7 @@ const WinningStreakTabs = () => {
                             filteredGames.map((game) => renderWinningStreakCards(game))
                         ) : (
                             <Box sx={{ pb: 4, pt: 8, textAlign: "center" }}>
-                                <Typography sx={{ color: "#FDE4BC" }}>
+                                <Typography sx={{ color: "#ffffff" }}>
                                     {selectedGame === "All"
                                         ? "No ongoing winning streaks"
                                         : `No streaks in ${selectedGame} game`}
@@ -351,7 +351,7 @@ const WinningStreakTabs = () => {
                         )
                     ) : (
                         <Box sx={{ pb: 4, pt: 8, textAlign: "center" }}>
-                            <Typography sx={{ color: "#FDE4BC" }}>No rules found</Typography>
+                            <Typography sx={{ color: "#ffffff" }}>No rules found</Typography>
                         </Box>
                     )}
                 </Box>

@@ -111,7 +111,7 @@ const EventDetails = () => {
           >
             <Grid item xs={2}>
               <IconButton
-                sx={{ color: "#FDE4BC", ml: -2 }} // White color for the icon
+                sx={{ color: "#ffffff", ml: -2 }} // White color for the icon
                 onClick={handleRedirect}
               >
                 <ArrowBackIosNewIcon sx={{ fontSize: "19px" }} />
@@ -121,7 +121,7 @@ const EventDetails = () => {
               <Typography
                 variant="h6"
                 sx={{
-                  color: "#FDE4BC", // White color for the text
+                  color: "#ffffff", // White color for the text
                   flexGrow: 1,
                   textAlign: "center",
                   mr: 8,
@@ -137,7 +137,7 @@ const EventDetails = () => {
             <TableContainer component={Paper} sx={{ maxWidth: 400, margin: 'auto', backgroundColor: '#cf7c10', overflow: "hidden" }}>
               <Table>
                 <TableHead>
-                  <TableRow sx={{ '& th': { color: '#FDE4BC', fontSize: '1rem', textAlign: 'center', textWrap: "nowrap" } }}>
+                  <TableRow sx={{ '& th': { color: '#ffffff', fontSize: '1rem', textAlign: 'center', textWrap: "nowrap" } }}>
                     <TableCell sx={{ padding: "10px 8px", borderBottom: "none" }}>Task</TableCell>
                     <TableCell sx={{ padding: "10px 8px", borderBottom: "none" }}>Number of spins</TableCell>
                     <TableCell sx={{ padding: "10px 8px", borderBottom: "none" }}>spin time</TableCell>
@@ -164,7 +164,7 @@ const EventDetails = () => {
                         <div style={{ color: '#d23838', fontSize: '12px', }}>₹{task.amount.toFixed(2)}</div>
                         <div style={{ color: '#B79C8B', fontSize: '11px' }}>Total depositsBalance</div>
                       </TableCell>
-                      <TableCell sx={{ color: '#FDE4BC', textAlign: 'center', fontSize: '13.8px', borderBottom: "none" }}>+{task.spins}</TableCell>
+                      <TableCell sx={{ color: '#ffffff', textAlign: 'center', fontSize: '13.8px', borderBottom: "none" }}>+{task.spins}</TableCell>
                       <TableCell sx={{ color: '#B79C8B', textAlign: 'center', textWrap: "nowrap", fontSize: '14px', borderBottom: "none" }}>00:00-23:59</TableCell>
                     </TableRow>
                   ))}

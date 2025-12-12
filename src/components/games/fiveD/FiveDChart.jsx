@@ -47,7 +47,7 @@ const StyledTab = styled(Tab)(({ selected, index }) => ({
     padding: "4px 16px",
     fontWeight: "bold",
     fontSize: "16px",
-    color: selected ? "transparent" : "#FDE4BC",
+    color: selected ? "transparent" : "#ffffff",
     backgroundColor: selected ? "#323738" : "#382e35",
     backgroundImage: selected ? `url(${chart[index]})` : "none",
     backgroundSize: "cover",
@@ -214,7 +214,7 @@ const NumberTableWithLines = ({ historyData, selectedTab }) => {
                                 <Box
                                     style={{
                                         fontSize: isSmallScreen ? "9px" : "12px",
-                                        color: "#FDE4BC",
+                                        color: "#ffffff",
                                         paddingLeft: isSmallScreen ? "0%" : isMiddleScreen ? "5%" : "0%"
                                     }}
                                 >
@@ -319,7 +319,7 @@ const Chart5D = ({ data }) => {
                 </Tabs>
                 <Divider sx={{ backgroundColor: "#3D363A" }} />
                 <Box sx={{ marginTop: "16px" }}>
-                    <Typography variant="body2" sx={{ mb: 1, textAlign: "start", color: "#FDE4BC" }}>
+                    <Typography variant="body2" sx={{ mb: 1, textAlign: "start", color: "#ffffff" }}>
                         Statistic (last 100 Periods)
                     </Typography>
                     <TableContainer
@@ -331,7 +331,7 @@ const Chart5D = ({ data }) => {
                             <TableBody>
                                 {currentStatisticsData.map((row, rowIndex) => (
                                     <StyledTableRow key={rowIndex}>
-                                        <StyledTableCell component="th" scope="row" sx={{ color: "#FDE4BC" }}>
+                                        <StyledTableCell component="th" scope="row" sx={{ color: "#ffffff" }}>
                                             {row.label}
                                         </StyledTableCell>
                                         {row.cols.map((col, colIndex) => (
@@ -373,12 +373,12 @@ const Chart5D = ({ data }) => {
                         backgroundColor: "#FED358",
                         "&.Mui-disabled": {
                             backgroundColor: "#382e35", // Disabled background color
-                            color: "#FDE4BC", // Optional: Change text color for better visibility
+                            color: "#ffffff", // Optional: Change text color for better visibility
                         },
                         "&.MuiButtonBase-root": { minWidth: 0, padding: "5px 7px" },
                     }}
                 >
-                    <ArrowBackIosRoundedIcon style={{ color: chartPage === 1 ? "#FDE4BC" : "#323738" }} />
+                    <ArrowBackIosRoundedIcon style={{ color: chartPage === 1 ? "#ffffff" : "#323738" }} />
                 </Button>
                 <Grid sx={{ display: "flex", alignItems: "center", color: "#B79C8B", fontSize: "12.8px" }}>
                     {chartPage}/{gameTotalPage}
@@ -392,12 +392,12 @@ const Chart5D = ({ data }) => {
                         backgroundColor: "#FED358",
                         "&.Mui-disabled": {
                             backgroundColor: "#382e35", // Disabled background color
-                            color: "#FDE4BC", // Optional: Change text color for better visibility
+                            color: "#ffffff", // Optional: Change text color for better visibility
                         },
                         "&.MuiButtonBase-root": { minWidth: 0, padding: "5px 7px" },
                     }}
                 >
-                    <ArrowForwardIosRoundedIcon style={{ color: chartPage === gameTotalPage ? "#FDE4BC" : "#323738" }} />
+                    <ArrowForwardIosRoundedIcon style={{ color: chartPage === gameTotalPage ? "#ffffff" : "#323738" }} />
                 </Button>
             </Box>
         </Box>

@@ -186,7 +186,7 @@ const Characteristic = () => {
           <Typography
             sx={{
               fontSize: "16px",
-              color: "#FDE4BC",
+              color: "#ffffff",
               marginRight: "12px",
               marginLeft: "6px",
               whiteSpace: "nowrap",

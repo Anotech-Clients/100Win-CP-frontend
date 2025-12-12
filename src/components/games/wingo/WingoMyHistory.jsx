@@ -196,7 +196,7 @@ const WingoMyHistory = ({ bets, page, setPage, totalPage, hideDetailsButton, ins
                         <Typography
                           sx={{
                             fontSize: "15px",
-                            color: "#FDE4BC",
+                            color: "#ffffff",
                             mb: 0.5,
                           }}
                         >
@@ -286,7 +286,7 @@ const WingoMyHistory = ({ bets, page, setPage, totalPage, hideDetailsButton, ins
                     textAlign: "left",
                     marginLeft: 1,
                     fontSize: "21px",
-                    color: "#FDE4BC",
+                    color: "#ffffff",
                   }}
                 >
                   Details

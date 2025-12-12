@@ -134,7 +134,7 @@ const GiftCoupon = ({ children }) => {
               >
                 <IconButton
                   sx={{
-                    color: "#FDE4BC",
+                    color: "#ffffff",
                     position: "absolute",
                     left: 0,
                     p: "12px",
@@ -145,7 +145,7 @@ const GiftCoupon = ({ children }) => {
                 </IconButton>
                 <Typography
                   variant="h6"
-                  sx={{ color: "#FDE4BC", textAlign: "center", fontSize: "19px" }}
+                  sx={{ color: "#ffffff", textAlign: "center", fontSize: "19px" }}
                 >
                   Gift
                 </Typography>
@@ -188,7 +188,7 @@ const GiftCoupon = ({ children }) => {
                     variant="body1"
                     gutterBottom
                     align="left"
-                    color="#FDE4BC"
+                    color="#ffffff"
                     sx={{ mt: 4, fontSize: "14px" }}
                   >
                     Please enter the gift code below
@@ -267,7 +267,7 @@ const GiftCoupon = ({ children }) => {
                         alignItems: "center", // Vertically align items
                         marginBottom: "0.5rem",
                         // marginTop: "1.5rem",
-                        color: "#FDE4BC",
+                        color: "#ffffff",
                         textAlign: "left",
                       }}
                     >

@@ -68,16 +68,16 @@ const ChangeIFSC = () => {
                     maxWidth: "100%"
                 }
             }}>
-                <Box sx={{ bgcolor: "#232626", padding: "8px 10px", display: "flex", alignItems: "center", color: "#FDE4BC" }}>
+                <Box sx={{ bgcolor: "#232626", padding: "8px 10px", display: "flex", alignItems: "center", color: "#ffffff" }}>
                     <ChevronLeftIcon sx={{ fontSize: 30, cursor: "pointer" }} onClick={() => navigate(-1)} />
-                    <Typography variant="h6" sx={{ flexGrow: 1, textAlign: "center", color: "#FDE4BC" }}>
+                    <Typography variant="h6" sx={{ flexGrow: 1, textAlign: "center", color: "#ffffff" }}>
                         IFSC Modification
                     </Typography>
                     <HomeIcon sx={{ fontSize: 30 ,cursor:"pointer"}} onClick={() => navigate("/")} />
                 </Box>
 
                 <Box sx={{ m: 2 }}>
-                    <Typography variant="subtitle1" sx={{ color: "#FDE4BC", my: 1, textAlign: "left" }}>
+                    <Typography variant="subtitle1" sx={{ color: "#ffffff", my: 1, textAlign: "left" }}>
                         Current IFSC Code
                     </Typography>
                     <TextField fullWidth placeholder="Current IFSC Code" variant="outlined" value={currentIFSC} onChange={(e) => setCurrentIFSC(e.target.value)} 
@@ -88,7 +88,7 @@ const ChangeIFSC = () => {
                                 "&:hover fieldset": { border: "1px solid #3B3833" },
                                 "&.Mui-focused fieldset": { border: "1px solid #3B3833" }
                             },borderRadius: 1, input: { color: "#f5f3f0" }, label: { color: "#A8A5A1" } }} />
-                    <Typography variant="subtitle1" sx={{ color: "#FDE4BC", mt: 3,mb:1, textAlign: "left" }}>
+                    <Typography variant="subtitle1" sx={{ color: "#ffffff", mt: 3,mb:1, textAlign: "left" }}>
                         New IFSC Code
                     </Typography>
                     <TextField

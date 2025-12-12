@@ -237,9 +237,9 @@ const ProgressQueries = () => {
         "&.MuiContainer-root": { maxWidth: "100%" }
       }}>
         {/* Header */}
-        <Box sx={{ bgcolor: "#232626", padding: "8px 10px", display: "flex", alignItems: "center", color: "#FDE4BC" }}>
+        <Box sx={{ bgcolor: "#232626", padding: "8px 10px", display: "flex", alignItems: "center", color: "#ffffff" }}>
           <ChevronLeftIcon sx={{ fontSize: 30, cursor: "pointer" }} onClick={() => window.history.back()} />
-          <Typography variant="h6" sx={{ flexGrow: 1, textAlign: "center", color: "#FDE4BC" }}>
+          <Typography variant="h6" sx={{ flexGrow: 1, textAlign: "center", color: "#ffffff" }}>
             Progress Queries
           </Typography>
           <HomeIcon sx={{ fontSize: 30, cursor: "pointer" }} onClick={() => navigate("/")} />
@@ -331,7 +331,7 @@ const ProgressQueries = () => {
                       borderLeft: `4px solid ${statusColors[ticket.status] || '#757575'}`,
                       cursor: 'pointer',
                       bgcolor: '#323738',
-                      color: '#FDE4BC'
+                      color: '#ffffff'
                     }}
                     onClick={() => handleTicketClick(ticket)}
                   >
@@ -387,7 +387,7 @@ const ProgressQueries = () => {
                             label={ticket.ticketAttachments.length}
                             size="small"
                             variant="outlined"
-                            sx={{ borderColor: 'rgba(255, 255, 255, 0.3)', color: '#FDE4BC' }}
+                            sx={{ borderColor: 'rgba(255, 255, 255, 0.3)', color: '#ffffff' }}
                           />
                         )}
                       </Box>
@@ -416,7 +416,7 @@ const ProgressQueries = () => {
           PaperProps={{
             style: {
               backgroundColor: '#232626',
-              color: '#FDE4BC',
+              color: '#ffffff',
               margin: isMobile ? "20px" : undefined,
               borderRadius: isMobile ? 0 : undefined,
               maxWidth: "360px",
@@ -696,8 +696,8 @@ const ProgressQueries = () => {
                           onClick={() => handleViewAttachment(attachment)}
                           sx={{
                             bgcolor: '#323738',
-                            color: '#FDE4BC',
-                            '& .MuiChip-icon': { color: '#FDE4BC' }
+                            color: '#ffffff',
+                            '& .MuiChip-icon': { color: '#ffffff' }
                           }}
                         />
                       ))}

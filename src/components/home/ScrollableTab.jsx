@@ -16,60 +16,62 @@ import HomeSlots from "./HomeSlots";
 import HomeFishing from "./HomeFishing";
 import HomeSports from "./HomeSports";
 import HomeMiniGames from "./HomeMiniGames";
-import TopBanner from "./TopBanner";
+import { useNavigate } from "react-router-dom";
+// import TopBanner from "./TopBanner";
 
 const ScrollableTabs = () => {
   // Set initial selected item to "Lobby"
   const [selectedItem, setSelectedItem] = useState("Lobby");
   const scrollRef = useRef(null);
   const itemRefs = useRef({});
+  const navigate = useNavigate()
 
-  const navigationItems = [
-    {
-      name: "Lobby",
-      icon: "/assets/gameFilter/lobby.webp"
-    },
-    {
-      name: "Lottery",
-      icon: "/assets/gameFilter/lottery.webp"
-    },
-    {
-      name: "Mini games",
-      icon: "/assets/gameFilter/miniGames.webp"
-    },
-    {
-      name: "Popular",
-      icon: "/assets/gameFilter/popular.webp"
-    },
-    {
-      name: "Slots",
-      icon: "/assets/gameFilter/slots.webp"
-    },
-    {
-      name: "Fishing",
-      icon: "/assets/gameFilter/fishing.webp"
-    },
-    {
-      name: "PVC",
-      icon: "/assets/gameFilter/pvc.webp"
-    },
-    {
-      name: "Casino",
-      icon: "/assets/gameFilter/casino.webp"
-    },
-    {
-      name: "Sports",
-      icon: "/assets/gameFilter/sports.webp"
-    }
-  ];
+  // const navigationItems = [
+  //   {
+  //     name: "Lobby",
+  //     icon: "/assets/gameFilter/lobby.webp"
+  //   },
+  //   {
+  //     name: "Lottery",
+  //     icon: "/assets/gameFilter/lottery.webp"
+  //   },
+  //   {
+  //     name: "Mini games",
+  //     icon: "/assets/gameFilter/miniGames.webp"
+  //   },
+  //   {
+  //     name: "Popular",
+  //     icon: "/assets/gameFilter/popular.webp"
+  //   },
+  //   {
+  //     name: "Slots",
+  //     icon: "/assets/gameFilter/slots.webp"
+  //   },
+  //   {
+  //     name: "Fishing",
+  //     icon: "/assets/gameFilter/fishing.webp"
+  //   },
+  //   {
+  //     name: "PVC",
+  //     icon: "/assets/gameFilter/pvc.webp"
+  //   },
+  //   {
+  //     name: "Casino",
+  //     icon: "/assets/gameFilter/casino.webp"
+  //   },
+  //   {
+  //     name: "Sports",
+  //     icon: "/assets/gameFilter/sports.webp"
+  //   }
+  // ];
 
   const handleFilter = (componentName) => {
     setSelectedItem(componentName);
   };
 
-  const handleSwitchToTab = (tabName) => {
-    handleFilter(tabName);
-  };
+  // const handleSwitchToTab = (tabName) => {
+  //   handleFilter(tabName);
+  // };
   // Center the selected tab
   useEffect(() => {
     if (scrollRef.current && itemRefs.current[selectedItem]) {
@@ -96,13 +98,13 @@ const ScrollableTabs = () => {
         return (
           <>
           <Lottery />
-           <HomeMiniGames onDetailClick={() => handleSwitchToTab("Mini games")}/>
-            <HomeCasino onDetailClick={() => handleSwitchToTab("Casino")}/>
-            <HomeSlots onDetailClick={() => handleSwitchToTab("Slots")}/>
+           <HomeMiniGames onDetailClick={() => navigate("/all-games/Mini games")}/>
+            <HomeCasino onDetailClick={() => navigate("/all-games/Casino")}/>
+            <HomeSlots onDetailClick={() => navigate("/all-games/Slots")}/>
               {/* <TopBanner/> */}
-                     <HomeSports onDetailClick={() => handleSwitchToTab("Sports")}/>
+                     <HomeSports onDetailClick={() => navigate("/all-games/Sports")}/>
                              <HomeRummy />
-                      <HomeFishing onDetailClick={() => handleSwitchToTab("Fishing")}/>
+                      <HomeFishing onDetailClick={() => navigate("/all-games/Fishing")}/>
                        <SuperJackpot />           
           </>
         );
@@ -196,7 +198,7 @@ const ScrollableTabs = () => {
 
             <Box
               sx={{
-                color: selectedItem === item.name ? "#FDE4BC" : "#837064",
+                color: selectedItem === item.name ? "#ffffff" : "#837064",
                 fontSize: '12.8px',
                 textAlign: 'center',
                 width: '100%',

@@ -93,19 +93,19 @@ const Lottery = () => {
     navigate("/wallet/deposit"); // Navigate to deposit page
   };
 
-  const handleNext = () => {
-    const container = document.querySelector(".games-container");
-    if (container) {
-      container.scrollLeft += container.offsetWidth;
-    }
-  };
+  // const handleNext = () => {
+  //   const container = document.querySelector(".games-container");
+  //   if (container) {
+  //     container.scrollLeft += container.offsetWidth;
+  //   }
+  // };
 
-  const handlePrev = () => {
-    const container = document.querySelector(".games-container");
-    if (container) {
-      container.scrollLeft -= container.offsetWidth;
-    }
-  };
+  // const handlePrev = () => {
+  //   const container = document.querySelector(".games-container");
+  //   if (container) {
+  //     container.scrollLeft -= container.offsetWidth;
+  //   }
+  // };
 
   return (
     <>
@@ -124,21 +124,20 @@ const Lottery = () => {
             scrollbarWidth: "none",
           }}
         >
-          <img src="/assets/gameFilter/lottery.webp" alt="" width="21px" />
+          {/* <img src="/assets/gameFilter/lottery.webp" alt="" width="21px" /> */}
           <Grid
             item
             sx={{ display: "flex", alignItems: "left", flexDirection: "column" }}
           >
             <Typography
               sx={{
-                fontSize: "14px",
-                color: "#FDE4BC",
+                fontSize: "16px",
+                color: "#ffffff",
                 marginRight: "6px",
                 marginLeft: "6.5px",
                 whiteSpace: "nowrap",
                 textAlign:"left",
                 fontWeight:"bold",
-                fontFamily: "'Times New Roman', Times, serif !important",
               }}
             >
               Lottery

@@ -67,7 +67,7 @@ const GameWalletCard = () => {
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              color: "#FDE4BC",
+              color: "#ffffff",
             }}
           >
             <Typography variant="h6" sx={{ fontWeight: "bold" }}>
@@ -93,7 +93,7 @@ const GameWalletCard = () => {
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              color: "#FDE4BC",
+              color: "#ffffff",
             }}
           >
             {/* <AccountBalanceWallet

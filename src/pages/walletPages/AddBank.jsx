@@ -146,7 +146,7 @@ const AddBank = () => {
           >
             <Grid item xs={1}>
               <IconButton
-                sx={{ color: "#FDE4BC", padding: 0 }}
+                sx={{ color: "#ffffff", padding: 0 }}
                 onClick={() => (showBankSelection ? setShowBankSelection(false) : navigate(-1))}
               >
                 <ArrowBackIosNewIcon sx={{ fontSize: "17px" }} />
@@ -154,7 +154,7 @@ const AddBank = () => {
 
             </Grid>
             <Grid item xs={11}>
-              <Typography variant="subtitle1" sx={{ textAlign: "center", color: "#FDE4BC" }}>
+              <Typography variant="subtitle1" sx={{ textAlign: "center", color: "#ffffff" }}>
                 {showBankSelection ? "Choose a bank" : "Add a bank account number"}
               </Typography>
             </Grid>
@@ -177,7 +177,7 @@ const AddBank = () => {
                 <Box sx={{ mr: 2, color: "#FED358" }}>
                   <AccountBalanceIcon />
                 </Box>
-                <Typography sx={{ color: "#FDE4BC",fontSize:"12.8px" }}>Choose a bank</Typography>
+                <Typography sx={{ color: "#ffffff",fontSize:"12.8px" }}>Choose a bank</Typography>
               </Box>
               <Box
                 onClick={() => setShowBankSelection(true)}
@@ -205,7 +205,7 @@ const AddBank = () => {
                 <Box sx={{ mr: 1.2, color: "#FED358" }}>
                   <PersonIcon sx={{fontSize:30}}/>
                 </Box>
-                <Typography sx={{ color: "#FDE4BC",fontSize:"12.8px" }}>Full recipient's name</Typography>
+                <Typography sx={{ color: "#ffffff",fontSize:"12.8px" }}>Full recipient's name</Typography>
               </Box>
               <Box sx={{ py: 1,px:0.5, borderRadius: "8px" }}>
                 <TextField
@@ -219,7 +219,7 @@ const AddBank = () => {
                     borderRadius:"6px",
                     py:1,
                     input: {
-                      color: "#FDE4BC", // Input text color
+                      color: "#ffffff", // Input text color
                       pl:1,
                       "&::placeholder": {
                         color: "#837064", // Placeholder color
@@ -249,7 +249,7 @@ const AddBank = () => {
                 <Box sx={{ mr: 1.2, color: "#FED358" }}>
                   <CreditCardIcon sx={{fontSize:30}}/>
                 </Box>
-                <Typography sx={{ color: "#FDE4BC" ,fontSize:"12.8px"}}>Bank account number</Typography>
+                <Typography sx={{ color: "#ffffff" ,fontSize:"12.8px"}}>Bank account number</Typography>
               </Box>
              <Box sx={{ py: 1,px:0.5, borderRadius: "8px" }}>
                 <TextField
@@ -268,7 +268,7 @@ const AddBank = () => {
                     borderRadius:"6px",
                     py:1,
                     input: {
-                      color: "#FDE4BC", // Input text color
+                      color: "#ffffff", // Input text color
                       pl:1,
                       "&::placeholder": {
                         color: "#837064", // Placeholder color
@@ -298,7 +298,7 @@ const AddBank = () => {
                 <Box sx={{ mr: 1.2, color: "#FED358" }}>
                   <VpnKeyIcon sx={{fontSize:30}}/>
                 </Box>
-                <Typography sx={{ color: "#FDE4BC",fontSize:"12.8px" }}>Bank IFSC code</Typography>
+                <Typography sx={{ color: "#ffffff",fontSize:"12.8px" }}>Bank IFSC code</Typography>
               </Box>
               <Box sx={{ py: 1,px:0.5, borderRadius: "8px" }}>
                 <TextField
@@ -312,7 +312,7 @@ const AddBank = () => {
                     borderRadius:"6px",
                     py:1,
                     input: {
-                      color: "#FDE4BC", // Input text color
+                      color: "#ffffff", // Input text color
                       pl:1,
                       "&::placeholder": {
                         color: "#837064", // Placeholder color
@@ -342,7 +342,7 @@ const AddBank = () => {
                 <Box sx={{ mr: 1.2, color: "#FED358" }}>
                   <PhoneIcon sx={{fontSize:30}}/>
                 </Box>
-                <Typography sx={{ color: "#FDE4BC",fontSize:"12.8px" }}>Phone number</Typography>
+                <Typography sx={{ color: "#ffffff",fontSize:"12.8px" }}>Phone number</Typography>
               </Box>
              <Box sx={{ py: 1,px:0.5, borderRadius: "8px" }}>
                 <TextField
@@ -363,7 +363,7 @@ const AddBank = () => {
                     borderRadius:"6px",
                     py:1,
                     input: {
-                      color: "#FDE4BC", // Input text color
+                      color: "#ffffff", // Input text color
                       pl:1,
                       "&::placeholder": {
                         color: "#837064", // Placeholder color

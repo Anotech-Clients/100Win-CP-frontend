@@ -145,10 +145,10 @@ const InvitationRewardRules = () => {
                     }}
                 >
                     <Grid item xs={12} container alignItems="center" justifyContent="center">
-                        <IconButton sx={{ color: '#FDE4BC', position: 'absolute', left: 0 ,p:"12px"}} onClick={handleBackClick}>
+                        <IconButton sx={{ color: '#ffffff', position: 'absolute', left: 0 ,p:"12px"}} onClick={handleBackClick}>
                             <ArrowBackIosNewIcon sx={{fontSize:"19px"}}/>
                         </IconButton>
-                        <Typography variant="h6" sx={{ color: '#FDE4BC', textAlign: 'center' ,fontSize:"19px"}}>
+                        <Typography variant="h6" sx={{ color: '#ffffff', textAlign: 'center' ,fontSize:"19px"}}>
                             Invitation reward rules
                         </Typography>
                     </Grid>

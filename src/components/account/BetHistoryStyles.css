@@ -18,7 +18,7 @@
   .card-header-left h6 {
     margin: 0;
     font-size: 16px;
-    color:#FDE4BC
+    color:#ffffff
   }
   
   .card-header-left p {
@@ -42,11 +42,11 @@
   }
   
   /* .card-content .label {
-    color: #FDE4BC;
+    color: #ffffff;
   }
    */
   .card-content .value {
-    color: #FDE4BC;
+    color: #ffffff;
     font-weight: 400;
   }
   .result-images{
@@ -149,7 +149,7 @@
   }
   .label {
     position: relative;
-    color: #FDE4BC;
+    color: #ffffff;
     font-size: 12px;
     font-weight: 500;
   }
@@ -192,7 +192,7 @@
 
   .inner-content {
     position: relative;
-    color: #FDE4BC;
+    color: #ffffff;
     font-size: 16px;
     font-weight: 500;
     /* margin-top: 20px; */

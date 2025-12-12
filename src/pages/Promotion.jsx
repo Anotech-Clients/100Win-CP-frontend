@@ -440,7 +440,7 @@ const Promotion = ({ children }) => {
                 zIndex: 1000,
                 backgroundColor: "#232626",
                 padding: "10px 16px",
-                color: "#FDE4BC",
+                color: "#ffffff",
               }}
             >
               {/* Centered Text */}
@@ -723,7 +723,7 @@ const Promotion = ({ children }) => {
                                   ? "green"
                                   : index === 2
                                     ? "orange"
-                                    : "#FDE4BC",
+                                    : "#ffffff",
                             }}
                           >
                             {dataItems[index].value}
@@ -735,7 +735,7 @@ const Promotion = ({ children }) => {
                               isSmallScreen2 ? 9 : isSmallScreen ? 10 : 11
                             }
                             sx={{
-                              color: "#FDE4BC",
+                              color: "#ffffff",
                               display: "block",
                               lineHeight: "1.4",
                             }}
@@ -767,7 +767,7 @@ const Promotion = ({ children }) => {
                                   ? "green"
                                   : index === 2
                                     ? "orange"
-                                    : "#FDE4BC",
+                                    : "#ffffff",
                             }}
                           >
                             {dataItems[index + 4].value}
@@ -779,7 +779,7 @@ const Promotion = ({ children }) => {
                               isSmallScreen2 ? 9 : isSmallScreen ? 10 : 11
                             }
                             sx={{
-                              color: "#FDE4BC",
+                              color: "#ffffff",
                               display: "block",
                               lineHeight: "1.4",
                             }}
@@ -874,7 +874,7 @@ const Promotion = ({ children }) => {
                   <Typography
                     variant="h4"
                     sx={{
-                      color: "#FDE4BC",
+                      color: "#ffffff",
                       flex: 1,
                       fontSize: isSmallScreen2
                         ? "0.75rem"
@@ -892,7 +892,7 @@ const Promotion = ({ children }) => {
                         <Typography
                           variant="inherit"
                           sx={{
-                            color: "#FDE4BC",
+                            color: "#ffffff",
                             fontSize: isSmallScreen ? 9.4 : 11,
                             marginLeft: 2,
                             marginRight: 0.5,
@@ -933,7 +933,7 @@ const Promotion = ({ children }) => {
                     <ListItemIcon
                       style={{
                         marginLeft: "auto",
-                        color: "#FDE4BC",
+                        color: "#ffffff",
                         marginRight: "-20px",
                       }}
                     >
@@ -984,7 +984,7 @@ const Promotion = ({ children }) => {
                     variant="h7"
                     sx={{
                       fontWeight: "bold",
-                      color: "#FDE4BC",
+                      color: "#ffffff",
                       fontSize: isSmallScreen2
                         ? "0.75rem"
                         : isSmallScreen
@@ -1004,7 +1004,7 @@ const Promotion = ({ children }) => {
                   <Typography
                     variant="body2"
                     sx={{
-                      color: "#FDE4BC",
+                      color: "#ffffff",
                       borderRight: "1px solid #454037",
                       mt: "5px",
                       fontSize: isSmallScreen2
@@ -1035,7 +1035,7 @@ const Promotion = ({ children }) => {
                   <Typography
                     variant="body2"
                     sx={{
-                      color: "#FDE4BC",
+                      color: "#ffffff",
                       mt: "5px",
                       fontSize: isSmallScreen2
                         ? "13px"
@@ -1064,7 +1064,7 @@ const Promotion = ({ children }) => {
                   <Typography
                     variant="body2"
                     sx={{
-                      color: "#FDE4BC",
+                      color: "#ffffff",
                       borderRight: "1px solid #454037",
                       mt: "5px",
                       fontSize: isSmallScreen2
@@ -1095,7 +1095,7 @@ const Promotion = ({ children }) => {
                   <Typography
                     variant="body2"
                     sx={{
-                      color: "#FDE4BC",
+                      color: "#ffffff",
                       mt: "5px",
                       fontSize: isSmallScreen2
                         ? "13px"

@@ -46,7 +46,7 @@ const K3Htp = ({ isOpen, onClose }) => {
                     overflowY: 'auto',
                     textAlign: 'left ',
                     background:"#232626",
-                    color:"#FDE4BC",
+                    color:"#ffffff",
                     scrollbarWidth: "none",  // Hide scrollbar in Firefox
                     msOverflowStyle: "none", // Hide scrollbar in IE/Edge
                 }}

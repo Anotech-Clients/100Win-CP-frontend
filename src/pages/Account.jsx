@@ -70,7 +70,7 @@ const ImageSubtitleGrid = ({ imageSrc, subtitle1, subtitle2, onClick }) => {
       >
         <Typography
           sx={{
-            color: "#FDE4BC",
+            color: "#ffffff",
             fontSize: isSmallScreen ? "13.5px" : "15px",
             // mb: 0.5,
             lineHeight: 1.2,
@@ -693,7 +693,7 @@ const options = [
                     variant="caption"
                     align="center"
                     sx={{
-                      color: "#FDE4BC",
+                      color: "#ffffff",
                       fontWeight: "bold",
                       fontSize: isSmallScreen ? "15px" : "19px",
                     }}
@@ -754,7 +754,7 @@ const options = [
                         variant="subtitle2"
                         align="center"
                         sx={{
-                          color: "#FDE4BC",
+                          color: "#ffffff",
                           fontWeight: "500",
                           fontSize: isSmallScreen ? "13px" : "15px",
                         }}
@@ -783,7 +783,7 @@ const options = [
                         variant="subtitle2"
                         align="center"
                         sx={{
-                          color: "#FDE4BC",
+                          color: "#ffffff",
                           fontWeight: "500",
                           fontSize: isSmallScreen ? "13px" : "15px",
                         }}
@@ -812,7 +812,7 @@ const options = [
                         variant="subtitle2"
                         align="center"
                         sx={{
-                          color: "#FDE4BC",
+                          color: "#ffffff",
                           fontWeight: "500",
                           fontSize: isSmallScreen ? "13px" : "15px",
                         }}
@@ -841,7 +841,7 @@ const options = [
                         variant="subtitle2"
                         align="center"
                         sx={{
-                          color: "#FDE4BC",
+                          color: "#ffffff",
                           fontWeight: "500",
                           fontSize: isSmallScreen ? "13px" : "15px",
                         }}
@@ -1010,20 +1010,20 @@ const options = [
                         <Typography
                           sx={{
                             fontSize: isSmallScreen ? "14px" : "15px", // Explicit font size
-                            color: "#FDE4BC",
+                            color: "#ffffff",
                             textAlign: "left",
                           }}
                         >
                           {option.label}
                         </Typography>
                       }
-                    // sx={{ textAlign: "left", color: "#FDE4BC", fontSize: "15px"}}
+                    // sx={{ textAlign: "left", color: "#ffffff", fontSize: "15px"}}
                     />
                     {option.subLabel && (
                       <ListItemText
                         secondary={option.subLabel}
                         secondaryTypographyProps={{
-                          style: { color: "#FDE4BC", fontSize: "15px" },
+                          style: { color: "#ffffff", fontSize: "15px" },
                         }}
                       />
                     )}
@@ -1219,7 +1219,7 @@ const options = [
                 marginTop: "20px",
               }}
             >
-              <Typography sx={{ color: "#FDE4BC", textAlign: "left", mb: 2.2 }}>
+              <Typography sx={{ color: "#ffffff", textAlign: "left", mb: 2.2 }}>
                 Service center
               </Typography>
               <Grid
@@ -1351,7 +1351,7 @@ const options = [
               <DialogContent sx={{ textAlign: "center" }}>
                 <Typography
                   variant="h6"
-                  sx={{ fontWeight: "bold", color: "#FDE4BC" }}
+                  sx={{ fontWeight: "bold", color: "#ffffff" }}
                 >
                   Do you want to log out?
                 </Typography>

@@ -77,20 +77,20 @@ const ChangeBankName = () => {
                     maxWidth: "100%"
                 }
             }}>
-                <Box sx={{ bgcolor: "#232626", padding: "8px 10px", display: "flex", alignItems: "center", color: "#FDE4BC" }}>
+                <Box sx={{ bgcolor: "#232626", padding: "8px 10px", display: "flex", alignItems: "center", color: "#ffffff" }}>
                     <ChevronLeftIcon sx={{ fontSize: 30, cursor: "pointer" }} onClick={() => navigate(-1)} />
-                    <Typography variant="h6" sx={{ flexGrow: 1, textAlign: "center", color: "#FDE4BC" }}>
+                    <Typography variant="h6" sx={{ flexGrow: 1, textAlign: "center", color: "#ffffff" }}>
                         Change Bank Name
                     </Typography>
                     <HomeIcon sx={{ fontSize: 30 }} />
                 </Box>
 
                 <Box sx={{ m: 2 }}>
-                    <Typography variant="subtitle1" sx={{ color: "#FDE4BC", mt: 1, mb: 1, textAlign: "left" }}>
+                    <Typography variant="subtitle1" sx={{ color: "#ffffff", mt: 1, mb: 1, textAlign: "left" }}>
                         Current Bank Name
                     </Typography>
                     <TextField fullWidth placeholder="Current Bank Name" variant="outlined" value={currentBankName} onChange={(e) => setCurrentBankName(e.target.value)} sx={inputStyles} />
-                    <Typography variant="subtitle1" sx={{ color: "#FDE4BC", mt: 3, mb: 1, textAlign: "left" }}>
+                    <Typography variant="subtitle1" sx={{ color: "#ffffff", mt: 3, mb: 1, textAlign: "left" }}>
                         New Bank Name
                     </Typography>
                     <TextField

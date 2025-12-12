@@ -94,7 +94,7 @@ const K3AllDifferent = ({
       <Typography
         variant="body1"
         align="left"
-        color="#FDE4BC"
+        color="#ffffff"
         fontSize={14}
         gutterBottom
       >
@@ -130,7 +130,7 @@ const K3AllDifferent = ({
                   : "#9B48DB",
                 borderRadius: "4px",
                 p: 1,
-                color: selectedNumbers1.includes(value) ? "white" : "#FDE4BC",
+                color: selectedNumbers1.includes(value) ? "white" : "#ffffff",
                 minWidth: "32px",
                 textAlign: "center",
                 position: "relative",
@@ -164,7 +164,7 @@ const K3AllDifferent = ({
         <Typography
           variant="body1"
           align="left"
-          color="#FDE4BC"
+          color="#ffffff"
           fontSize={14}
           gutterBottom
         >
@@ -211,7 +211,7 @@ const K3AllDifferent = ({
       <Typography
         variant="body1"
         align="left"
-        color="#FDE4BC"
+        color="#ffffff"
         fontSize={14}
         gutterBottom
       >

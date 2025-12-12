@@ -914,7 +914,7 @@ const WithDraw = ({ children }) => {
               >
                 <Grid item xs={3} display="flex" justifyContent="flex-start">
                   <IconButton
-                    sx={{ color: "#FDE4BC", ml: -1.5 }}
+                    sx={{ color: "#ffffff", ml: -1.5 }}
                     onClick={handleWithdrawback}
                   >
                     <ArrowBackIosNewIcon sx={{ fontSize: "20px" }} />
@@ -924,7 +924,7 @@ const WithDraw = ({ children }) => {
                   <Typography
                     variant="h6"
                     sx={{
-                      color: "#FDE4BC",
+                      color: "#ffffff",
                       fontSize: "19px",
                       whiteSpace: "nowrap", // Prevent wrapping
                       textAlign: "center",
@@ -937,7 +937,7 @@ const WithDraw = ({ children }) => {
                   <Typography
                     variant="caption"
                     sx={{
-                      color: "#FDE4BC",
+                      color: "#ffffff",
                       fontSize: "12px",
                       whiteSpace: "nowrap", // Prevent wrapping
                       cursor: "pointer", // Indicate it's clickable
@@ -1678,7 +1678,7 @@ const WithDraw = ({ children }) => {
                           />
                           <Typography
                             variant="subtitle1"
-                            sx={{ color: "#FDE4BC" }}
+                            sx={{ color: "#ffffff" }}
                           >
                             Select amount of USDT
                           </Typography>

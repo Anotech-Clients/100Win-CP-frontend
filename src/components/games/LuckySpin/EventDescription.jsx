@@ -42,7 +42,7 @@ const EventDesc = () => {
           >
             <Grid item xs={2}>
               <IconButton
-                sx={{ color: "#FDE4BC", ml: -2 }} // White color for the icon
+                sx={{ color: "#ffffff", ml: -2 }} // White color for the icon
                 onClick={handleRedirect}
               >
                 <ArrowBackIosNewIcon sx={{ fontSize:"19px"}}/>
@@ -52,7 +52,7 @@ const EventDesc = () => {
               <Typography
                 variant="h6"
                 sx={{
-                  color: "#FDE4BC", // White color for the text
+                  color: "#ffffff", // White color for the text
                   flexGrow: 1,
                   textAlign: "center",
                   mr: 8,
@@ -80,13 +80,13 @@ const EventDesc = () => {
                 <PlayArrowRoundedIcon sx={{ color: "#f1f2f5", marginRight: "4px" }} />
                 <Typography
                   variant="subtitle1"
-                  sx={{ fontWeight: "medium", color: "#FDE4BC" }}
+                  sx={{ fontWeight: "medium", color: "#ffffff" }}
                 >
                   Activity time
                 </Typography>
               </Box>
               <Box sx={{ width: "90%", bgcolor: "#323738", padding: "8px 16px" }}>
-                <Typography variant="body2" sx={{ color: "#FDE4BC", fontSize: "12px" }}>
+                <Typography variant="body2" sx={{ color: "#ffffff", fontSize: "12px" }}>
                   From now on
                 </Typography>
               </Box>
@@ -107,13 +107,13 @@ const EventDesc = () => {
                 <PlayArrowRoundedIcon sx={{ color: "#f1f2f5", marginRight: "8px" }} />
                 <Typography
                   variant="subtitle1"
-                  sx={{ fontWeight: "medium", color: "#FDE4BC" }}
+                  sx={{ fontWeight: "medium", color: "#ffffff" }}
                 >
                   Validity period
                 </Typography>
               </Box>
               <Box sx={{ width: "90%", bgcolor: "#323738", padding: "8px 16px" }}>
-                <Typography variant="body2" sx={{ color: "#FDE4BC", fontSize: "12px" }}>
+                <Typography variant="body2" sx={{ color: "#ffffff", fontSize: "12px" }}>
                   Official website notification shall prevail
                 </Typography>
               </Box>
@@ -159,7 +159,7 @@ const EventDesc = () => {
                 <PlayArrowRoundedIcon sx={{ color: "#f1f2f5", marginRight: "8px" }} />
                 <Typography
                   variant="subtitle1"
-                  sx={{ fontWeight: "medium", color: "#FDE4BC" }}
+                  sx={{ fontWeight: "medium", color: "#ffffff" }}
                 >
                   Conditions of participation
                 </Typography>

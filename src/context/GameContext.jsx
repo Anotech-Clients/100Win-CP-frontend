@@ -34,29 +34,29 @@ export const FISH_GAME_ARRAY = {
 }
 
 export const CASINO_GAME_ARRAY = {
-  IDEAL: IDEAL_GAME_UIDS,
-  EVO_Video: EVO_VIDEO_GAME_UIDS,
-  SEXY_Video: SEXY_GAME_UIDS,
-  V8: V8_GAME_UIDS,
+  // IDEAL: IDEAL_GAME_UIDS,
+  // EVO_Video: EVO_VIDEO_GAME_UIDS,
+  // SEXY_Video: SEXY_GAME_UIDS,
+  // V8: V8_GAME_UIDS,
 };
 
 export const SLOT_GAME_ARRAY = {
   JILI: JILI_GAME_UIDS,
-  CQ9: CQ9_GAME_UIDS,
-  MG: MG_GAME_UIDS,
-  PG: PG_GAME_UIDS,
-  EVO_Electronic: EVO_GAME_UIDS,
-  JDB: JDB_GAME_UIDS,
-  KM: KM_GAME_UIDS
+  // CQ9: CQ9_GAME_UIDS,
+  // MG: MG_GAME_UIDS,
+  // PG: PG_GAME_UIDS,
+  // EVO_Electronic: EVO_GAME_UIDS,
+  // JDB: JDB_GAME_UIDS,
+  // KM: KM_GAME_UIDS
 };
 
 export const SPORT_GAME_ARRAY = {
-  SPORT: SPORT_GAME_UIDS,
+  // SPORT: SPORT_GAME_UIDS,
 }
 
 export const PVC_GAME_ARRAY = {
-  V8: V8_GAME_UIDS,
-  Card365: GAME_UIDS_365,
+  // V8: V8_GAME_UIDS,
+  // Card365: GAME_UIDS_365,
 }
 
 
@@ -65,7 +65,7 @@ const HOME_URL = "https://plan4.cognixsolutions.shop";
 
 export const GameProvider = ({ children }) => {
   const [isLoading, setIsLoading] = useState(false)
-  const [userDataLoaded, setUserDataLoaded] = useState(false)
+  // const [userDataLoaded, setUserDataLoaded] = useState(false)
   const [walletBalance, setWalletBalance] = useState(0)
   const [isApiCoinAvailable, setIsApiCoinAvailable] = useState(true)
   const [thirdPartyWalletBalance, setThirdPartyWalletBalance] = useState(0)

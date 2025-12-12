@@ -108,7 +108,7 @@ const K3Charts = ({ data ,page, setPage ,totalPage}) => {
               margin: "5px 0",
               alignItems: "center",
               padding: "0 10px",
-              color: "#FDE4BC",
+              color: "#ffffff",
               justifyContent: "space-between",
             }}
           >
@@ -159,14 +159,14 @@ const K3Charts = ({ data ,page, setPage ,totalPage}) => {
             backgroundColor: "#FED358",
             "&.Mui-disabled": {
               backgroundColor: "#5a5145", // Disabled background color
-              color: "#FDE4BC", // Optional: Change text color for better visibility
+              color: "#ffffff", // Optional: Change text color for better visibility
             },
             "&.MuiButtonBase-root": { minWidth: 0, padding: "5px 7px" },
           }}
         >
-          <ArrowBackIosRoundedIcon style={{ color: page === 1 ? "#FDE4BC" : "#323738" }} />
+          <ArrowBackIosRoundedIcon style={{ color: page === 1 ? "#ffffff" : "#323738" }} />
         </Button>
-        <Grid sx={{ display: "flex", alignItems: "center", color: "#FDE4BC",fontSize:"12.8px" }}>
+        <Grid sx={{ display: "flex", alignItems: "center", color: "#ffffff",fontSize:"12.8px" }}>
           {page}/{totalPage}
         </Grid>
         <Button
@@ -178,12 +178,12 @@ const K3Charts = ({ data ,page, setPage ,totalPage}) => {
             backgroundColor: "#FED358",
             "&.Mui-disabled": {
               backgroundColor: "#5a5145", // Disabled background color
-              color: "#FDE4BC", // Optional: Change text color for better visibility
+              color: "#ffffff", // Optional: Change text color for better visibility
             },
             "&.MuiButtonBase-root": { minWidth: 0, padding: "5px 7px" },
           }}
         >
-          <ArrowForwardIosRoundedIcon style={{ color: page === totalPage ? "#FDE4BC" : "#323738" }} />
+          <ArrowForwardIosRoundedIcon style={{ color: page === totalPage ? "#ffffff" : "#323738" }} />
         </Button>
       </Box>
     </div>

@@ -181,7 +181,7 @@ const UsdtAddress = () => {
             >
               <Grid item xs={1}>
                 <IconButton
-                  sx={{ color: "#FDE4BC", padding: 0 }}
+                  sx={{ color: "#ffffff", padding: 0 }}
                   onClick={() => navigate(-1)}
                 >
                   <ArrowBackIosNewIcon />
@@ -190,7 +190,7 @@ const UsdtAddress = () => {
               <Grid item xs={11}>
                 <Typography
                   variant="subtitle1"
-                  sx={{ textAlign: "center", color: "#FDE4BC" }}
+                  sx={{ textAlign: "center", color: "#ffffff" }}
                 >
                   Add USDT Address
                 </Typography>

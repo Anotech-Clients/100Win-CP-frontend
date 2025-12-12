@@ -102,7 +102,7 @@ const DepositModal = ({ open, onClose }) => {
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
-            color: "#FDE4BC",
+            color: "#ffffff",
             position: "sticky",
             top: 0,
             zIndex: 1000,

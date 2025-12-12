@@ -183,7 +183,7 @@ const Notification = ({ children }) => {
             >
               <IconButton
                 sx={{
-                  color: "#FDE4BC",
+                  color: "#ffffff",
                   position: "absolute",
                   left: 0,
                   p: "12px",
@@ -194,7 +194,7 @@ const Notification = ({ children }) => {
               </IconButton>
               <Typography
                 variant="h6"
-                sx={{ color: "#FDE4BC", textAlign: "center", fontSize: "19px" }}
+                sx={{ color: "#ffffff", textAlign: "center", fontSize: "19px" }}
               >
                 Notifications
               </Typography>
@@ -219,7 +219,7 @@ const Notification = ({ children }) => {
                 notifications.length === 0 ? (
                   <Box display="flex" flexDirection="column" alignItems="center" height="100vh" marginTop="20px">
                     <img src="/assets/No data-1.webp" alt="No Data" style={{ width: '200px', height: '200px' }} />
-                    <Typography variant="h7" color="#FDE4BC">No notifications available</Typography>
+                    <Typography variant="h7" color="#ffffff">No notifications available</Typography>
                   </Box>
                 ) : (
                   notifications.map((notification, index) => (

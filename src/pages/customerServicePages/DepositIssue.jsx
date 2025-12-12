@@ -95,16 +95,16 @@ const DepositIssue = () => {
         "&.MuiContainer-root": { maxWidth: "100%" }
       }}>
         {/* Header */}
-        <Box sx={{ bgcolor: "#232626", padding: "8px 10px", display: "flex", alignItems: "center", color: "#FDE4BC" }}>
+        <Box sx={{ bgcolor: "#232626", padding: "8px 10px", display: "flex", alignItems: "center", color: "#ffffff" }}>
           <ChevronLeftIcon sx={{ fontSize: 30, cursor: "pointer" }} onClick={() => window.history.back()} />
-          <Typography variant="h6" sx={{ flexGrow: 1, textAlign: "center", color: "#FDE4BC" }}>
+          <Typography variant="h6" sx={{ flexGrow: 1, textAlign: "center", color: "#ffffff" }}>
             Deposit Not Received
           </Typography>
           <HomeIcon sx={{ fontSize: 30, cursor: "pointer" }} onClick={() => navigate("/")} />
         </Box>
 
         {/* Form */}
-        <Box sx={{ p: 2, color: "#FDE4BC", flexGrow: 1, textAlign: "left" }}>
+        <Box sx={{ p: 2, color: "#ffffff", flexGrow: 1, textAlign: "left" }}>
           <Typography variant="body1" sx={{ mb: 1 }}>UTR number <span style={{ color: "red" }}>*</span></Typography>
           <TextField fullWidth placeholder="Please enter UTR" variant="outlined" sx={inputStyles} value={utrNumber} InputProps={{ readOnly: true }} />
 
@@ -139,7 +139,7 @@ const DepositIssue = () => {
             ( Upto <span style={{ color: "red" }}>2 mb</span> )</span></Typography>
           <Box component="label" sx={{ width: 100, height: 100, bgcolor: "#333", display: "flex", alignItems: "center", justifyContent: "center", borderRadius: 2, cursor: "pointer", overflow: "hidden" }}>
             {screenshot ? <img src={URL.createObjectURL(screenshot)} alt="Screenshot" style={{ width: "100%", height: "100%", objectFit: "cover" }} /> :
-              <AddPhotoAlternateIcon sx={{ color: "#FDE4BC", fontSize: 45 }} />}
+              <AddPhotoAlternateIcon sx={{ color: "#ffffff", fontSize: 45 }} />}
             <input type="file" accept="image/*" hidden onChange={handleImageUpload} />
           </Box>
 
@@ -215,7 +215,7 @@ const DepositIssue = () => {
 // Styles
 const inputStyles = {
   bgcolor: "#323738",
-  input: { color: "#FDE4BC", height: "15px", fontSize: "14px" },
+  input: { color: "#ffffff", height: "15px", fontSize: "14px" },
   "& .MuiOutlinedInput-root": {
     "& fieldset": {
       border: "1px solid #3B3833", // Remove border initially

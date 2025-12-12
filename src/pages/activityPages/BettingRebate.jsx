@@ -275,7 +275,7 @@ const BettingRebate = () => {
           >
             <IconButton
               sx={{
-                color: "#FDE4BC",
+                color: "#ffffff",
                 position: "absolute",
                 left: 0,
                 p: "12px",
@@ -286,7 +286,7 @@ const BettingRebate = () => {
             </IconButton>
             <Typography
               variant="h6"
-              sx={{ color: "#FDE4BC", textAlign: "center", fontSize: "19px" }}
+              sx={{ color: "#ffffff", textAlign: "center", fontSize: "19px" }}
             >
               Rebate
             </Typography>
@@ -340,7 +340,7 @@ const BettingRebate = () => {
               sx={{
                 // fontWeight: "bold",
                 mb: 0.5,
-                color: "#FDE4BC",
+                color: "#ffffff",
                 textAlign: "left",
                 fontSize: "15px",
               }}
@@ -383,7 +383,7 @@ const BettingRebate = () => {
                 variant="h5"
                 sx={{
                   fontWeight: "bold",
-                  color: "#FDE4BC",
+                  color: "#ffffff",
                   mb: 1,
                   textAlign: "left",
                   fontSize: "19px",
@@ -497,7 +497,7 @@ const BettingRebate = () => {
                   textTransform: "none",
                   "&.Mui-disabled": {
                     background: "#5a5145",
-                    color: "#FDE4BC",
+                    color: "#ffffff",
                   },
                   height: "38px",
                   fontSize: "1rem",
@@ -548,7 +548,7 @@ const BettingRebate = () => {
               fontWeight: "bold",
               mt: 1.5,
               mb: 2,
-              color: "#FDE4BC",
+              color: "#ffffff",
               display: "flex",
               alignItems: "center"
             }}
