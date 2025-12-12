@@ -936,15 +936,15 @@ const BetHistory = () => {
         </div> */}
 
         <div
-          style={{
-            width: "100%",
-            height: "2px",
-            backgroundImage: "radial-gradient(#fff 1px, transparent 1px)",
-            backgroundSize: "10px 2px", // bigger gaps = fewer dots
-            backgroundRepeat: "repeat-x",
-            margin: "12px auto",
-          }}
-        ></div>
+  style={{
+    width: "100%",
+    borderBottom: "2px dashed rgba(255,255,255,0.7)",
+    marginTop: "12px",
+    borderSpacing: "4px",
+    opacity:0.5
+  }}
+></div>
+
         <div className="card-content2">
           <div className="card-row2">
             <div
@@ -1594,7 +1594,7 @@ const BetHistory = () => {
                       background:
                         option === selectedOption
                           ? "linear-gradient(90deg,#24ee89,#9fe871)"
-                          : "#3b3833",
+                          : "#232626",
                       "&:hover": {
                         background:
                           option === selectedOption

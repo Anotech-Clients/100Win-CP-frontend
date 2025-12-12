@@ -1987,9 +1987,9 @@ const Deposit = ({ children }) => {
                       fontSize: "16px",
                       textTransform: "initial",
                       borderRadius: "20px",
-                      color: "#FED358",
+                      color: "#24EE89",
                       background: "transparent",
-                      border: "1px solid #FED358",
+                      border: "1px solid #24EE89",
                       // "&:hover": {
                       //   background:
                       //     "linear-gradient(90deg,#24ee89,#9fe871)",

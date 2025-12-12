@@ -6,37 +6,37 @@ import BannerPosterContext from "../../context/BannerPosterContext"
 const images = [
   {
     key: "welcome",
-    fallback: "/assets/Banner/ban_welcome.webp",
+    fallback: "/assets/Banner/welcome-2.webp",
     txt: "Our customer service never sends a link to the member, if you received a link from someone else it might be a scam.",
   },
   {
     key: "agent",
-    fallback: "/assets/Banner/ban_agentbonus.webp",
+    fallback: "/assets/Banner/agent-2.webp",
     txt: "Welcome to our Cognix Solutions our customer service never sends a link to the member.",
   },
   {
      key: "attendance",
-      fallback: "/assets/Banner/ban_dailybonus.webp",
+      fallback: "/assets/Banner/attendance-2.webp",
     txt: "Thankyou for visting our website and your value time,our website deals with many features,hope you enjoy",
   },
   {
     key:"youtube",
-    fallback: "/assets/Banner/ban_youtube.webp",
+    fallback: "/assets/Banner/youtube-2.webp",
     txt: "Thankyou for visting our website and your value time,our website deals with many features,hope you enjoy",
   },
   {
     key: "luckyspin",
-    fallback: "/assets/Banner/ban_luckyspin.webp",
+    fallback: "/assets/Banner/luckyspin-2.webp",
     txt: "Thankyou for visting our website and your value time,our website deals with many features,hope you enjoy",
   },
   {
     key: "winstreak",
-      fallback: "/assets/Banner/ban_winstreak.webp",
+      fallback: "/assets/Banner/winstreak-2.webp",
     txt: "Thankyou for visting our website and your value time,our website deals with many features,hope you enjoy",
   },
   {
     key: "avaitor",
-      fallback: "/assets/Banner/ban_avaitor.webp",
+      fallback: "/assets/Banner/aviator-3.webp",
     txt: "Thankyou for visting our website and your value time,our website deals with many features,hope you enjoy",
   },
  
@@ -87,12 +87,12 @@ const ImageSlider = () => {
   sx={{
     position: "relative",
     maxWidth: "800px", // Maximum width on larger screens
-    height: "200px", // Default height
+    height: "190px", // Default height
     margin: "0 auto", // Auto for horizontal centering
     overflow: "hidden", // Prevent extra images from being visible
 
-    marginLeft: "13px", // Left margin
-    marginRight: "13px", // Right margin
+    marginLeft: "10px", // Left margin
+    marginRight: "10px", // Right margin
     backgroundColor:"#232626 ",
   }}
 >
@@ -118,8 +118,10 @@ const ImageSlider = () => {
                 sx={{
                   width: "100%",
                   borderRadius: "10px",
-                  height: "100%",
+                  height: "150px",
+                  backgroundPosition:"center",
                   objectFit: "cover",
+                  backgroundSize:"cover",
                   flexShrink: 0, // Prevent the images from shrinking
                 }}
               />

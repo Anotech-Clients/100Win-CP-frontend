@@ -398,7 +398,7 @@ const SwipeableCards = () => {
                       <div className="l-one">
                         <img src={getCrownImage(level.level)} alt={level.name} />
                       </div>
-                      <div className="l-two" style={{ fontWeight: "bold" }}>
+                      <div className="l-two" style={{ fontWeight: "600" }}>
                         {level.name}
                       </div>
                       <div className="l-three">
@@ -407,10 +407,10 @@ const SwipeableCards = () => {
                             style={{
                               marginLeft: "10px",
                               color: "white",
-                              fontSize: "0.6em",
+                              fontSize: "0.53em",
                             }}
                           >
-                            Level unlocked
+                             Unlocked
                           </span>
                         ) : (
                           <div
