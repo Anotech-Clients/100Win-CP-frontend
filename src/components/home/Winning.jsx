@@ -1,263 +1,227 @@
 import React from "react";
-import { Box, Typography } from "@mui/material";
+import { Box, Grid, Typography, Divider } from "@mui/material";
 import { useState, useEffect } from "react";
-import { keyframes } from "@mui/system";
 
 const Winning = () => {
   const initialWinners = [
     {
       id: 1,
-      user: "Mem***PXX",
-      image: "/assets/avatars/profile-4.webp",
-      amount: "980.00",
-      game: "K3",
-      gameType: "",
-      thumbnail: "/assets/lottery/wingo.webp",
+      txt: "Mem***GGD",
+      image: "/assets/avatars/profile-1.webp",
+      txt2: "28.09",
+      image1: "/assets/icons/winningInformation.webp",
     },
     {
       id: 2,
-      user: "Mem***AAL",
+      txt: "Mem***DHF",
       image: "/assets/avatars/profile-2.webp",
-      amount: "300.00",
-      game: "JILI",
-      gameType: "GAME",
-      thumbnail: "/assets/lottery/K3Lottery.webp",
+      txt2: "39.03",
+      image1: "/assets/icons/winningInformation.webp",
     },
     {
       id: 3,
-      user: "Mem***LZL",
+      txt: "Mem***SKL",
       image: "/assets/avatars/profile-3.webp",
-      amount: "19,200.00",
-      game: "Plinko",
-      gameType: "",
-      thumbnail: "/assets/lottery/wingo.webp",
+      txt2: "13.36",
+      image1: "/assets/icons/winningInformation.webp",
     },
     {
       id: 4,
-      user: "Mem***PXX",
+      txt: "Mem***PID",
       image: "/assets/avatars/profile-4.webp",
-      amount: "980.00",
-      game: "K3",
-      gameType: "",
-      thumbnail: "/assets/lottery/wingo.webp",
+      txt2: "16.90",
+      image1: "/assets/icons/winningInformation.webp",
     },
     {
       id: 5,
-      user: "Mem***PXX",
-      image: "/assets/avatars/profile-4.webp",
-      amount: "980.00",
-      game: "K3",
-      gameType: "",
-      thumbnail: "/assets/lottery/wingo.webp",
+      txt: "Mem***JYR",
+      image: "/assets/avatars/profile-5.webp",
+      txt2: "69.03",
+      image1: "/assets/icons/winningInformation.webp",
     },
     {
       id: 6,
-      user: "Mem***MKL",
+      txt: "Mem***MKL",
       image: "/assets/avatars/profile-6.webp",
-      amount: "1,390.00",
-      game: "Plinko",
-      gameType: "",
-      thumbnail: "/assets/lottery/wingo.webp",
+      txt2: "139.03",
+      image1: "/assets/icons/winningInformation.webp",
     },
     {
       id: 7,
-      user: "Mem***XYZ",
-      image: "/assets/avatars/profile-7.webp",
-      amount: "2,999.00",
-      game: "K3",
-      gameType: "",
-      thumbnail: "/assets/lottery/wingo.webp",
+      txt: "Mem***MKL",
+      image: "/assets/avatars/profile-6.webp",
+      txt2: "19.53",
+      image1: "/assets/icons/winningInformation.webp",
+    },
+    {
+      id: 8,
+      txt: "Mem***MKL",
+      image: "/assets/avatars/profile-6.webp",
+      txt2: "539.03",
+      image1: "/assets/icons/winningInformation.webp",
+    },
+    {
+      id: 9,
+      txt: "Mem***MKL",
+      image: "/assets/avatars/profile-6.webp",
+      txt2: "181.23",
+      image1: "/assets/icons/winningInformation.webp",
+    },
+    {
+      id: 10,
+      txt: "Mem***XYZ",
+      image: "/assets/icons/winningInformation.webp",
+      txt2: "99.99",
+      image1: "/assets/icons/winningInformation.webp",
     },
   ];
 
   const [winners, setWinners] = useState(initialWinners);
-  const [visibleCards, setVisibleCards] = useState(initialWinners.slice(0, 4));
-  const [lastRemovedCard, setLastRemovedCard] = useState(null);
-  const [showNewCard, setShowNewCard] = useState(false);
-
-  // Define the blinking animation
-  const blinkKeyframes = keyframes`
-    0% { opacity: 0; }
-    20% { opacity: 1; }
-    40% { opacity: 0; }
-    60% { opacity: 1; }
-    80% { opacity: 0; }
-    100% { opacity: 1; }
-  `;
+  const [visibleCards, setVisibleCards] = useState(initialWinners.slice(0, 9));
+  const [animationClass, setAnimationClass] = useState("");
 
   useEffect(() => {
-    const rotationInterval = 3000; // Total time for one complete cycle
-    
-    const animate = () => {
-      // 1. Get the next card to display
-      const nextCardIndex = (winners.indexOf(visibleCards[0]) - 1 + winners.length) % winners.length;
-      const nextCard = winners[nextCardIndex];
-      
-      // 2. First make all current cards slide right (losing the last one)
-      const currentCards = [...visibleCards];
-      const removedCard = currentCards.pop(); // Store the last card that will be removed
-      setLastRemovedCard(removedCard);
-      
-      // All cards move right
-      document.querySelectorAll('.card-item').forEach(card => {
-        card.style.transform = 'translateX(calc(100% + 12px))';
-      });
-      
-      // 3. After the sliding completes, add the new card with blink effect
+    const rotateWinners = () => {
+      // 1. Trigger the animation to slide down the existing cards
+      setAnimationClass("slide-down");
+
+      // 2. Wait for the animation to complete, then update the visible cards
       setTimeout(() => {
-        const newVisibleCards = [nextCard, ...currentCards.slice(0, 3)];
-        setVisibleCards(newVisibleCards);
-        
-        // Reset positions of all cards
-        document.querySelectorAll('.card-item').forEach(card => {
-          card.style.transform = 'translateX(0)';
+        setWinners((prevWinners) => {
+          const newWinners = [...prevWinners];
+          const nextWinner = newWinners[5]; // Get the next card in the list
+          newWinners.push(nextWinner); // Add it to the end
+          newWinners.shift(); // Remove the oldest card
+          setVisibleCards(newWinners.slice(0, 9)); // Update visible cards
+          return newWinners;
         });
-        
-        // Show the new card with blink effect
-        setShowNewCard(true);
-        
-        // After blinking completes, reset for next animation
-        setTimeout(() => {
-          setShowNewCard(false);
-        }, 1000);
-      }, 600);
+
+        // 3. Reset the animation class
+        setAnimationClass("");
+      }, 600); // Match this duration with the CSS animation duration
     };
 
-    const interval = setInterval(animate, rotationInterval);
+    const interval = setInterval(rotateWinners, 3000); // Rotate every 3 seconds
     return () => clearInterval(interval);
-  }, [winners, visibleCards]);
+  }, [winners.length]);
 
   return (
     <>
       <style>
         {`
+          @keyframes slideDown {
+            0% {
+              transform: translateY(0);
+            }
+            100% {
+              transform: translateY(100%);
+            }
+          }
+
           .winner-container {
             position: relative;
             overflow: hidden;
-            width: 100%;
+            height: 375px; /* Adjust based on your card height */
           }
-          
-          .winner-cards {
-            display: flex;
-            position: relative;
-            gap: 12px;
+
+          .winner-item {
+            transition: all 0.6s ease;
           }
-          
-          .card-item {
-            flex: 0 0 auto;
-            transition: transform 0.6s ease;
+
+          .slide-down .winner-item {
+            animation: slideDown 0.6s forwards;
           }
-          
-          .new-card {
-            animation: ${blinkKeyframes} 1s ease-in-out;
-          }
-          
-          .game-badge {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background-color: #e74c3c;
-            color: white;
-            text-align: center;
-            padding: 2px 0;
-            font-size: 12px;
-            font-weight: bold;
-            text-transform: uppercase;
-          }
-          
-          .game-type {
-            position: absolute;
-            top: 0;
-            right: 0;
-            background-color: rgba(0, 0, 0, 0.7);
-            color: white;
-            padding: 2px 6px;
-            font-size: 10px;
-            border-radius: 0 0 0 5px;
+
+          .winner-item.slide-in {
+            animation: slideIn 0.6s forwards;
           }
         `}
       </style>
 
-      <Box 
-        sx={{ 
-          padding: "15px 10px",
-          backgroundImage: "url('/assets/winningbg.webp')",
-          backgroundPosition: "center center",
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "100% 100%",
-          borderRadius: "0 0 8px 8px",
-          m: 2,
-          position: "relative",
-          overflow: "hidden"
-        }}
-      >
+      <Box display="flex" alignItems="center" mt={4} mb={-1} mx={"13px"}>
+
+        <img src="/assets/icons/winningInformation.webp" alt="" width="25px" />
         <Typography
+          align="left"
           sx={{
-            fontSize: "16px",
-            color: "#FDE4BC",
+            fontSize: "14px",
+            color: "#1E2637",
+            display: "flex",
+            marginLeft: "2px",
+            alignItems: "center",
             fontWeight: "bold",
             fontFamily: "'Times New Roman', Times, serif !important",
-            mb: 2
           }}
         >
           Winning information
         </Typography>
-        
-        <Box className="winner-container">
-          <Box className="winner-cards">
-            {/* Visible cards */}
-            {visibleCards.map((item, index) => (
-              <Box
-                key={`card-${item.id}`}
-                className={`card-item ${index === 0 && showNewCard ? 'new-card' : ''}`}
-                sx={{
-                  width: { xs: "80px", sm: "100px", md: "110px" },
-                  borderRadius: "6px",
-                  overflow: "hidden",
-                }}
-              >
-                <Box sx={{ 
-                  position: "relative", 
-                  width: "100%", 
-                  overflow: "hidden" 
-                }}>
-                  <img
-                    src={item.thumbnail}
-                    alt={item.game}
-                    style={{
-                      width: "100%",
-                      height: "100%",
-                      objectFit: "contain"
-                    }}
-                  />
-                </Box>
-
-                <Box sx={{ 
-                  textAlign: "center"
-                }}>
-                  <Typography sx={{ 
-                    color: "#B79C8B", 
-                    fontSize: "11px",
-                    whiteSpace: "nowrap",
-                    overflow: "hidden",
-                    fontFamily: "'Times New Roman', Times, serif !important",
-                    textOverflow: "ellipsis"
-                  }}>
-                    {item.user}
-                  </Typography>
-                  <Typography sx={{ 
-                    color: "#FED358", 
-                    fontSize: "11px", 
-                  }}>
-                    ₹{item.amount}
-                  </Typography>
-                </Box>
-              </Box>
-            ))}
-          </Box>
-        </Box>
       </Box>
+
+      <Box sx={{ mt:3,mx: 1.5, background: "#323738", width: "calc(100% - 25px)", borderRadius: "15px" }}>
+        <Grid sx={{ display: "flex", justifyContent: "space-between", px: "10px", mt: 2, py: 2 }}>
+          <Grid sx={{ color: "#B3BEC1", fontSize: "14px", width: "30%", textAlign: "left",  fontFamily: "'Times New Roman', Times, serif !important", }} >Game</Grid>
+          <Grid sx={{ color: "#B3BEC1", fontSize: "14px", width: "30%",  fontFamily: "'Times New Roman', Times, serif !important", }}>Player</Grid>
+          <Grid sx={{ color: "#B3BEC1", fontSize: "14px", width: "30%",textAlign:"right" ,  fontFamily: "'Times New Roman', Times, serif !important",}}>Profit</Grid>
+        </Grid>
+        <Divider sx={{ color: "#E1E1E1" }}></Divider>
+        <Box sx={{  mx: "13px" }} className={`winner-container ${animationClass}`}>
+          <Grid container >
+
+            {/* <Box sx={{background:"#323738",width:"100%",borderRadius:"15px"}}> */}
+
+            {visibleCards.map((item, index) => (
+              <Grid item xs={12} key={index}>
+                <Box
+                  className={`winner-item ${index === 4 ? "slide-in" : ""}`}
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "space-between",
+                    backgroundColor: "#323738",
+                    py: "10px",
+                    borderRadius: "8px",
+                    marginBottom: "2px",
+                  }}
+                >
+                  {/* Left Section: User Image and Info */}
+                  <Box sx={{ display: "flex", alignItems: "center", gap: 1,width:"30%" }}>
+                    <Box sx={{ position: "relative" }}>
+                      <img
+                        src={item.image1}
+                        alt="Winner"
+                        style={{
+                          width: "22px",
+                        }}
+                      />
+                    </Box>
+                    <Box sx={{ textAlign: "left" }}>
+                      <Typography sx={{ color: "#ffffff", fontSize: "12.8px",  fontFamily: "'Times New Roman', Times, serif !important", }}>
+                        Card 365
+                      </Typography>
+                    </Box>
+                  </Box>
+
+                  {/* Right Section: Details and Amount */}
+                  <Box sx={{ textAlign: "center",display:"flex",justifyContent:"center",width:"30%" }}>
+                    <Typography sx={{ color: "#ffffff", fontSize: "12.8px" ,  fontFamily: "'Times New Roman', Times, serif !important",}}>
+                      {item.txt}
+                    </Typography>
+                    </Box>
+
+                  {/* Right Section: Details and Amount */}
+                  <Box sx={{ textAlign: "right" ,width:"30%"}}>
+                    <Typography sx={{ color: "#24ee89", fontSize: "12.8px", mt: "5px" ,  fontFamily: "'Times New Roman', Times, serif !important",}}>
+                      ₹{item.txt2}
+                    </Typography>
+                  </Box>
+                </Box>
+                <Divider sx={{ color: "#E1E1E1" }}></Divider>
+              </Grid>
+              
+            ))}
+            {/* </Box> */}
+          </Grid>
+        </Box></Box>
     </>
   );
 };

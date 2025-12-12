@@ -6,7 +6,7 @@ import Typography from "@mui/material/Typography";
 import Avatar from "@mui/material/Avatar";
 import DetailsBox from "../common/DetailsBox";
 import Winning from "./Winning";
-import Stage from "./Stage";
+// import Stage from "./Stage";
 import ScrollableTabs from "./ScrollableTab";
 import SvgIcon from "@mui/material/SvgIcon";
 import { useNavigate } from "react-router-dom";
@@ -204,8 +204,8 @@ const HomeMain = ({ children }) => {
                 Today's earnings chart
               </Typography>
             </Box>
-            <Box sx={{ width: "100%", borderRadius: "12px", background: "#232626" }}>
-              <Stage /></Box>
+            {/* <Box sx={{ width: "100%", borderRadius: "12px", background: "#232626" }}>
+              <Stage /></Box> */}
           </Box>
 
           {/* InfoSection */}
