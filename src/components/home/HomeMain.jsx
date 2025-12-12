@@ -19,8 +19,9 @@ import CloudDownloadIcon from '@mui/icons-material/CloudDownload';
 import LoadingLogo from "../utils/LodingLogo";
 import Divider from '@mui/material/Divider';
 import { useAuth } from "../../context/AuthContext";
-import { Button } from "@mui/material";
+import { Badge, Button } from "@mui/material";
 import JackpotSection from "./JackpotSection";
+import { Bell, Divide, Gift, Plus } from "lucide-react";
 const HomeMain = ({ children }) => {
   const RhombusIcon = (props) => (
     <SvgIcon {...props}>
@@ -42,6 +43,7 @@ const HomeMain = ({ children }) => {
     const timer = setTimeout(() => {
       setLogoLoading(false); // Hide loading after 2 seconds
     }, 1000);
+    getWalletBalance()
 
     return () => clearTimeout(timer); // Cleanup
   }, []);
@@ -84,33 +86,40 @@ const HomeMain = ({ children }) => {
         )}
         <Box flexGrow={1}>
           {/* Top bar */}
-          <Grid
-            container
-            alignItems="center"
-            justifyContent="space-between"
-            sx={{
-              position: "sticky",
-              top: 0,
-              zIndex: 1000,
-              backgroundColor: "#232626",
-              // padding: "5px 6px",
-              px: "6px",
-              // pt: "7px",
-              // pb: "3px",
-              color: "white",
-              // pt: "5px"
-            }}
-          >
-            <Grid item xs={4} sx={{ ml: 1 }} textAlign="left">
-              <img
-                src="/assets/logo/colorLogo.webp"
-                alt="logo"
-                style={{ width: "140px", height: "auto" }}
-              />
-            </Grid>
 
-            <Grid item xs={6} textAlign="right" sx={{ display: "flex", alignItems: "center", justifyContent: "flex-end" }}>
-              {isAuthenticated ? (
+          {!isAuthenticated ? (
+            <Grid
+              container
+              alignItems="center"
+              justifyContent="space-between"
+              sx={{
+                position: "sticky",
+                top: 0,
+                zIndex: 1000,
+                backgroundColor: "#232626",
+                px: "6px",
+                pt: "6px",
+                color: "white",
+              }}
+            >
+              <Grid item xs={4} sx={{ ml: 1 }} textAlign="left">
+                <img
+                  src="/assets/logo/colorLogo.webp"
+                  alt="logo"
+                  style={{ width: "140px", height: "auto" }}
+                />
+              </Grid>
+
+              <Grid
+                item
+                xs={6}
+                textAlign="right"
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "flex-end",
+                }}
+              >
                 <Box
                   sx={{
                     display: "flex",
@@ -118,52 +127,169 @@ const HomeMain = ({ children }) => {
                     alignItems: "center",
                   }}
                 >
-                  <IconButton
-                    style={{ color: "#fed358" }}
-                  // onClick={() => navigate("/customer-service")}
+                  <Button
+                    sx={{
+                      textTransform: "none",
+                      color: "#ffffff",
+                      border: "1px solid white",
+                      width: "60px",
+                      height: "30px",
+                      mr: 1,
+                      fontSize: "12px",
+                      textAlign: "center",
+                      lineHeight: "30px",
+                      fontWeight: "600",
+                    }}
                   >
-                    <CloudDownloadIcon />
-                  </IconButton>
+                    Sign In
+                  </Button>
+
+                  <Button
+                    sx={{
+                      textTransform: "none",
+                      color: "#000000",
+                      width: "60px",
+                      height: "30px",
+                      fontSize: "12px",
+                      textAlign: "center",
+                      lineHeight: "30px",
+                      fontWeight: "600",
+                      background: "linear-gradient(90deg,#24ee89,#9fe871)",
+                      boxShadow:
+                        "0 0 12px rgba(35,238,136,.3), inset 0 -2px #1dca6a",
+                    }}
+                  >
+                    Sign Up
+                  </Button>
+                </Box>
+              </Grid>
+            </Grid>
+          ) : (
+            <Grid
+              container
+              alignItems="center"
+              justifyContent="space-between"
+              sx={{
+                position: "sticky",
+                top: 0,
+                zIndex: 1000,
+                backgroundColor: "#232626",
+                px: "6px",
+                pt: "6px",
+                color: "white",
+                display: "flex"
+              }}
+            >
+              {/* LEFT LOGO */}
+              <Grid item xs={1}>
+                <Box sx={{ display: "flex", alignItems: "center" }}>
                   <img
-                    src="assets/icons/english.webp"
+                    src="/assets/logo/a_logo.webp"   // your green G logo
                     alt="logo"
-                    style={{ width: "18px", marginRight: "4px", marginLeft: "4px" }}
+                    style={{ width: 42, height: "auto" }}
                   />
-                  <Typography sx={{ fontSize: "15px", color: "#FED358", marginRight: "13px" }}>EN</Typography>
-                </Box>) : (
-                <Box sx={{
+                </Box>
+              </Grid>
+
+              {/* CENTER BALANCE BOX */}
+              <Grid item xs={4}>
+                <Box
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "space-between",
+                    background: "#2F3232",
+                    borderRadius: "10px",
+                    border: "1px solid #3A3C3C",
+                    px: 1,
+                    py: 0.6,
+                  }}
+                >
+                  {/* Rupee Amount */}
+                  <Typography
+                    sx={{
+                      fontSize: "14px",
+                      color: "#fff",
+                      fontWeight: 500,
+                      mr: 1,
+                    }}
+                  >
+                    ₹ {userWallet}
+                  </Typography>
+
+                  {/* Green + Button */}
+                  <IconButton
+                    sx={{
+                      width: 30,
+                      height: 30,
+                      background: "#20D562",
+                      borderRadius: "10px",
+                      p: 0,
+                      "&:hover": { background: "#1bc057" },
+                    }}
+                    onClick={() => navigate("/wallet/deposit")}
+                  >
+                    <Plus />
+                  </IconButton>
+                </Box>
+              </Grid>
+
+              {/* RIGHT ICONS + AVATAR */}
+              <Grid
+                item
+                xs={6}
+                sx={{
                   display: "flex",
                   justifyContent: "flex-end",
                   alignItems: "center",
-                }}>
-                  <Button sx={{
-                    textTransform: "none",
-                    color: "#ffffff",
-                    border: "1px solid white",
-                    width: "60px",
-                    height: "30px",
-                    mr: 1,
-                    fontSize: "12px",
-                    textAlign: "center",
-                    lineHeight: "30px",
-                    fontWeight: "600",
-                  }}>Sign In</Button>
-                  <Button sx={{
-                    textTransform: "none",
-                    color: "#000000",
-                    width: "60px",
-                    height: "30px",
-                    fontSize: "12px",
-                    textAlign: "center",
-                    lineHeight: "30px",
-                    fontWeight: "600",
-                    background: "linear-gradient(90deg,#24ee89,#9fe871)",
-                    boxShadow: "0 0 12px rgba(35,238,136,.3),inset 0 -2px #1dca6a"
-                  }}>Sign Up </Button>
+                  gap: 1.5,
+                }}
+              >
+                {/* Bell Icon with badge "2" */}
+                <Box sx={{ bgcolor: "#ffffff0d", p: "6px", display: "flex", borderRadius: "10px" }}>
+                  <Badge
+                    badgeContent={4}
+                    sx={{
+                      "& .MuiBadge-badge": {
+                        backgroundColor: "#9DF86D",
+                        color: "#000",
+                        fontSize: "10px",
+                        fontWeight: 600,
+                      },
+                    }}
+                  >
+                    <IconButton sx={{ p: 0.5 }}
+                      onClick={() => navigate("/account/notification")}>
+                      <Bell style={{ color: "white" }} />
+                    </IconButton>
+                  </Badge>
+                  <Divider />
+                  {/* Gift Icon */}
+                  <IconButton sx={{ p: 0.5 }}
+                  onClick={() => navigate("/account/gift-coupon")}>
+                    <Gift style={{ color: "white" }} />
+                  </IconButton>
+
                 </Box>
-              )}
+
+
+                {/* Hot Event Sticker */}
+                <img
+                  src="/assets/hotevent-GYxqVDim.png"
+                  alt="hot event"
+                  style={{ width: 44, height: "auto" }}
+                />
+
+                {/* Profile Avatar */}
+                <img
+                  src="/assets/home-profile.png"   // santa hat avatar asset
+                  width={50}
+                  onClick={() => navigate("/account")}
+                />
+              </Grid>
             </Grid>
-          </Grid>
+          )}
+
 
           {/* <TopBanner /> */}
           <ImageSlider />
@@ -398,7 +524,7 @@ const HomeMain = ({ children }) => {
         </Box>
 
         {children}
-      </Box>
+      </Box >
     </>
   );
 };
