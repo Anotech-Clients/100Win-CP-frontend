@@ -301,9 +301,7 @@ const JackpotSection = () => {
                                 <RollingDigit value={randomDigits[0]} />
                                 <RollingDigit value={randomDigits[1]} />
                                 <RollingDigit value={randomDigits[2]} />
-
                                 {"."}
-
                                 {/* decimals */}
                                 <RollingDigit value={randomDigits[3]} />
                                 <RollingDigit value={randomDigits[4]} />

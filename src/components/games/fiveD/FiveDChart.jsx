@@ -172,7 +172,6 @@ const NumberTableWithLines = ({ historyData, selectedTab }) => {
                     key={column.id}
                     sx={{
                         width: column.width,
-                        color: "white",
                         padding: "4% 5.6%",
                         borderTopLeftRadius: index === 0 ? "5px" : "0",
                         borderTopRightRadius: index === columns.length - 1 ? "5px" : "0",

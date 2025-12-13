@@ -47,7 +47,6 @@ const K3GameHistory = ({ data, page, setPage ,totalPage}) => {
             sx={{
               color: "black",
               height: 40,
-              fontWeight: "bold",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
