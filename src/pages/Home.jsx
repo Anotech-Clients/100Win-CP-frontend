@@ -18,8 +18,8 @@ const Home = () => {
   const { isAuthenticated } = useAuth();
   const { getUserData } = useContext(UserContext)
 
-  const [forceUpdate, setForceUpdate] = useState(0);
-  const hasFetched = useRef(false);
+  // const [forceUpdate, setForceUpdate] = useState(0);
+  // const hasFetched = useRef(false);
   // const location = useLocation();
   const [forceRemount, setForceRemount] = useState(0);
 

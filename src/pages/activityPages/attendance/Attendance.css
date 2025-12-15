@@ -125,7 +125,8 @@
   align-items: center;
   flex-direction: column;
   justify-content: space-around;
-  gap: 2px;
+  white-space: nowrap;
+  /* gap: 2px; */
   background: #323738;
   border-radius: 10px;
   padding: 0.8em;
