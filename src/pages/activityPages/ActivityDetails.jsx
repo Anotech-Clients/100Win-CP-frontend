@@ -36,15 +36,15 @@ const ActivityDetails = () => {
     case "activity-2": // Special Attendance Bonus
       if (bannerPosterContext.attendanceUrl) bannerImageUrl = bannerPosterContext.attendanceUrl
       break
-    case "activity-3": // 100Win Solutions Partner Rewards
+    case "activity-3": // 100Win Games Partner Rewards
       if (bannerPosterContext.realtimerebateUrl) bannerImageUrl = bannerPosterContext.realtimerebateUrl
       if (bannerPosterContext.realtimerebatePosterUrl) posterImageUrl = bannerPosterContext.realtimerebatePosterUrl
       break
-    case "activity-4": // 100Win Solutions Daily Luck Spin
+    case "activity-4": // 100Win Games Daily Luck Spin
       if (bannerPosterContext.youtubeUrl) bannerImageUrl = bannerPosterContext.youtubeUrl
       if (bannerPosterContext.youtubePosterUrl) posterImageUrl = bannerPosterContext.youtubePosterUrl
       break
-    case "activity-6": // 100Win Solutions Official Channel
+    case "activity-6": // 100Win Games Official Channel
       if (bannerPosterContext.avaiatorUrl) bannerImageUrl = bannerPosterContext.avaiatorUrl
       if (bannerPosterContext.superjackpotPosterUrl) posterImageUrl = bannerPosterContext.superjackpotPosterUrl
       break
