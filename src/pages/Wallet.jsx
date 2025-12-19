@@ -8,7 +8,7 @@ import Box from '@mui/material/Box';
 import { useNavigate } from "react-router-dom";
 import { CircularProgress } from "@mui/material";
 import BottomNavigationArea from "../components/common/BottomNavigation";
-import { domain } from "../utils/Secret";
+import { apidomain, clientPrefix, clientSecretKey, domain } from "../utils/Secret";
 import { useAuth } from "../context/AuthContext"; // Import useAuth hook
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import { UserContext } from "../context/UserState"
@@ -20,13 +20,14 @@ const Wallet = ({ children }) => {
     totalWithdrawal: 0,
     balance: 0
   });
-  const [thirdPartyWalletBalance, setThirdPartyWalletBalance] = useState(0);
-  const [getThirdPartyBalance, setGetThirdPartyBalance] = useState(null);
+  // const [user, setUser] = useState(null);
+  // const [countdown, setCountdown] = useState(0);
   const [logoLoading, setLogoLoading] = useState(true);
   const [loading, setLoading] = useState(false);
+
   const { axiosInstance } = useAuth();
   const navigate = useNavigate();
-  const { userWallet, getWalletBalance, userData } = useContext(UserContext);
+  const { userWallet, getWalletBalance, userData, getThirdPartyBalance, fetchThirdPartyBalance } = useContext(UserContext);
 
   useEffect(() => {
     const setVh = () => {
@@ -41,22 +42,30 @@ const Wallet = ({ children }) => {
   }, []);
 
   const mainWalletBalance = userWallet ? userWallet : 0;
-  const progressMainWallet = Math.min((mainWalletBalance / dwInfo.totalDeposit) * 100, 100);
-  const progressThirdPartyWallet = Math.min((getThirdPartyBalance / dwInfo.totalDeposit) * 100, 100);
+  const progressMainWallet = mainWalletBalance > 0 ? Math.min((mainWalletBalance / dwInfo.totalDeposit) * 100, 100) : 0;
+  const progressThirdPartyWallet = getThirdPartyBalance > 0 ? Math.min((getThirdPartyBalance / dwInfo.totalDeposit) * 100, 100) : 0;
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setLogoLoading(false);
+      setLogoLoading(false); // Hide loading after 2 seconds
     }, 1000);
 
-    return () => clearTimeout(timer);
+    return () => clearTimeout(timer); // Cleanup
   }, []);
-  
-  // Fetch wallet balance and DW info when component mounts
+
   useEffect(() => {
-    getWalletBalance();
+    getWalletBalance()
     fetchDwInfo();
-  }, []);
+    setLogoLoading(true)
+    if(!getThirdPartyBalance || getThirdPartyBalance <= 0) {
+    fetchThirdPartyBalance();
+    const timer = setTimeout(() => {
+      setLogoLoading(false); 
+    }, 1500);
+
+    return () => clearTimeout(timer); 
+    }
+  }, [getThirdPartyBalance])
 
   // Fetch deposit and withdrawal information
   const fetchDwInfo = async () => {
@@ -65,7 +74,7 @@ const Wallet = ({ children }) => {
         const response = await axiosInstance.get(`${domain}/api/wallet/common/dw-info`, {
           withCredentials: true,
         });
-        
+
         if (response.data.success) {
           setDwInfo({
             totalDeposit: response.data.data.totalDeposit || 0,
@@ -79,22 +88,6 @@ const Wallet = ({ children }) => {
     }
   };
 
-  const fetchThirdPartyBalance = async () => {
-    try {
-      const response = await axiosInstance.get(`${domain}/api/api-wrapper/get-wallet-balance`, {
-        withCredentials: true,
-      });
-      setGetThirdPartyBalance(response.data.ThirdPartyWalletAmount);
-    } catch (err) {
-      console.error("Error fetching third-party wallet balance:", err);
-    }
-  };
-
-  // Fetch initial data
-  useEffect(() => {
-    fetchThirdPartyBalance();
-  }, []);
-
   // Handle wallet transfer
   const handleTransfer = async () => {
     if (!userData?.uid || loading) return;
@@ -102,19 +95,18 @@ const Wallet = ({ children }) => {
     setLoading(true);
 
     try {
-      await fetchThirdPartyBalance();
-
       if (getThirdPartyBalance <= 0) {
         console.error("Insufficient balance for transfer.");
         setLoading(false);
         return;
       }
-
       const transferResponse = await axiosInstance.post(
-        `${domain}/api/api-wrapper/wallet-transfer`,
+        `${domain}/api/huidu/balance-sync`,
         {
-          uid: userData.uid,
-          amount: getThirdPartyBalance,
+          apiKey: clientPrefix,
+          apiSecret: clientSecretKey,
+          wrapperUrl: apidomain,
+          transfer: true,
         },
         { withCredentials: true }
       );
@@ -122,9 +114,7 @@ const Wallet = ({ children }) => {
       if (transferResponse.data.success) {
         await getWalletBalance();
         await fetchThirdPartyBalance();
-        await fetchDwInfo(); // Refresh deposit/withdrawal info after transfer
-
-        //console.log("Wallet transfer successful:", transferResponse.data);
+        await fetchDwInfo();
       } else {
         console.error("Wallet transfer failed:", transferResponse.data.message);
       }
@@ -135,67 +125,64 @@ const Wallet = ({ children }) => {
     }
   };
 
-  useEffect(() => {
-    //console.log("loading", loading);
-  }, [loading]);
-
   const data = [
     {
       label: "Lottery",
       value: `${userWallet || 0}`,
-      bgImage: "/assets/betHistory/WM_Video.webp"
+      bgImage: "/assets/betHistory/WM_Video2.webp"  // Replace with actual path
     },
     {
       label: "CQ9",
       value: 0.0,
-      bgImage: "/assets/betHistory/CQ9.webp"
+      bgImage: "/assets/betHistory/CQ92.webp"
     },
     {
       label: "MG",
       value: 0.0,
-      bgImage: "/assets/betHistory/MG_Video.webp"
+      bgImage: "/assets/betHistory/MG_Video2.webp"
     },
     {
       label: "JDB",
       value: 0.0,
-      bgImage: "/assets/betHistory/JDB.webp"
+      bgImage: "/assets/betHistory/JDB2.webp"
     },
     {
       label: "EVO_Video",
       value: 0.0,
-      bgImage: "/assets/betHistory/EVO_Video.webp"
+      bgImage: "/assets/betHistory/EVO_Video2.webp"
     },
     {
       label: "JILI",
       value: 0.0,
-      bgImage: "/assets/betHistory/Jili.webp"
+      bgImage: "/assets/betHistory/Jili2.webp"
     },
     {
       label: "V8Card",
       value: 0.0,
-      bgImage: "/assets/betHistory/V8CARD.webp"
+      bgImage: "/assets/betHistory/V8CARD2.webp"
     },
     {
       label: "DG",
       value: 0.0,
-      bgImage: "/assets/betHistory/DG.webp"
+      bgImage: "/assets/betHistory/DG2.webp"
     },
     {
       label: "WM_Video",
       value: 0.0,
-      bgImage: "/assets/betHistory/WM_Video.webp"
-    },
-    {
-      label: "Card365",
-      value: 0.0,
-      bgImage: "assets/betHistory/CARD365.webp"
+      bgImage: "/assets/betHistory/WM_Video2.webp"
     },
     {
       label: "SEXY_Video",
       value: 0.0,
-      bgImage: "/assets/betHistory/SEXY_Video.webp"
+      bgImage: "/assets/betHistory/SEXY_Video2.webp"
+    },
+    {
+      label: "CARD 365",
+      value: 0.0,
+      bgImage: "/assets/betHistory/CARD3652.webp"
     },
   ];
+
 
   const handleRedirect = () => {
     navigate(-1);
