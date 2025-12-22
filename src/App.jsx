@@ -522,8 +522,10 @@ function AppContent() {
           />
         </Route>
         {/* Global Zero-balance deposit modal (blocks actions until deposit or contact) */}
-        <ZeroBalanceDepositModal open={showZeroBalanceDepositPrompt} onClose={() => setShowZeroBalanceDepositPrompt(false)} />
       </Routes>
+
+      {/* Render modal outside of <Routes> so it doesn't break router children requirement */}
+      <ZeroBalanceDepositModal open={showZeroBalanceDepositPrompt} onClose={() => setShowZeroBalanceDepositPrompt(false)} />
     </>
   );
 }
