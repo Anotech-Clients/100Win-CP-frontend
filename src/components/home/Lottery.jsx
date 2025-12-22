@@ -4,7 +4,9 @@ import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 // import Button from '@mui/material/Button';
 import { useNavigate } from "react-router-dom";
+import { useContext } from "react";
 import { useAuth } from "../../context/AuthContext"; // Import useAuth to access axiosInstance and token
+import { UserContext } from "../../context/UserState";
 // import { jwtDecode } from "jwt-decode"; // Import jwtDecode to decode the token
 import NeedToDepositModal from "../common/NeedToDepositModal"; // Import the new modal
 
@@ -76,7 +78,16 @@ const Lottery = () => {
     fetchUserData();
   }, [axiosInstance]);
 
+  const { isZeroBalance } = useContext(UserContext);
+
   const handleGameClick = (game) => {
+    // If both balances are zero, prompt deposit (only when user actively clicks a game)
+    if (isZeroBalance()) {
+      setSelectedGame(game);
+      setOpenDepositModal(true);
+      return;
+    }
+
     if (needToDepositMode && !firstDepositMade) {
       setSelectedGame(game);
       setOpenDepositModal(true); // Open the deposit modal

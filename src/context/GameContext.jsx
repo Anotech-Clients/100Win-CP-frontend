@@ -78,6 +78,7 @@ export const GameProvider = ({ children }) => {
     userData,
     getUserData,
   } = useContext(UserContext)
+  const { isZeroBalance } = useContext(UserContext)
 
   const { axiosInstance } = useAuth()
 
@@ -151,6 +152,13 @@ export const GameProvider = ({ children }) => {
     if (needToDepositMode && !firstDepositMade) {
       setOpenDepositModal(true);
       return
+    }
+
+    // If both balances are zero, prompt deposit (only when user attempts to launch a game)
+    if (isZeroBalance()) {
+      setOpenDepositModal(true);
+      setIsLoading(false);
+      return;
     }
 
     setIsLoading(true);

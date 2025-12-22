@@ -451,6 +451,7 @@ const AllGamesPage = () => {
     const activeCategoryRef = useRef(null)
     const [currentCategory, setCurrentCategory] = useState(null)
     const { handleApiClick } = useContext(GameContext)
+    const { isZeroBalance } = useContext(UserContext)
     const navigate = useNavigate()
     const [firstDepositMade, setFirstDepositMade] = useState(false);
     const [needToDepositMode, setNeedToDepositMode] = useState(false);
@@ -504,6 +505,12 @@ const AllGamesPage = () => {
     }, [axiosInstance])
 
     const handleLotteryClick = (path) => {
+        // If both balances are zero, prompt deposit when the user clicks
+        if (isZeroBalance()) {
+            setOpenDepositModal(true);
+            return;
+        }
+
         if (needToDepositMode && !firstDepositMade) {
             setOpenDepositModal(true);
         } else {
