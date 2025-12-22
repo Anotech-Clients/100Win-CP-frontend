@@ -13,7 +13,6 @@ const UserState = ({ children }) => {
   const [accountType, setAccountType] = useState("")
   const [error, setError] = useState(null)
   const [getThirdPartyBalance, setGetThirdPartyBalance] = useState(null);
-  const [showZeroBalanceDepositPrompt, setShowZeroBalanceDepositPrompt] = useState(false);
 
   const getUserData = async () => {
     try {
@@ -51,8 +50,7 @@ const UserState = ({ children }) => {
       });
       // console.log("fetchThirdPartyBalance", response)
       setGetThirdPartyBalance(response.data.data.third_party_balance);
-        // Re-evaluate deposit prompt when third party balance updates
-        evaluateZeroBalances(undefined, response.data.data.third_party_balance);
+        // third party balance updated
     } catch (err) {
       console.error("Error fetching third-party wallet balance:", err);
     }
@@ -62,11 +60,11 @@ useEffect(() => {
   fetchThirdPartyBalance()
 }, [])
 
-  // Evaluate if both main wallet and third-party balance are zero and prompt deposit
-  const evaluateZeroBalances = (wallet = userWallet, third = getThirdPartyBalance) => {
+  // Helper to check if both main and third-party balances are zero
+  const isZeroBalance = (wallet = userWallet, third = getThirdPartyBalance) => {
     try {
       const parseWallet = (w) => {
-        if (w == null) return null;
+        if (w == null) return 0;
         if (typeof w === 'string') return parseFloat(w.replace(/,/g, '')) || 0;
         return Number(w) || 0;
       };
@@ -74,20 +72,12 @@ useEffect(() => {
       const walletNum = parseWallet(wallet);
       const thirdNum = Number(third ?? 0);
 
-      if (walletNum === 0 && thirdNum === 0) {
-        setShowZeroBalanceDepositPrompt(true);
-      } else {
-        setShowZeroBalanceDepositPrompt(false);
-      }
+      return walletNum === 0 && thirdNum === 0;
     } catch (err) {
-      console.error('[evaluateZeroBalances] error', err);
+      console.error('[isZeroBalance] error', err);
+      return false;
     }
   };
-
-  // Re-evaluate when values change
-  useEffect(() => {
-    evaluateZeroBalances();
-  }, [userWallet, getThirdPartyBalance]);
 
   const getWalletBalance = async () => {
     try {
@@ -226,8 +216,7 @@ useEffect(() => {
         error,
         getThirdPartyBalance,
         fetchThirdPartyBalance,
-        showZeroBalanceDepositPrompt,
-        setShowZeroBalanceDepositPrompt,
+        isZeroBalance,
       }} >
       {children}
     </UserContext.Provider>

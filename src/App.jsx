@@ -144,7 +144,6 @@ import { BannerPosterProvider } from "./context/BannerPosterContext.jsx";
 import PushNotificationAdmin from "./pages/admin/PushNotificationAdmin.jsx";
 import UPIManualDepositPage from "./pages/walletPages/UPIManualDepositPage.jsx";
 import UPIManagement from "./pages/walletPages/UPIManagement.jsx";
-import ZeroBalanceDepositModal from "./components/wallet/ZeroBalanceDepositModal";
 import { UserContext } from "./context/UserState";
 // import UPIManagementAdmin from "./pages/admin/UPIManagementAdmin.jsx";
 
@@ -524,8 +523,7 @@ function AppContent() {
         {/* Global Zero-balance deposit modal (blocks actions until deposit or contact) */}
       </Routes>
 
-      {/* Render modal outside of <Routes> so it doesn't break router children requirement */}
-      <ZeroBalanceDepositModal open={showZeroBalanceDepositPrompt} onClose={() => setShowZeroBalanceDepositPrompt(false)} />
+      {/* No global deposit modal: deposit prompt should only appear when user attempts an action (e.g., clicks a game) */}
     </>
   );
 }
