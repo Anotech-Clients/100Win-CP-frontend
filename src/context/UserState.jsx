@@ -13,6 +13,7 @@ const UserState = ({ children }) => {
   const [accountType, setAccountType] = useState("")
   const [error, setError] = useState(null)
   const [getThirdPartyBalance, setGetThirdPartyBalance] = useState(null);
+  const [showZeroBalanceDepositPrompt, setShowZeroBalanceDepositPrompt] = useState(false);
 
   const getUserData = async () => {
     try {
@@ -50,6 +51,8 @@ const UserState = ({ children }) => {
       });
       // console.log("fetchThirdPartyBalance", response)
       setGetThirdPartyBalance(response.data.data.third_party_balance);
+        // Re-evaluate deposit prompt when third party balance updates
+        evaluateZeroBalances(undefined, response.data.data.third_party_balance);
     } catch (err) {
       console.error("Error fetching third-party wallet balance:", err);
     }
@@ -58,6 +61,33 @@ const UserState = ({ children }) => {
 useEffect(() => {
   fetchThirdPartyBalance()
 }, [])
+
+  // Evaluate if both main wallet and third-party balance are zero and prompt deposit
+  const evaluateZeroBalances = (wallet = userWallet, third = getThirdPartyBalance) => {
+    try {
+      const parseWallet = (w) => {
+        if (w == null) return null;
+        if (typeof w === 'string') return parseFloat(w.replace(/,/g, '')) || 0;
+        return Number(w) || 0;
+      };
+
+      const walletNum = parseWallet(wallet);
+      const thirdNum = Number(third ?? 0);
+
+      if (walletNum === 0 && thirdNum === 0) {
+        setShowZeroBalanceDepositPrompt(true);
+      } else {
+        setShowZeroBalanceDepositPrompt(false);
+      }
+    } catch (err) {
+      console.error('[evaluateZeroBalances] error', err);
+    }
+  };
+
+  // Re-evaluate when values change
+  useEffect(() => {
+    evaluateZeroBalances();
+  }, [userWallet, getThirdPartyBalance]);
 
   const getWalletBalance = async () => {
     try {
@@ -77,6 +107,11 @@ useEffect(() => {
             : validBalance % 1 === 0
               ? `${validBalance}.00`
               : validBalance.toFixed(2)
+        );
+        // Re-evaluate deposit prompt when main wallet updates
+        evaluateZeroBalances(
+          validBalance === 0 ? "0.00" : (validBalance % 1 === 0 ? `${validBalance}.00` : validBalance.toFixed(2)),
+          getThirdPartyBalance
         );
       }
 
@@ -191,6 +226,8 @@ useEffect(() => {
         error,
         getThirdPartyBalance,
         fetchThirdPartyBalance,
+        showZeroBalanceDepositPrompt,
+        setShowZeroBalanceDepositPrompt,
       }} >
       {children}
     </UserContext.Provider>

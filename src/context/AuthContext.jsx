@@ -322,6 +322,16 @@ Ready to upgrade? Contact us today!`;
         return Promise.reject(error);
       }
       
+      // Handle API rate/limit errors with a friendly message instead of raw API text
+      if (error.response?.status === 429 || error.response?.data?.message?.toLowerCase()?.includes('limit')) {
+        // Replace server message with a professional, user-friendly one
+        const friendlyMessage = "API limit exceeded. Please contact customer service for assistance.";
+        if (!error.response.data) error.response.data = {};
+        error.response.data.message = friendlyMessage;
+        error.message = friendlyMessage;
+        return Promise.reject(error);
+      }
+      
       if (error.response?.status === 401 && !originalRequest._retry) {
         originalRequest._retry = true;
   

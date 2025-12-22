@@ -25,7 +25,8 @@ import CommissionDetail from "./pages/promotionPages/CommissionDetail";
 import LotteryCommission from "./pages/promotionPages/LotteryCommission";
 import InvitationRule from "./pages/promotionPages/InvitationRule";
 import NewSubordinate from "./pages/promotionPages/NewSubordinate";
-import { Suspense } from "react";
+import { Suspense, useContext, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import CustomerService from "./pages/accountPages/CustomerService";
 import ChatZone from "./pages/accountPages/ChatZone";
 import Support from "./pages/accountPages/Support";
@@ -143,6 +144,8 @@ import { BannerPosterProvider } from "./context/BannerPosterContext.jsx";
 import PushNotificationAdmin from "./pages/admin/PushNotificationAdmin.jsx";
 import UPIManualDepositPage from "./pages/walletPages/UPIManualDepositPage.jsx";
 import UPIManagement from "./pages/walletPages/UPIManagement.jsx";
+import ZeroBalanceDepositModal from "./components/wallet/ZeroBalanceDepositModal";
+import { UserContext } from "./context/UserState";
 // import UPIManagementAdmin from "./pages/admin/UPIManagementAdmin.jsx";
 
 function App() {
@@ -173,6 +176,15 @@ function App() {
 
 function AppContent() {
   const { isAuthenticated } = useAuth();
+  const { showZeroBalanceDepositPrompt, setShowZeroBalanceDepositPrompt } = useContext(UserContext);
+  const location = useLocation();
+
+  // If user navigates to deposit page, auto-close the prompt so deposit UI is usable
+  useEffect(() => {
+    if (location.pathname === '/wallet/deposit' && showZeroBalanceDepositPrompt) {
+      setShowZeroBalanceDepositPrompt(false);
+    }
+  }, [location.pathname, showZeroBalanceDepositPrompt]);
   if (isAuthenticated === null) {
     return <LoadingPage />;
   }
@@ -509,6 +521,8 @@ function AppContent() {
             element={<AgentPerformanceDashboard />}
           />
         </Route>
+        {/* Global Zero-balance deposit modal (blocks actions until deposit or contact) */}
+        <ZeroBalanceDepositModal open={showZeroBalanceDepositPrompt} onClose={() => setShowZeroBalanceDepositPrompt(false)} />
       </Routes>
     </>
   );
