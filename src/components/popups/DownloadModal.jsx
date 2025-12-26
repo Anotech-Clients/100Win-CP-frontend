@@ -16,12 +16,12 @@ const DownloadModal = ({ onClose, iconSrc }) => {
     }, []);
 
     const handleDownload = () => {
-        // const link = document.createElement("a");
-        // link.href = `https://111club.online/abclottery.apk`;
-        // link.download = "abclottery.apk";
-        // document.body.appendChild(link);
-        // link.click();
-        // document.body.removeChild(link);
+        const link = document.createElement("a");
+        link.href = `https://drive.google.com/file/d/1kmb5qtSQ-JQ-ECN2EXPk66VihhLdIS6q/view?usp=sharing`;
+        link.download = "100win.apk";
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
     };
 
     const handleClose = () => {
