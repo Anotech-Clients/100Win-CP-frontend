@@ -54,8 +54,8 @@ const DownloadModal = ({ onClose, iconSrc }) => {
         >
             {/* App Icon */}
             <Box onClick={handleDownload} sx={{ display: 'flex', alignItems: 'center', }}>
-                <Grid sx={{background:"#000000",display:"flex",justifyContent:"center",alignItems:"center",width: 23, marginRight: "5px"}}> <img
-                    src="/assets/logo/a_logo2.webp"
+                <Grid sx={{display:"flex",justifyContent:"center",alignItems:"center",width: 23, marginRight: "5px"}}> <img
+                    src="/assets/logo/a_logo.webp"
                     alt="logo"
                     style={{ width: "100%" }}
                 /></Grid>

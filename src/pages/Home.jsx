@@ -5,7 +5,7 @@ import NotificationModal from "../components/popups/NotificationPopup";
 import LoadingLogo from "../components/utils/LodingLogo";
 import BottomNavigationArea from "../components/common/BottomNavigation";
 import HomeMain from "../components/home/HomeMain";
-// import DownloadModal from "../components/popups/DownloadModal";
+import DownloadModal from "../components/popups/DownloadModal";
 import CustomerSupportButton from "../components/utils/FloatingButtons/CustomerSupportButton";
 // import LuckySpinFloat from "../components/utils/FloatingButtons/LuckySpinFloat";
 import TelegramFloat from "../components/utils/FloatingButtons/TelegramFloat";
@@ -124,7 +124,7 @@ const Home = () => {
             </>)
           }
           <HomeMain />
-          {/* <DownloadModal /> */}
+          <DownloadModal />
           <BottomNavigationArea />
         </Mobile>
         {isAuthenticated && <TelegramFloat />}
