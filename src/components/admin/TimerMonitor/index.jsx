@@ -207,7 +207,7 @@ const TimerMonitor = ({
         wsRef.current = null;
       }
     };
-  }, [websocketUrl, handleWebSocketMessage]);
+  }, [websocketUrl]);
 
   const handleTimerChange = useCallback((e, value) => {
     if (value) {
