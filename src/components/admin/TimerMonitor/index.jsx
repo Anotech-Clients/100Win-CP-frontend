@@ -30,8 +30,14 @@ const TimerMonitor = ({
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
   const wsRef = useRef(null);
+  const selectedTimerRef = useRef(selectedTimer);
   const reconnectTimeoutRef = useRef(null);
   const isComponentMounted = useRef(true);
+  const pingIntervalRef = useRef(null);
+
+  useEffect(() => {
+    selectedTimerRef.current = selectedTimer;
+  }, [selectedTimer]);
 
   // Map selected timer value to timer type expected by server
   const getTimerType = useCallback((timerValue) => {
@@ -71,7 +77,7 @@ const TimerMonitor = ({
           console.log("⚠️ No matching timer found for type:", currentTimerType);
           console.log("Available timers:", data.data.map(t => t.timerType));
         }
-      } 
+      }
       // Handle connection confirmation
       else if (data.status === "connected") {
         console.log("✅ WebSocket connection confirmed:", data.message);
@@ -101,23 +107,23 @@ const TimerMonitor = ({
         setError("Error processing timer data: " + err.message);
       }
     }
-  }, [selectedTimer, onPeriodUpdate, getTimerType]);
+  }, [onPeriodUpdate, getTimerType]);
 
   // WebSocket connection setup with proper cleanup
   useEffect(() => {
     isComponentMounted.current = true;
     let reconnectAttempts = 0;
     const maxReconnectAttempts = 5;
-    const baseReconnectDelay = 1000;
+    // const baseReconnectDelay = 1000;
 
     const connect = () => {
       if (!isComponentMounted.current) return;
 
-      // Clear any existing connection
-      if (wsRef.current) {
-        wsRef.current.close();
+      // 🛑 Prevent duplicate connections
+      if (wsRef.current?.readyState === WebSocket.OPEN) {
+        console.log("⚠️ WebSocket already connected, skipping...");
+        return;
       }
-
       try {
         console.log("🔌 Connecting to Timer WebSocket:", websocketUrl);
         const socket = new WebSocket(websocketUrl);
@@ -128,74 +134,62 @@ const TimerMonitor = ({
             socket.close();
             return;
           }
-          console.log('✅ Timer WebSocket connected successfully');
+
+          console.log("✅ Timer WebSocket connected successfully");
           setIsLoading(false);
           setError(null);
           reconnectAttempts = 0;
 
-          // Subscribe to timer updates for WINGO game
-          const subscribeMessage = {
+          // 📡 Subscribe
+          socket.send(JSON.stringify({
             type: "subscribe",
             gameType: "WINGO"
-          };
-          
-          console.log("📡 Sending subscription message:", subscribeMessage);
-          socket.send(JSON.stringify(subscribeMessage));
+          }));
 
-          // Send ping to keep connection alive
-          const pingInterval = setInterval(() => {
+          // ❤️ Start ping (stored in ref)
+          pingIntervalRef.current = setInterval(() => {
             if (socket.readyState === WebSocket.OPEN) {
               socket.send(JSON.stringify({ type: "ping" }));
-            } else {
-              clearInterval(pingInterval);
             }
-          }, 30000); // Ping every 30 seconds
+          }, 30000);
         };
 
         socket.onmessage = handleWebSocketMessage;
 
-        socket.onerror = (error) => {
+        socket.onerror = (err) => {
           if (!isComponentMounted.current) return;
-          console.error('❌ Timer WebSocket error:', error);
-          setError("WebSocket connection error. Check server status.");
-          setIsLoading(false);
+          console.error("❌ Timer WebSocket error:", err);
+          setError("WebSocket connection error.");
         };
 
         socket.onclose = (event) => {
           if (!isComponentMounted.current) return;
-          console.log('🔌 Timer WebSocket closed:', event.code, event.reason);
 
-          if (!error) {
-            setError("WebSocket connection closed. Reconnecting...");
+          console.log("🔌 Timer WebSocket closed:", event.code, event.reason);
+
+          // 🧹 Clear ping
+          if (pingIntervalRef.current) {
+            clearInterval(pingIntervalRef.current);
+            pingIntervalRef.current = null;
           }
 
-          // Implement exponential backoff for reconnection
           if (reconnectAttempts < maxReconnectAttempts) {
-            const delay = Math.min(1000 * Math.pow(2, reconnectAttempts), 10000);
-            console.log(`🔄 Reconnecting in ${delay}ms (attempt ${reconnectAttempts + 1}/${maxReconnectAttempts})`);
-
+            const delay = Math.min(1000 * 2 ** reconnectAttempts, 10000);
             reconnectTimeoutRef.current = setTimeout(() => {
-              if (isComponentMounted.current) {
-                reconnectAttempts++;
-                connect();
-              }
+              reconnectAttempts++;
+              connect();
             }, delay);
           } else {
-            setError("Failed to reconnect after several attempts. Please reload the page.");
+            setError("Failed to reconnect. Please refresh.");
           }
         };
-      } catch (error) {
-        if (isComponentMounted.current) {
-          console.error('❌ Timer WebSocket connection error:', error);
-          setError("Failed to establish WebSocket connection: " + error.message);
-          setIsLoading(false);
-        }
+      } catch (err) {
+        console.error("❌ WebSocket init error:", err);
+        setError("Failed to connect WebSocket.");
       }
     };
 
     connect();
-
-    // Cleanup function
     return () => {
       isComponentMounted.current = false;
 
@@ -203,9 +197,14 @@ const TimerMonitor = ({
         clearTimeout(reconnectTimeoutRef.current);
       }
 
+      if (pingIntervalRef.current) {
+        clearInterval(pingIntervalRef.current);
+        pingIntervalRef.current = null;
+      }
+
       if (wsRef.current) {
-        wsRef.current.onclose = null;
         wsRef.current.close();
+        wsRef.current = null;
       }
     };
   }, [websocketUrl, handleWebSocketMessage]);
