@@ -57,7 +57,7 @@ const TimerMonitor = ({
 
     try {
       const data = JSON.parse(event.data);
-      console.log("🔍 Timer WS received data:", data);
+      //console.log("🔍 Timer WS received data:", data);
 
       // Handle different message types from the unified WebSocket service
       if (data.type === "timerUpdate" && Array.isArray(data.data)) {
@@ -71,27 +71,27 @@ const TimerMonitor = ({
         );
 
         if (currentTimer) {
-          console.log("✅ Found matching timer:", currentTimer);
+          //console.log("✅ Found matching timer:", currentTimer);
           onPeriodUpdate?.(currentTimer.periodId);
         } else {
-          console.log("⚠️ No matching timer found for type:", currentTimerType);
-          console.log("Available timers:", data.data.map(t => t.timerType));
+          console.error("⚠️ No matching timer found for type:", currentTimerType);
+          console.error("Available timers:", data.data.map(t => t.timerType));
         }
       }
       // Handle connection confirmation
       else if (data.status === "connected") {
-        console.log("✅ WebSocket connection confirmed:", data.message);
+        //console.log("✅ WebSocket connection confirmed:", data.message);
         setError(null);
         setIsLoading(false);
       }
       // Handle subscription confirmation
       else if (data.type === "subscribed") {
-        console.log("✅ Successfully subscribed to:", data.gameType);
+        //console.log("✅ Successfully subscribed to:", data.gameType);
         setError(null);
       }
       // Handle game updates that might contain timer information
       else if (data.type === "gameUpdate") {
-        console.log("🎮 Game update received:", data);
+        //console.log("🎮 Game update received:", data);
         // Process game updates if they contain timer data
         if (data.data && data.data.timers) {
           setTimerData(data.data.timers);
@@ -99,7 +99,7 @@ const TimerMonitor = ({
         }
       }
       else {
-        console.log("📄 Other message type received:", data.type);
+        //console.log("📄 Other message type received:", data.type);
       }
     } catch (err) {
       console.error("❌ Error processing WebSocket message:", err, event.data);
@@ -121,11 +121,11 @@ const TimerMonitor = ({
 
       // 🛑 Prevent duplicate connections
       if (wsRef.current?.readyState === WebSocket.OPEN) {
-        console.log("⚠️ WebSocket already connected, skipping...");
+        //console.log("⚠️ WebSocket already connected, skipping...");
         return;
       }
       try {
-        console.log("🔌 Connecting to Timer WebSocket:", websocketUrl);
+        //console.log("🔌 Connecting to Timer WebSocket:", websocketUrl);
         const socket = new WebSocket(websocketUrl);
         wsRef.current = socket;
 
@@ -135,7 +135,7 @@ const TimerMonitor = ({
             return;
           }
 
-          console.log("✅ Timer WebSocket connected successfully");
+          //console.log("✅ Timer WebSocket connected successfully");
           setIsLoading(false);
           setError(null);
           reconnectAttempts = 0;
@@ -165,7 +165,7 @@ const TimerMonitor = ({
         socket.onclose = (event) => {
           if (!isComponentMounted.current) return;
 
-          console.log("🔌 Timer WebSocket closed:", event.code, event.reason);
+          //console.log("🔌 Timer WebSocket closed:", event.code, event.reason);
 
           // 🧹 Clear ping
           if (pingIntervalRef.current) {
@@ -211,7 +211,7 @@ const TimerMonitor = ({
 
   const handleTimerChange = useCallback((e, value) => {
     if (value) {
-      console.log("⏱️ Selected timer changed to:", value);
+      //console.log("⏱️ Selected timer changed to:", value);
       setSelectedTimer(value);
       onTimerSelect?.(value);
     }
@@ -220,7 +220,7 @@ const TimerMonitor = ({
   const currentTimer = useMemo(() => {
     const timerType = getTimerType(selectedTimer);
     const timer = timerData.find((timer) => timer.timerType === timerType);
-    console.log("🎯 Current timer selected:", timer);
+    //console.log("🎯 Current timer selected:", timer);
     return timer;
   }, [timerData, selectedTimer, getTimerType]);
 
